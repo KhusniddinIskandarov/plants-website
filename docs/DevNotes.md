@@ -24,6 +24,12 @@
 - Removed default scaffold to keep project clean and controlled
 - Introduced minimal folder structure to avoid early over-engineering
 
+### gitignore-setup
+
+- Introduced comprehensive `.gitignore` rules to prevent unnecessary files from being tracked
+- Ensured sensitive environment files are excluded from version control
+- Standardized ignore patterns for consistency across environments
+
 ---
 
 ## Observations
@@ -31,3 +37,5 @@
 - setup phase is not about UI, but about foundation quality
 - early decisions will directly affect scalability
 - keeping structure minimal now allows flexible architecture later
+- proper `.gitignore` setup is critical for repository hygiene and security
+- small configuration decisions can prevent large future issues
