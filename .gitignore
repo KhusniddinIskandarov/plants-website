@@ -17,6 +17,8 @@ build/
 
 # Env files
 .env
+.env.local
+.env.*.local
 *.local
 
 # Coverage
