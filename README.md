@@ -1,92 +1,73 @@
 # 🌱 Plant Website
 
-A frontend project being built incrementally using a structured Git workflow.
+A modern frontend project built with a structured Git workflow and incremental architecture-driven development.
 
 ---
 
 ## Project Vision
 
-This repository is used to practice and document:
+This repository is designed to practice and demonstrate:
 
-- scalable frontend workflow
-- feature branch development
+- scalable frontend architecture
+- feature-branch workflow (Git-based development)
 - documentation-driven engineering
-- gradual architecture evolution
+- incremental system design
+- real-world frontend tooling setup
 
 ---
 
-## Planned Stack
+## Tech Stack
 
-(Planned — subject to implementation)
-
-- Vite
-- TailwindCSS
-- Vanilla JavaScript
-
----
-
-## Workflow
-
-Branches planned:
-
-- main
-- develop
-- feature/\*
-- release/\*
-
-Detailed workflow will evolve during development.
+- Vite (build tool)
+- TailwindCSS (utility-first styling)
+- JavaScript (ESM, vanilla approach)
+- ESLint + Prettier (code quality)
+- Husky + lint-staged (git automation)
 
 ---
 
-## Documentation Evolution Map
+## Development Workflow
 
-- **main (init)** → README.md, LICENSE.md  
-  ✅ Repository initialized, base documentation ready.
-
-- **develop (skeleton)** → README-short.md, SETUP.md, ARCHITECTURE.md, DEVLOG.md, CHANGELOG.md, DevNotes.md, DEPLOYMENT.md  
-  ✅ Skeleton files added, foundation stage completed.
-
-- **Planned (next)**  
-  🔜 `feature/setup-vite-tailwind` → Vite + Tailwind configuration (SETUP.md expanded)  
-  🔜 `feature/gitignore-setup` → Rules for environment and build files (SETUP.md expanded)  
-  🔜 `feature/code-quality-setup` → ESLint, Prettier configuration (DevNotes.md and SETUP.md expanded)  
-  🔜 `feature/git-hooks-setup` → Husky and lint-staged integration (DEVLOG.md and DevNotes.md expanded)  
-  🔜 `feature/html-head-setup` → Meta tags, favicon, SEO basics (ARCHITECTURE.md expanded)  
-  🔜 `docs/setup-phase` → Documentation branch added to finalize setup docs, employer-centric presentation  
-  🔜 `release/v0.1.0` → Consolidated docs merged into main  
-  🔜 `tag/v0.1.0` → Version tag created for first milestone release
+- `main` → stable production-ready code
+- `develop` → integration branch
+- `feature/*` → isolated feature development
+- `docs/*` → documentation phase branches
+- `release/*` → version preparation
 
 ---
 
 ## Current Status
 
-Completed:
+Setup phase complete:
 
-- Git repository initialized
-- Initial documentation started
-
-Next:
-
-- Create develop branch
-- Add documentation skeleton files
+- Vite + TailwindCSS setup
+- ESLint + Prettier configuration
+- Husky + lint-staged automation
+- HTML head (SEO + performance)
+- Documentation foundation
 
 ---
 
-## Note
+## Documentation
 
-This repository is intentionally built in phases.
-Documentation and architecture will evolve together with the codebase.
+| Document                                  | Description                                  |
+| ----------------------------------------- | -------------------------------------------- |
+| [SETUP.md](./docs/SETUP.md)               | Project setup guide and phase breakdown      |
+| [ARCHITECTURE.md](./docs/ARCHITECTURE.md) | Architecture decisions and planned structure |
+| [CHANGELOG.md](./docs/CHANGELOG.md)       | Version history and release notes            |
+| [DEVLOG.md](./docs/DEVLOG.md)             | Development progress log                     |
+| [DevNotes.md](./docs/DevNotes.md)         | Technical decisions and engineering notes    |
+| [DEPLOYMENT.md](./docs/DEPLOYMENT.md)     | Deployment strategy and guide                |
+| [LICENSE.md](./LICENSE.md)                | MIT License                                  |
 
 ---
 
-## 👨‍💻 Author
+## Author
 
-### Khusniddin Iskandarov
-
-- 🐙 GitHub: [KhusniddinIskandarov](https://github.com/KhusniddinIskandarov)
+**Khusniddin Iskandarov** · [GitHub](https://github.com/KhusniddinIskandarov)
 
 ---
 
-## 📄 License
+## License
 
-MIT License — See [LICENSE.md](./LICENSE.md)
+MIT — see [LICENSE.md](./LICENSE.md)
