@@ -1,8 +1,24 @@
-# Plants Website (Short Overview)
+# 🌱 Plants Website
 
-Frontend project under active development.
+Modern frontend project with structured Git workflow and incremental architecture.
 
-Status:
-Documentation and workflow foundation in progress.
+---
 
-📘See README.md for full overview. 👉 [README.md](./README.md)
+## Stack
+
+- Vite · TailwindCSS · JavaScript
+- ESLint · Prettier · Husky
+
+---
+
+## Current Status
+
+Setup phase complete — foundation ready for architecture phase.
+
+---
+
+## Documentation
+
+Full documentation available in [`/docs`](./docs/) directory.
+
+→ See [README.md](./README.md) for complete reference.

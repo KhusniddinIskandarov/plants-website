@@ -1,17 +1,19 @@
 # Developer Notes
 
-## Current ideas
+## Current Ideas
 
 - follow documentation-driven workflow
 - keep commits and branches small and focused
 - build project in incremental, testable steps
+- prefer clarity over premature optimization
 
 ---
 
-## Questions
+## Open Questions
 
 - what will be final architecture structure?
 - which deployment platform will be used later?
+- how will scaling strategy evolve after v0.1.0?
 
 ---
 
@@ -45,7 +47,8 @@
 - Introduced Husky to manage Git hooks in the project
 - Used lint-staged to run checks only on staged files for better performance
 - Configured pre-commit hook to automatically run ESLint and Prettier
-- Ensured that code quality rules defined earlier are enforced before commits
+- Enforced code quality rules at commit stage
+- Reduced risk of inconsistent or broken code entering repository
 
 ### html-head-setup
 
@@ -72,3 +75,19 @@
 - enforcing rules at commit stage prevents bad code from entering the repository
 - combining linting and hooks creates a reliable development workflow
 - properly structured HTML head improves SEO, performance, and sharing experience
+
+---
+
+## Key Takeaways
+
+- ESLint + Prettier = code consistency layer
+- Husky + lint-staged = quality gate at commit level
+- Git workflow + documentation = predictable development flow
+- HTML head standardization improves SEO and performance early
+- small decisions compound into large architectural impact
+
+---
+
+## Engineering Principle
+
+> "Stability is not built at the end — it is enforced at every commit."
