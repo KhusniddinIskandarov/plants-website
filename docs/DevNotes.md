@@ -37,6 +37,17 @@
 - Added Prettier to handle consistent code formatting
 - Integrated Prettier with ESLint to avoid rule conflicts
 - Ensured support for multiple file types (JS, JSON, CSS, Markdown)
+- Added `.editorconfig` to standardize editor settings across team
+- Added `.env.example` as a safe template for environment variables
+
+---
+
+### git-hooks-setup
+
+- Introduced Husky to manage Git hooks in the project
+- Used lint-staged to run checks only on staged files for better performance
+- Configured pre-commit hook to automatically run ESLint and Prettier
+- Ensured that code quality rules defined earlier are enforced before commits
 
 ---
 
@@ -50,3 +61,6 @@
 - consistent code quality requires both linting and formatting tools
 - separating concerns (ESLint vs Prettier) improves maintainability
 - early setup of code standards prevents technical debt
+- automation of code checks significantly improves consistency
+- enforcing rules at commit stage prevents bad code from entering the repository
+- combining linting and hooks creates a reliable development workflow
