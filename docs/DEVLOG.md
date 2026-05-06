@@ -65,9 +65,31 @@ Completed:
 - configured browser environment and ESM modules
 - added Prettier for consistent code formatting
 - integrated Prettier with ESLint using `eslint-config-prettier`
+- added `.editorconfig` for consistent editor behavior
+- added `.env` and `.env.example` for environment variable management
+- moved `eslint-config-prettier` to devDependencies
+- added lint and format scripts to `package.json`
 
 Notes:
 
 - established code quality standards across the project
 - reduced risk of inconsistent formatting and linting conflicts
 - prepared foundation for automated code checks (git hooks)
+
+---
+
+### feature/git-hooks-setup
+
+Completed:
+
+- installed Husky for managing Git hooks
+- initialized `.husky` directory for hook definitions
+- added lint-staged for processing staged files
+- configured lint-staged to run ESLint and Prettier
+- implemented pre-commit hook to enforce code quality checks before commits
+
+Notes:
+
+- introduced automated code quality enforcement layer
+- ensures only properly formatted and linted code is committed
+- reduces manual checking and improves development workflow
