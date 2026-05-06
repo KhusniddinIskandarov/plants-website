@@ -18,7 +18,7 @@ Upcoming:
 
 ## Setup Phase Progress
 
-### [feature/setup-vite-tailwind]
+### feature/setup-vite-tailwind
 
 Completed:
 
@@ -36,7 +36,7 @@ Notes:
 
 ---
 
-### [feature/gitignore-setup]
+### feature/gitignore-setup
 
 Completed:
 
@@ -53,3 +53,21 @@ Notes:
 - improved repository cleanliness and maintainability
 - reduced risk of committing sensitive data
 - standardized ignore rules for team collaboration
+
+---
+
+### feature/code-quality-setup
+
+Completed:
+
+- initialized ESLint with modern flat configuration
+- enabled linting for JavaScript, JSON, CSS, and Markdown
+- configured browser environment and ESM modules
+- added Prettier for consistent code formatting
+- integrated Prettier with ESLint using `eslint-config-prettier`
+
+Notes:
+
+- established code quality standards across the project
+- reduced risk of inconsistent formatting and linting conflicts
+- prepared foundation for automated code checks (git hooks)

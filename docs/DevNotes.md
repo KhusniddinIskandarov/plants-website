@@ -30,6 +30,14 @@
 - Ensured sensitive environment files are excluded from version control
 - Standardized ignore patterns for consistency across environments
 
+### code-quality-setup
+
+- Introduced ESLint as the primary linting tool for code quality enforcement
+- Configured ESLint using modern flat config approach
+- Added Prettier to handle consistent code formatting
+- Integrated Prettier with ESLint to avoid rule conflicts
+- Ensured support for multiple file types (JS, JSON, CSS, Markdown)
+
 ---
 
 ## Observations
@@ -39,3 +47,6 @@
 - keeping structure minimal now allows flexible architecture later
 - proper `.gitignore` setup is critical for repository hygiene and security
 - small configuration decisions can prevent large future issues
+- consistent code quality requires both linting and formatting tools
+- separating concerns (ESLint vs Prettier) improves maintainability
+- early setup of code standards prevents technical debt
