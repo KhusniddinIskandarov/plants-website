@@ -128,3 +128,19 @@ Notes:
 
 - documentation reflects complete setup phase history
 - serves as reference for future development phases
+
+---
+
+### release/v0.1.0
+
+Completed:
+
+- bumped version to 0.1.0 in package.json
+- finalized CHANGELOG for v0.1.0 release
+- added version badge to README and README-short
+
+Notes:
+
+- first stable foundation release
+- marks completion of setup phase
+- prepares repository for architecture phase
