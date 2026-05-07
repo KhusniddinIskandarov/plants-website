@@ -1,10 +1,12 @@
 # 🌱 Plant Website
 
+[![v0.1.0](https://img.shields.io/badge/version-v0.1.0-green)](./docs/CHANGELOG.md)
+
 A modern frontend project built with a structured Git workflow and incremental architecture-driven development.
 
 ---
 
-## Project Vision
+## 📌 Project Vision
 
 This repository is designed to practice and demonstrate:
 
@@ -16,17 +18,17 @@ This repository is designed to practice and demonstrate:
 
 ---
 
-## Tech Stack
+## 🧱 Tech Stack
 
-- Vite (build tool)
-- TailwindCSS (utility-first styling)
-- JavaScript (ESM, vanilla approach)
+- ⚡ Vite (build tool)
+- 🎨 TailwindCSS (utility-first styling)
+- 🟨 JavaScript (ESM, vanilla approach)
 - ESLint + Prettier (code quality)
 - Husky + lint-staged (git automation)
 
 ---
 
-## Development Workflow
+## 🔧 Development Workflow
 
 - `main` → stable production-ready code
 - `develop` → integration branch
@@ -36,19 +38,21 @@ This repository is designed to practice and demonstrate:
 
 ---
 
-## Current Status
+## 📊 Current Status
 
 Setup phase complete:
 
-- Vite + TailwindCSS setup
-- ESLint + Prettier configuration
-- Husky + lint-staged automation
-- HTML head (SEO + performance)
-- Documentation foundation
+**v0.1.0** — Foundation complete
+
+- ✅ Vite + TailwindCSS setup
+- ✅ ESLint + Prettier configuration
+- ✅ Husky + lint-staged automation
+- ✅ HTML head (SEO + performance)
+- ✅ Documentation foundation
 
 ---
 
-## Documentation
+## 📚 Documentation
 
 | Document                                  | Description                                  |
 | ----------------------------------------- | -------------------------------------------- |
@@ -62,12 +66,12 @@ Setup phase complete:
 
 ---
 
-## Author
+## 👨‍💻 Author
 
 **Khusniddin Iskandarov** · [GitHub](https://github.com/KhusniddinIskandarov)
 
 ---
 
-## License
+## 📄 License
 
 MIT — see [LICENSE.md](./LICENSE.md)
