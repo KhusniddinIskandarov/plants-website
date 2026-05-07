@@ -1,72 +1,77 @@
 # 🌱 Plant Website
 
-A frontend project being built incrementally using a structured Git workflow.
+[![v0.1.0](https://img.shields.io/badge/version-v0.1.0-green)](./docs/CHANGELOG.md)
+
+A modern frontend project built with a structured Git workflow and incremental architecture-driven development.
 
 ---
 
-## Project Vision
+## 📌 Project Vision
 
-This repository is used to practice and document:
+This repository is designed to practice and demonstrate:
 
-- scalable frontend workflow
-- feature branch development
+- scalable frontend architecture
+- feature-branch workflow (Git-based development)
 - documentation-driven engineering
-- gradual architecture evolution
+- incremental system design
+- real-world frontend tooling setup
 
 ---
 
-## Planned Stack
+## 🧱 Tech Stack
 
-(Planned — subject to implementation)
-
-- Vite
-- TailwindCSS
-- Vanilla JavaScript
-
----
-
-## Workflow
-
-Branches planned:
-
-- main
-- develop
-- feature/\*
-- release/\*
-
-Detailed workflow will evolve during development.
+- ⚡ Vite (build tool)
+- 🎨 TailwindCSS (utility-first styling)
+- 🟨 JavaScript (ESM, vanilla approach)
+- ESLint + Prettier (code quality)
+- Husky + lint-staged (git automation)
 
 ---
 
-## Current Status
+## 🔧 Development Workflow
 
-Completed:
-
-- Git repository initialized
-- Initial documentation started
-
-Next:
-
-- Create develop branch
-- Add documentation skeleton files
+- `main` → stable production-ready code
+- `develop` → integration branch
+- `feature/*` → isolated feature development
+- `docs/*` → documentation phase branches
+- `release/*` → version preparation
 
 ---
 
-## Note
+## 📊 Current Status
 
-This repository is intentionally built in phases.
-Documentation and architecture will evolve together with the codebase.
+Setup phase complete:
+
+**v0.1.0** — Foundation complete
+
+- ✅ Vite + TailwindCSS setup
+- ✅ ESLint + Prettier configuration
+- ✅ Husky + lint-staged automation
+- ✅ HTML head (SEO + performance)
+- ✅ Documentation foundation
+
+---
+
+## 📚 Documentation
+
+| Document                                  | Description                                  |
+| ----------------------------------------- | -------------------------------------------- |
+| [SETUP.md](./docs/SETUP.md)               | Project setup guide and phase breakdown      |
+| [ARCHITECTURE.md](./docs/ARCHITECTURE.md) | Architecture decisions and planned structure |
+| [CHANGELOG.md](./docs/CHANGELOG.md)       | Version history and release notes            |
+| [DEVLOG.md](./docs/DEVLOG.md)             | Development progress log                     |
+| [DevNotes.md](./docs/DevNotes.md)         | Technical decisions and engineering notes    |
+| [DEPLOYMENT.md](./docs/DEPLOYMENT.md)     | Deployment strategy and guide                |
+| [LICENSE.md](./LICENSE.md)                | MIT License                                  |
 
 ---
 
 ## 👨‍💻 Author
 
-### Khusniddin Iskandarov
-
-- 🐙 GitHub: [KhusniddinIskandarov](https://github.com/KhusniddinIskandarov)
+**Khusniddin Iskandarov** · [GitHub](https://github.com/KhusniddinIskandarov)
 
 ---
 
 ## 📄 License
 
-MIT License — See [LICENSE.md](./LICENSE.md)
+MIT — see [LICENSE.md](./LICENSE.md)
