@@ -45,6 +45,16 @@ Completed:
 
 ---
 
+### feature/entry-point
+
+- `index.html` updated — app mount point added
+- `index.html` updated — Vite module script connected
+- `main.js` updated — `MainLayout` rendered into `#app`
+- `MainLayout.js` updated — export naming fixed for entry-point rendering
+- Initial DOMContentLoaded app initialization added
+
+---
+
 ## v0.1.0 — Foundation Release
 
 ### Repository initialization

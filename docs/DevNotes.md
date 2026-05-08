@@ -97,6 +97,16 @@
 
 ---
 
+### entry-point
+
+- Established `main.js` as the application entry point
+- Used `#app` in `index.html` as the single DOM mount target
+- Rendered `MainLayout` through the application entry point instead of static HTML
+- Kept runtime initialization limited to layout rendering during the architecture phase
+- Deferred interactive modules to the UX phase to keep branch scope focused
+
+---
+
 ## Observations
 
 - layout separation (`layouts/` vs `components/`) enforces clear architectural boundaries early
