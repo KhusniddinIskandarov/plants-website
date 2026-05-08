@@ -35,6 +35,16 @@ Completed:
 
 ---
 
+### feature/style-foundation
+
+- `src/style.css` removed
+- `src/styles/` folder created
+- `main.css` added — Tailwind entry point and style imports
+- `custom.css` added — base styles, navigation styles, and button styles
+- `main.js` updated — stylesheet import changed to `src/styles/main.css`
+
+---
+
 ## v0.1.0 — Foundation Release
 
 ### Repository initialization
