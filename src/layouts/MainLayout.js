@@ -1,7 +1,7 @@
 import { Header } from './Header'
 import { Footer } from './Footer'
 
-export const MainLayouts = () => {
+export const MainLayout = () => {
   return `
   ${Header()}
   <main id="main">Main Content Here</main>
