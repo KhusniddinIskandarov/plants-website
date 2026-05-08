@@ -145,6 +145,16 @@ Completed:
 
 ---
 
+### release/v0.2.0
+
+- version bumped to `0.2.0` in `package.json`
+- CHANGELOG finalized for v0.2.0
+- version badge updated in README and README-short
+- build verified successfully
+- lint and format checks passed
+
+---
+
 ## Summary
 
 | Layer               | Status |
@@ -161,3 +171,4 @@ Completed:
 | Documentation       | ✔      |
 | Release v0.1.0      | ✔      |
 | Architecture v0.2.0 | ✔      |
+| Release v0.2.0      | ✔      |

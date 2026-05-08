@@ -24,6 +24,7 @@ All notable changes in this project are documented in this file.
 - updated `ARCHITECTURE.md` with the current v0.2.0 project structure
 - updated `DEVLOG.md` with architecture phase progress
 - updated `DevNotes.md` with architecture phase decisions
+- updated deployment documentation to defer deployment until the production phase
 
 ### Removed in v0.2.0
 
@@ -35,7 +36,7 @@ All notable changes in this project are documented in this file.
 
 ---
 
-## 0.1.0 - 2026-05-06
+## v0.1.0 - 2026-05-06
 
 ### Added in v0.1.0
 
@@ -80,8 +81,9 @@ All notable changes in this project are documented in this file.
 
 ## Notes
 
-- v0.2.0 = architecture release (layout, navigation, UI component skeleton, styles, and entry point)
+- v0.2.0 = architecture release (layout, navigation, reusable UI components, style foundation, and app entry point)
 - v0.1.0 = foundation release (tooling + setup only)
 
 - UI sections and interactive behavior are not included yet
+- deployment is intentionally deferred until the production phase
 - future releases will focus on UI sections, UX behavior, and production readiness

@@ -1,6 +1,6 @@
 # 🌱 Plant Website
 
-[![v0.1.0](https://img.shields.io/badge/version-v0.1.0-green)](./docs/CHANGELOG.md)
+[![v0.2.0](https://img.shields.io/badge/version-v0.2.0-green)](./docs/CHANGELOG.md)
 
 A modern frontend project built with a structured Git workflow and incremental architecture-driven development.
 
@@ -40,29 +40,32 @@ This repository is designed to practice and demonstrate:
 
 ## 📊 Current Status
 
-Setup phase complete:
-
-**v0.1.0** — Foundation complete
+**v0.2.0** — Architecture phase complete
 
 - ✅ Vite + TailwindCSS setup
 - ✅ ESLint + Prettier configuration
 - ✅ Husky + lint-staged automation
 - ✅ HTML head (SEO + performance)
 - ✅ Documentation foundation
+- ✅ Layout architecture
+- ✅ Navigation structure
+- ✅ Reusable UI components
+- ✅ Style foundation
+- ✅ Application entry point
 
 ---
 
 ## 📚 Documentation
 
-| Document                                  | Description                                  |
-| ----------------------------------------- | -------------------------------------------- |
-| [SETUP.md](./docs/SETUP.md)               | Project setup guide and phase breakdown      |
-| [ARCHITECTURE.md](./docs/ARCHITECTURE.md) | Architecture decisions and planned structure |
-| [CHANGELOG.md](./docs/CHANGELOG.md)       | Version history and release notes            |
-| [DEVLOG.md](./docs/DEVLOG.md)             | Development progress log                     |
-| [DevNotes.md](./docs/DevNotes.md)         | Technical decisions and engineering notes    |
-| [DEPLOYMENT.md](./docs/DEPLOYMENT.md)     | Deployment strategy and guide                |
-| [LICENSE.md](./LICENSE.md)                | MIT License                                  |
+| Document                                  | Description                                       |
+| ----------------------------------------- | ------------------------------------------------- |
+| [SETUP.md](./docs/SETUP.md)               | Project setup guide and phase breakdown           |
+| [ARCHITECTURE.md](./docs/ARCHITECTURE.md) | Current project architecture and phase boundaries |
+| [CHANGELOG.md](./docs/CHANGELOG.md)       | Version history and release notes                 |
+| [DEVLOG.md](./docs/DEVLOG.md)             | Development progress log                          |
+| [DevNotes.md](./docs/DevNotes.md)         | Technical decisions and engineering notes         |
+| [DEPLOYMENT.md](./docs/DEPLOYMENT.md)     | Deployment strategy and production planning       |
+| [LICENSE.md](./LICENSE.md)                | MIT License                                       |
 
 ---
 
