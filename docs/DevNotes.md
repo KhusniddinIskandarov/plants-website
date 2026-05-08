@@ -19,14 +19,6 @@
 
 ## Decision Notes
 
-### main-layout
-
-- separated layout from components — `layouts/` handles structure, `components/` handles UI
-- `MainLayout.js` acts as a pure wrapper — renders Header, main content area, and Footer
-- `Header.js` and `Footer.js` kept as simple functions returning HTML strings
-- used named exports for Header and Footer, consistent with component pattern
-- `main` content area given `id="main"` for scroll and accessibility targeting later
-
 ### setup-vite-tailwind
 
 - Chose Vite for fast development and modern tooling
@@ -34,11 +26,15 @@
 - Removed default scaffold to keep project clean and controlled
 - Introduced minimal folder structure to avoid early over-engineering
 
+---
+
 ### gitignore-setup
 
 - Introduced comprehensive `.gitignore` rules to prevent unnecessary files from being tracked
 - Ensured sensitive environment files are excluded from version control
 - Standardized ignore patterns for consistency across environments
+
+---
 
 ### code-quality-setup
 
@@ -50,6 +46,8 @@
 - Added `.editorconfig` to standardize editor settings across team
 - Added `.env.example` as a safe template for environment variables
 
+---
+
 ### git-hooks-setup
 
 - Introduced Husky to manage Git hooks in the project
@@ -57,6 +55,8 @@
 - Configured pre-commit hook to automatically run ESLint and Prettier
 - Enforced code quality rules at commit stage
 - Reduced risk of inconsistent or broken code entering repository
+
+---
 
 ### html-head-setup
 
@@ -69,12 +69,31 @@
 
 ---
 
+### main-layout
+
+- separated layout from components — `layouts/` handles structure, `components/` handles UI
+- `MainLayout.js` acts as a pure wrapper — renders Header, main content area, and Footer
+- `Header.js` and `Footer.js` kept as simple functions returning HTML strings
+- used named exports for Header and Footer, consistent with component pattern
+- `main` content area given `id="main"` for scroll and accessibility targeting later
+
+---
+
 ### ui-components
 
 - Introduced reusable UI components for shared interface elements
 - Separated common buttons, social links, and scroll control into dedicated components
 - Kept components simple and markup-focused during the architecture phase
 - Deferred advanced styling and behavior refinements to later feature cycles
+
+---
+
+### style-foundation
+
+- Moved global styling from a single root stylesheet into a dedicated `src/styles/` folder
+- Established `main.css` as the stylesheet entry point
+- Used `custom.css` for project-specific base styles and shared component classes
+- Kept this phase limited to foundation styles to avoid mixing UI section or UX animation work into the architecture phase
 
 ---
 
