@@ -1,146 +1,172 @@
 # Development Log
 
-## Documentation Foundation Milestone
+---
 
-Completed:
+## v0.2.0 — Architecture Phase
 
-- main branch created
-- develop branch created
-- documentation skeleton files added
+### feature/main-layout
+
+- created `src/layouts/` directory
+- added `MainLayout.js` — layout wrapper rendering Header, main, and Footer
+- added `Header.js` — fixed top navigation base structure
+- added `Footer.js` — base footer structure with layout classes
+- fixed export naming: `MainLayouts` → `MainLayout`
 
 ---
 
-## Setup Phase Progress
+### feature/navbar
+
+- `src/components/navigation/` folder created
+- `Navbar.js` added — navigation structure with mobile menu
+- `LeafDecoration.js` added — decorative leaf elements for mobile menu
+- `src/assets/images/leaf-1.png`, `leaf-2.png` added — leaf assets
+- `Header.js` updated — Navbar integrated into header
+
+---
+
+### feature/ui-components
+
+- `src/components/ui/` folder created
+- `Button.js` added — primary and outline button components
+- `SocialNetworks.js` added — social media links component
+- `ScrollUp.js` added — scroll-to-top button component
+
+---
+
+### feature/style-foundation
+
+- `src/style.css` removed
+- `src/styles/` folder created
+- `main.css` added — Tailwind entry point and style imports
+- `custom.css` added — base styles, navigation styles, and button styles
+- `main.js` updated — stylesheet import changed to `src/styles/main.css`
+
+---
+
+### feature/entry-point
+
+- `index.html` updated — app mount point added
+- `index.html` updated — Vite module script connected
+- `main.js` updated — `MainLayout` rendered into `#app`
+- `MainLayout.js` updated — export naming fixed for entry-point rendering
+- Initial DOMContentLoaded app initialization added
+
+---
+
+### docs/architecture-phase
+
+- `ARCHITECTURE.md` updated — current v0.2.0 project architecture documented
+- Architecture history preserved with v0.1.0 foundation summary
+- Architecture phase boundaries clarified
+- Next UI phase scope documented
+
+---
+
+### release/v0.2.0
+
+- version bumped to `0.2.0` in `package.json`
+- CHANGELOG finalized for v0.2.0
+- version badge updated in README and README-short
+- build verified successfully
+- lint and format checks passed
+
+---
+
+## v0.1.0 — Foundation Release
+
+### Repository initialization
+
+- `main` and `develop` branches created
+- documentation system established
+
+---
 
 ### feature/setup-vite-tailwind
 
-Completed:
-
-- initialized Vite project
-- integrated TailwindCSS
-- removed default starter scaffold
-- created base folder structure
-- configured path alias (@ → /src)
-- verified development server and build process
-
-Notes:
-
-- foundation for scalable frontend project established
-- ready for further tooling setup (linting, hooks, etc.)
+- Vite project initialized
+- TailwindCSS integrated
+- Default scaffold removed
+- Folder structure created
+- Path alias configured (`@` → `/src`)
 
 ---
 
 ### feature/gitignore-setup
 
-Completed:
-
-- added and refined `.gitignore` configuration
-- excluded dependency directories (`node_modules/`)
-- excluded build outputs (`dist/`, `dist-ssr/`, `build/`)
-- ignored environment files (`.env`, `.env.*`, `.env*.local`)
-- added rules for logs and debug files
-- configured editor-specific ignore rules
-- helped establish secure baseline for repository setup phase
-
-Notes:
-
-- improved repository cleanliness and maintainability
-- reduced risk of committing sensitive data
-- standardized ignore rules for team collaboration
+- `.gitignore` configured
+- `node_modules/`, `dist/`, `build/` excluded
+- `.env` files protected
+- Editor-specific rules added
 
 ---
 
 ### feature/code-quality-setup
 
-Completed:
-
-- initialized ESLint with modern flat configuration
-- enabled linting for JavaScript, JSON, CSS, and Markdown
-- configured browser environment and ESM modules
-- added Prettier for consistent code formatting
-- integrated Prettier with ESLint using `eslint-config-prettier`
-- added `.editorconfig` for consistent editor behavior
-- added `.env` and `.env.example` for environment variable management
-- moved `eslint-config-prettier` to devDependencies
-- added lint and format scripts to `package.json`
-
-Notes:
-
-- established code quality standards across the project
-- reduced risk of inconsistent formatting and linting conflicts
-- prepared foundation for automated code checks (git hooks)
+- ESLint initialized with modern flat config
+- JS, JSON, CSS, Markdown linting enabled
+- browser environment and ESM modules configured
+- Prettier integrated for consistent formatting
+- ESLint + Prettier connected via `eslint-config-prettier`
+- `.editorconfig` added for cross-editor consistency
+- `.env` and `.env.example` added for environment variable management
+- lint and format scripts added to `package.json`
 
 ---
 
 ### feature/git-hooks-setup
 
-Completed:
-
-- installed Husky for managing Git hooks
-- initialized `.husky` directory for hook definitions
-- added lint-staged for processing staged files
-- configured lint-staged to run ESLint and Prettier
-- implemented pre-commit hook to enforce code quality checks before commits
-
-Notes:
-
-- introduced automated code quality enforcement layer
-- ensures only properly formatted and linted code is committed
-- reduces manual checking and improves development workflow
+- Husky initialized, `.husky/` directory created
+- lint-staged configured for staged file processing
+- pre-commit hook implemented — runs ESLint + Prettier automatically
 
 ---
 
 ### feature/html-head-setup
 
-Completed:
-
-- added `favicon.ico` and `preview.png` to public directory
-- configured essential meta tags (charset, viewport, compatibility)
-- added SEO meta tags (description, keywords, author, robots)
-- defined canonical URL for search engine consistency
-- implemented Open Graph meta tags for social sharing
-- added Twitter card metadata
-- configured favicon and theme color
-- optimized font loading using preconnect
-- integrated Google Fonts (Jost, Lobster)
-- added icon libraries (Font Awesome, Remix Icon)
-- connected main stylesheet
-
-Notes:
-
-- established SEO and social sharing foundation
-- improved performance through resource optimization
-- ensured consistent branding and metadata structure
-- prepared project for better visibility in search engines and social platforms
+- `favicon.ico` and `preview.png` added to `public/`
+- essential meta tags configured (charset, viewport, compatibility)
+- SEO meta tags added (description, keywords, author, robots)
+- canonical URL defined
+- Open Graph and Twitter card metadata implemented
+- favicon and theme color configured
+- preconnect optimization applied for font loading
+- Google Fonts integrated (Jost, Lobster)
+- icon libraries added (Font Awesome, Remix Icon)
+- main stylesheet connected
 
 ---
 
 ### docs/setup-phase
 
-Completed:
-
-- consolidated all setup phase documentation
-- finalized SETUP.md, ARCHITECTURE.md, DEVLOG.md, DevNotes.md
-- recorded all decisions and reasoning
-- prepared release structure for v0.1.0
-
-Notes:
-
-- documentation reflects complete setup phase history
-- serves as reference for future development phases
+- all setup phase documentation consolidated
+- SETUP.md, ARCHITECTURE.md, DEVLOG.md, DevNotes.md finalized
+- all decisions and reasoning recorded
+- release structure prepared for v0.1.0
 
 ---
 
 ### release/v0.1.0
 
-Completed:
+- version bumped to `0.1.0` in `package.json`
+- CHANGELOG finalized for v0.1.0
+- version badge added to README and README-short
 
-- bumped version to 0.1.0 in package.json
-- finalized CHANGELOG for v0.1.0 release
-- added version badge to README and README-short
+---
 
-Notes:
+## Summary
 
-- first stable foundation release
-- marks completion of setup phase
-- prepares repository for architecture phase
+| Layer               | Status |
+| ------------------- | ------ |
+| Tooling             | ✔      |
+| Code quality        | ✔      |
+| Git automation      | ✔      |
+| HTML foundation     | ✔      |
+| Layout structure    | ✔      |
+| Navigation layer    | ✔      |
+| UI components       | ✔      |
+| Style foundation    | ✔      |
+| Entry point         | ✔      |
+| Documentation       | ✔      |
+| Release v0.1.0      | ✔      |
+| Architecture v0.2.0 | ✔      |
+| Release v0.2.0      | ✔      |
