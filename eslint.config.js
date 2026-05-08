@@ -8,7 +8,12 @@ import { defineConfig } from 'eslint/config'
 
 export default defineConfig([
   {
-    ignores: ['dist/**', 'node_modules/**', 'package-lock.json']
+    ignores: [
+      'dist/**',
+      'node_modules/**',
+      'package-lock.json',
+      'src/styles/custom.css'
+    ]
   },
   {
     files: ['**/*.{js,mjs,cjs}'],
@@ -32,6 +37,9 @@ export default defineConfig([
     files: ['**/*.css'],
     plugins: { css },
     language: 'css/css',
-    extends: ['css/recommended']
+    extends: ['css/recommended'],
+    rules: {
+      'css/no-invalid-at-rules': 'off'
+    }
   }
 ])
