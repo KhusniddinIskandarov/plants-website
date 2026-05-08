@@ -55,45 +55,44 @@ Completed:
 
 ---
 
+### docs/architecture-phase
+
+- `ARCHITECTURE.md` updated — current v0.2.0 project architecture documented
+- Architecture history preserved with v0.1.0 foundation summary
+- Architecture phase boundaries clarified
+- Next UI phase scope documented
+
+---
+
 ## v0.1.0 — Foundation Release
 
 ### Repository initialization
 
-Completed:
-
 - `main` and `develop` branches created
-- documentation system established (README, DEVLOG, DevNotes, SETUP, ARCHITECTURE, CHANGELOG, DEPLOYMENT)
+- documentation system established
 
 ---
 
 ### feature/setup-vite-tailwind
 
-Completed:
-
 - Vite project initialized
 - TailwindCSS integrated
-- default scaffold removed, clean structure established
-- base folder structure created
-- path alias configured (`@` → `/src`)
-- development server and build process verified
+- Default scaffold removed
+- Folder structure created
+- Path alias configured (`@` → `/src`)
 
 ---
 
 ### feature/gitignore-setup
 
-Completed:
-
 - `.gitignore` configured
-- `node_modules/`, `dist/`, `dist-ssr/`, `build/` excluded
-- `.env`, `.env.*`, `.env*.local` files protected
-- log and debug file rules added
-- editor-specific ignore rules configured
+- `node_modules/`, `dist/`, `build/` excluded
+- `.env` files protected
+- Editor-specific rules added
 
 ---
 
 ### feature/code-quality-setup
-
-Completed:
 
 - ESLint initialized with modern flat config
 - JS, JSON, CSS, Markdown linting enabled
@@ -108,8 +107,6 @@ Completed:
 
 ### feature/git-hooks-setup
 
-Completed:
-
 - Husky initialized, `.husky/` directory created
 - lint-staged configured for staged file processing
 - pre-commit hook implemented — runs ESLint + Prettier automatically
@@ -117,8 +114,6 @@ Completed:
 ---
 
 ### feature/html-head-setup
-
-Completed:
 
 - `favicon.ico` and `preview.png` added to `public/`
 - essential meta tags configured (charset, viewport, compatibility)
@@ -135,8 +130,6 @@ Completed:
 
 ### docs/setup-phase
 
-Completed:
-
 - all setup phase documentation consolidated
 - SETUP.md, ARCHITECTURE.md, DEVLOG.md, DevNotes.md finalized
 - all decisions and reasoning recorded
@@ -146,8 +139,6 @@ Completed:
 
 ### release/v0.1.0
 
-Completed:
-
 - version bumped to `0.1.0` in `package.json`
 - CHANGELOG finalized for v0.1.0
 - version badge added to README and README-short
@@ -156,14 +147,17 @@ Completed:
 
 ## Summary
 
-| Phase           | Branch                      | Status |
-| --------------- | --------------------------- | ------ |
-| Initialization  | main / develop              | ✅     |
-| Vite + Tailwind | feature/setup-vite-tailwind | ✅     |
-| Git hygiene     | feature/gitignore-setup     | ✅     |
-| Code quality    | feature/code-quality-setup  | ✅     |
-| Git automation  | feature/git-hooks-setup     | ✅     |
-| HTML foundation | feature/html-head-setup     | ✅     |
-| Documentation   | docs/setup-phase            | ✅     |
-| Release v0.1.0  | release/v0.1.0              | ✅     |
-| Main layout     | feature/main-layout         | 🔄     |
+| Layer               | Status |
+| ------------------- | ------ |
+| Tooling             | ✔      |
+| Code quality        | ✔      |
+| Git automation      | ✔      |
+| HTML foundation     | ✔      |
+| Layout structure    | ✔      |
+| Navigation layer    | ✔      |
+| UI components       | ✔      |
+| Style foundation    | ✔      |
+| Entry point         | ✔      |
+| Documentation       | ✔      |
+| Release v0.1.0      | ✔      |
+| Architecture v0.2.0 | ✔      |
