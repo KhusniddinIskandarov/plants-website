@@ -26,6 +26,15 @@ Completed:
 
 ---
 
+### feature/ui-components
+
+- `src/components/ui/` folder created
+- `Button.js` added — primary and outline button components
+- `SocialNetworks.js` added — social media links component
+- `ScrollUp.js` added — scroll-to-top button component
+
+---
+
 ## v0.1.0 — Foundation Release
 
 ### Repository initialization
