@@ -11,13 +11,21 @@
 
 ## Open Questions
 
-- what will be final architecture structure?
+- ~~what will be final architecture structure?~~ → resolving in v0.2.0
 - which deployment platform will be used later?
 - how will scaling strategy evolve after v0.1.0?
 
 ---
 
 ## Decision Notes
+
+### main-layout
+
+- separated layout from components — `layouts/` handles structure, `components/` handles UI
+- `MainLayout.js` acts as a pure wrapper — renders Header, main content area, and Footer
+- `Header.js` and `Footer.js` kept as simple functions returning HTML strings
+- used named exports for Header and Footer, consistent with component pattern
+- `main` content area given `id="main"` for scroll and accessibility targeting later
 
 ### setup-vite-tailwind
 
@@ -63,6 +71,8 @@
 
 ## Observations
 
+- layout separation (`layouts/` vs `components/`) enforces clear architectural boundaries early
+- keeping layout components as simple functions avoids unnecessary abstraction
 - setup phase is not about UI, but about foundation quality
 - early decisions will directly affect scalability
 - keeping structure minimal now allows flexible architecture later
@@ -85,6 +95,7 @@
 - Git workflow + documentation = predictable development flow
 - HTML head standardization improves SEO and performance early
 - small decisions compound into large architectural impact
+- `layouts/` vs `components/` separation = clear structural boundary from the start
 
 ---
 
