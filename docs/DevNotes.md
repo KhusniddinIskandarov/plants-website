@@ -69,6 +69,15 @@
 
 ---
 
+### ui-components
+
+- Introduced reusable UI components for shared interface elements
+- Separated common buttons, social links, and scroll control into dedicated components
+- Kept components simple and markup-focused during the architecture phase
+- Deferred advanced styling and behavior refinements to later feature cycles
+
+---
+
 ## Observations
 
 - layout separation (`layouts/` vs `components/`) enforces clear architectural boundaries early
