@@ -16,6 +16,16 @@ Completed:
 
 ---
 
+### feature/navbar
+
+- `src/components/navigation/` folder created
+- `Navbar.js` added — navigation structure with mobile menu
+- `LeafDecoration.js` added — decorative leaf elements for mobile menu
+- `src/assets/images/leaf-1.png`, `leaf-2.png` added — leaf assets
+- `Header.js` updated — Navbar integrated into header
+
+---
+
 ## v0.1.0 — Foundation Release
 
 ### Repository initialization
