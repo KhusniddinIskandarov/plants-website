@@ -1,6 +1,10 @@
-# Developer Notes
+# 🧠 Developer Notes
 
-## Current Ideas
+This file tracks decisions, reasoning, and architectural thinking behind the project.
+
+---
+
+## 💡 Current Ideas
 
 - follow documentation-driven workflow
 - keep commits and branches small and focused
@@ -9,15 +13,14 @@
 
 ---
 
-## Open Questions
+## ❓ Open Questions
 
-- ~~what will be final architecture structure?~~ → resolving in v0.2.0
-- which deployment platform will be used later?
-- how will scaling strategy evolve after v0.1.0?
+- how will scaling strategy evolve after v0.2.0?
+- how will UI sections be organized during the UI phase?
 
 ---
 
-## Decision Notes
+## ⚙️ Decision Notes
 
 ### setup-vite-tailwind
 
@@ -107,36 +110,42 @@
 
 ---
 
-## Observations
+### architecture-phase
 
-- layout separation (`layouts/` vs `components/`) enforces clear architectural boundaries early
-- keeping layout components as simple functions avoids unnecessary abstraction
-- setup phase is not about UI, but about foundation quality
-- early decisions will directly affect scalability
-- keeping structure minimal now allows flexible architecture later
-- proper `.gitignore` setup is critical for repository hygiene and security
-- small configuration decisions can prevent large future issues
-- consistent code quality requires both linting and formatting tools
-- separating concerns (ESLint vs Prettier) improves maintainability
-- early setup of code standards prevents technical debt
-- automation of code checks significantly improves consistency
-- enforcing rules at commit stage prevents bad code from entering the repository
-- combining linting and hooks creates a reliable development workflow
-- properly structured HTML head improves SEO, performance, and sharing experience
+- Consolidated the architecture phase documentation after completing all v0.2.0 feature branches
+- Documented the current project structure in `ARCHITECTURE.md`
+- Preserved v0.1.0 foundation decisions as architecture history instead of mixing them with the current state
+- Clarified that UI sections, animations, scroll behavior, swiper integration, and deployment are outside the v0.2.0 scope
 
 ---
 
-## Key Takeaways
+## 📊 Architectural Insights
+
+- The setup phase is not about UI, but about building a reliable foundation.
+- Early architectural decisions directly affect long-term scalability.
+- Keeping the initial structure minimal allows the architecture to evolve flexibly.
+- Separating layouts, navigation, UI components, styles, and the entry point keeps future work focused.
+- Clear boundaries between `layouts/` and `components/` improve maintainability.
+- Simple function-based layout components avoid unnecessary abstraction at this stage.
+- Proper `.gitignore` configuration is important for repository hygiene and security.
+- Separating ESLint and Prettier responsibilities makes code quality easier to maintain.
+- Commit-stage automation helps prevent inconsistent code from entering the repository.
+- Structured HTML metadata improves SEO, performance, and sharing behavior.
+
+---
+
+## 🧠 Key Takeaways
 
 - ESLint + Prettier = code consistency layer
 - Husky + lint-staged = quality gate at commit level
 - Git workflow + documentation = predictable development flow
 - HTML head standardization improves SEO and performance early
+- layout + component separation creates a clearer UI foundation
+- dedicated style entry points make future styling easier to manage
 - small decisions compound into large architectural impact
-- `layouts/` vs `components/` separation = clear structural boundary from the start
 
 ---
 
-## Engineering Principle
+## 🚀 Engineering Principle
 
 > "Stability is not built at the end — it is enforced at every commit."
