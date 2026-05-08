@@ -119,6 +119,14 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ---
 
+### release/v0.2.0
+
+- confirmed version bump to `0.2.0` follows SemVer conventions
+- verified build, lint, and format checks before release
+- README and CHANGELOG updated to reflect architecture phase completion
+
+---
+
 ## 📊 Architectural Insights
 
 - The setup phase is not about UI, but about building a reliable foundation.
