@@ -6,8 +6,6 @@
 
 ### feature/main-layout
 
-Completed:
-
 - created `src/layouts/` directory
 - added `MainLayout.js` — layout wrapper rendering Header, main, and Footer
 - added `Header.js` — fixed top navigation base structure
@@ -61,6 +59,16 @@ Completed:
 - Architecture history preserved with v0.1.0 foundation summary
 - Architecture phase boundaries clarified
 - Next UI phase scope documented
+
+---
+
+### release/v0.2.0
+
+- version bumped to `0.2.0` in `package.json`
+- CHANGELOG finalized for v0.2.0
+- version badge updated in README and README-short
+- build verified successfully
+- lint and format checks passed
 
 ---
 
@@ -161,3 +169,4 @@ Completed:
 | Documentation       | ✔      |
 | Release v0.1.0      | ✔      |
 | Architecture v0.2.0 | ✔      |
+| Release v0.2.0      | ✔      |
