@@ -56,3 +56,37 @@ h3 {
 .btn_outline:hover {
   @apply bg-yellow-500;
 }
+
+/* feature/hero-section */
+/* animate-movingY */
+.animate-movingY {
+  @apply transition-transform;
+  animation: move 3s linear infinite;
+}
+@keyframes move {
+  50% {
+    transform: translateY(-1rem);
+  }
+}
+
+/* animate-rotating */
+.animate-rotating {
+  @apply animate-[spin_15s_linear_infinite];
+}
+
+/* animate-scalingUp */
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+.animate-scalingUp {
+  @apply transform;
+  animation: scaleUp 3s linear infinite;
+}
