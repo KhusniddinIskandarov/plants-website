@@ -2,6 +2,23 @@
 
 ---
 
+## v0.3.0 — UI Phase
+
+### feature/hero-section
+
+- `src/pages/` directory created
+- `src/pages/main/` directory created
+- `src/pages/main/sections/` directory created
+- `src/pages/main/components/` directory created
+- `HeroSection.js` added — hero section with layout, content, image, and social links
+- `DecorativeIcons.js` added — animated leaf, flower, and plant decorative icons
+- `src/assets/images/home.png` added — hero section main image
+- `Index.js` added — page entry point rendering all main sections
+- `MainLayout.js` updated — `Index` integrated, `export const` replaced with `export function`
+- hero-specific animation styles added to `custom.css` — `animate-movingY`, `animate-rotating`, `animate-scalingUp`
+
+---
+
 ## v0.2.0 — Architecture Phase
 
 ### feature/main-layout
@@ -170,3 +187,4 @@
 | Release v0.1.0      | ✔      |
 | Architecture v0.2.0 | ✔      |
 | Release v0.2.0      | ✔      |
+| Hero section        | ✔      |

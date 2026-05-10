@@ -127,6 +127,20 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ---
 
+### hero-section
+
+- Introduced `src/pages/` directory to separate page-level concerns from layout and reusable components
+- Used `src/pages/main/sections/` for page sections and `src/pages/main/components/` for section-specific components
+- `HeroSection.js` uses `export default` — consistent with page-level section pattern
+- `DecorativeIcons.js` kept as a separate component to isolate decorative markup from section logic
+- `Index.js` acts as the page entry point — renders all main sections in order
+- `MainLayout.js` updated to use `export function` for consistency with all other layout and component files
+- images kept in `.png` format during development — format conversion deferred to production phase
+- animation styles added to `custom.css` under `feature/hero-section` comment marker for traceability
+- relative import paths used throughout — no path alias configured in `vite.config.js`
+
+---
+
 ## 📊 Architectural Insights
 
 - The setup phase is not about UI, but about building a reliable foundation.
