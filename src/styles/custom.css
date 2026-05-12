@@ -90,3 +90,8 @@ h3 {
   @apply transform;
   animation: scaleUp 3s linear infinite;
 }
+
+/* feature/about-section */
+.title {
+  @apply font-[Lobster] text-yellow-500;
+}
