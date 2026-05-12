@@ -27,6 +27,16 @@
 
 ---
 
+### feature/about-section
+
+- `AboutSection.js` added — about section with inline `AboutItem` component
+- two about items added with alternating layout (normal and reversed)
+- `plant-1.png`, `plant-2.png`, `leaf-3.png` added — about section image assets
+- `.title` base style added to `custom.css` — shared title style for section headings
+- `Index.js` updated — `AboutSection` integrated into page entry point
+
+---
+
 ## v0.2.0 — Architecture Phase
 
 ### feature/main-layout

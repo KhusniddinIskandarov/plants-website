@@ -150,6 +150,17 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ---
 
+### about-section
+
+- `AboutSection.js` uses `export default` — consistent with page-level section pattern
+- `AboutItem` kept as a private function inside `AboutSection.js` — not exported, only used internally
+- `reverse` parameter used to alternate layout direction — avoids code duplication
+- `index` parameter used for unique BEM class names per item — allows section-specific styling later
+- `.title` style added to `custom.css` — shared across multiple sections, not about-specific
+- images kept in `.png` format — format conversion deferred to production phase
+
+---
+
 ## 📊 Architectural Insights
 
 - The setup phase is not about UI, but about building a reliable foundation.
