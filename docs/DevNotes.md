@@ -141,6 +141,15 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ---
 
+### services-section
+
+- `ServicesSection.js` uses `export default` — consistent with page-level section pattern
+- `ServiceCard` kept as a private function inside `ServicesSection.js` — not exported, only used internally
+- no separate assets needed for this section — icon-based design using Remix Icon library
+- section background set to white (`bg-white`) with dark green text — intentional contrast against dark hero section
+
+---
+
 ## 📊 Architectural Insights
 
 - The setup phase is not about UI, but about building a reliable foundation.
