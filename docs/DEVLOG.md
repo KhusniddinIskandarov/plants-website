@@ -37,6 +37,16 @@
 
 ---
 
+### feature/popular-section
+
+- `PopularSection.js` added — popular plants section with inline `PopularCard` component
+- four plant cards added — Boston Fern, Rubber Plant, Peace Lily, Desert Rose
+- `cart-1.png`, `cart-2.png`, `cart-3.png`, `cart-4.png` added — popular plant image assets
+- `.popular__card:hover img` style added to `custom.css` — card image lift effect on hover
+- `Index.js` updated — `PopularSection` integrated into page entry point
+
+---
+
 ## v0.2.0 — Architecture Phase
 
 ### feature/main-layout
