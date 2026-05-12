@@ -19,6 +19,14 @@
 
 ---
 
+### feature/services-section
+
+- `ServicesSection.js` added — services section with inline `ServiceCard` component
+- four service cards added — Fast Delivery, Customer Service, Original Plants, Affordable Price
+- `Index.js` updated — `ServicesSection` integrated into page entry point
+
+---
+
 ## v0.2.0 — Architecture Phase
 
 ### feature/main-layout
