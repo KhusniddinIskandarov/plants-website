@@ -161,6 +161,17 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ---
 
+### popular-section
+
+- `PopularSection.js` uses `export default` — consistent with page-level section pattern
+- `PopularCard` kept as a private function inside `PopularSection.js` — not exported, only used internally
+- card image hover effect added via CSS — image lifts on card hover using `popular__card:hover img`
+- `mb-40` used in section header to create space for overlapping card images
+- `gap-y-36` used in grid to maintain vertical spacing between cards with overflowing images
+- images kept in `.png` format — format conversion deferred to production phase
+
+---
+
 ## 📊 Architectural Insights
 
 - The setup phase is not about UI, but about building a reliable foundation.
