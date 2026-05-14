@@ -230,6 +230,15 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ---
 
+### active-nav-links
+
+- `scrollActiveLink.js` tracks scroll position against section offsets — updates active class on nav links dynamically
+- `current` defaults to `hero` — ensures first nav link is active on page load before any scrolling
+- offset of `60px` used in section detection — accounts for fixed header height
+- null guard added — prevents errors if sections or nav links are not found in DOM
+
+---
+
 ## 📊 Architectural Insights
 
 - The setup phase is not about UI, but about building a reliable foundation.

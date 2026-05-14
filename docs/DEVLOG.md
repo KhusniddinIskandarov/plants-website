@@ -13,6 +13,13 @@
 
 ---
 
+### feature/active-nav-links
+
+- `scrollActiveLink.js` added — scroll-based active navigation link tracking
+- `main.js` updated — `initActiveLink` integrated into app entry
+
+---
+
 ## v0.3.0 — UI Phase
 
 ### hotfix/navbar-pointer-events
