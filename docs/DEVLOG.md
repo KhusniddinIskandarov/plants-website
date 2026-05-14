@@ -47,6 +47,18 @@
 
 ---
 
+### feature/review-section
+
+- `ReviewSection.js` added — customer review section with inline `ReviewCard` component
+- four review cards added with reviewer avatar images
+- `review-1.jpg`, `review-2.jpg`, `review-3.jpg`, `review-4.jpg` added — reviewer avatar assets
+- `leaf-4.png` added — leaf decoration asset for review section
+- swiper pagination styles added to `custom.css` — custom bullet size and color
+- `Index.js` updated — `ReviewSection` integrated into page entry point
+- swiper library integration deferred to UX phase
+
+---
+
 ## v0.2.0 — Architecture Phase
 
 ### feature/main-layout
