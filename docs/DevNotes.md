@@ -219,6 +219,17 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ---
 
+### scroll-header
+
+- `src/modules/` directory introduced — separates interactive behavior from layout and components
+- `navbarController.js` handles hamburger toggle and nav link click — closes menu on link click for better UX
+- `scrollHeader.js` adds border effect on scroll — visual feedback for sticky header position
+- null guards added to both modules — prevents errors if elements are not found in DOM
+- modules initialized inside `initApp` after `app.innerHTML = MainLayout()` — ensures DOM is ready before querying elements
+- interactive modules intentionally deferred from architecture phase — added now as UX phase begins
+
+---
+
 ## 📊 Architectural Insights
 
 - The setup phase is not about UI, but about building a reliable foundation.

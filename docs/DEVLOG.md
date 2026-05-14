@@ -2,6 +2,17 @@
 
 ---
 
+## v0.4.0 — UX Phase
+
+### feature/scroll-header
+
+- `src/modules/` directory created
+- `navbarController.js` added — hamburger menu toggle and nav link click handlers
+- `scrollHeader.js` added — scroll-based header border effect
+- `main.js` updated — `initNavbarController` and `initScrollHeader` integrated into app entry
+
+---
+
 ## v0.3.0 — UI Phase
 
 ### hotfix/navbar-pointer-events
