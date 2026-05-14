@@ -183,6 +183,19 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ---
 
+### footer-section
+
+- `src/components/footer/` directory created — footer-specific components separated from shared UI components
+- footer sub-components kept small and focused — each component handles one responsibility
+- `NewsletterForm.js` placed in `src/pages/main/components/` — page-specific component, not shared
+- `SocialIcons.js` reuses `SocialNetworks` component from shared UI layer — avoids duplication
+- `FloralDecoration.js` uses `pointer-events-none` — prevents decoration from blocking interactions
+- `ScrollUp` button kept hidden via `-bottom-1/2` — show/hide behavior deferred to UX phase
+- `Footer.js` updated to integrate all sub-components — layout wrapper pattern consistent with architecture phase
+- images kept in `.png` format — format conversion deferred to production phase
+
+---
+
 ## 📊 Architectural Insights
 
 - The setup phase is not about UI, but about building a reliable foundation.
