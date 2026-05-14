@@ -4,6 +4,14 @@
 
 ## v0.3.0 — UI Phase
 
+### hotfix/navbar-pointer-events
+
+- `Navbar.js` updated — fixed `#nav-menu` overflow issue blocking page interactions on desktop
+- added `lg:h-auto`, `lg:w-auto`, `lg:py-0`, `lg:overflow-visible` to nav-menu — menu collapses to content size on desktop
+- `LeafDecoration.js` updated — fixed import paths from `/src/assets/` to relative `../../assets/`
+
+---
+
 ### feature/hero-section
 
 - `src/pages/` directory created
