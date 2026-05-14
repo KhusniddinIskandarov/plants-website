@@ -1,5 +1,7 @@
 import './styles/main.css'
 import { MainLayout } from './layouts/MainLayout'
+import { initNavbarController } from './modules/navbarController'
+import { initScrollHeader } from './modules/scrollHeader'
 
 function initApp() {
   const app = document.querySelector('#app')
@@ -10,6 +12,9 @@ function initApp() {
   }
 
   app.innerHTML = MainLayout()
+
+  initNavbarController()
+  initScrollHeader()
 }
 
 window.addEventListener('DOMContentLoaded', initApp)
