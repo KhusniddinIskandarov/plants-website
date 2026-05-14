@@ -2,6 +2,92 @@
 
 ---
 
+## v0.3.0 — UI Phase
+
+### feature/hero-section
+
+- `src/pages/` directory created
+- `src/pages/main/` directory created
+- `src/pages/main/sections/` directory created
+- `src/pages/main/components/` directory created
+- `HeroSection.js` added — hero section with layout, content, image, and social links
+- `DecorativeIcons.js` added — animated leaf, flower, and plant decorative icons
+- `src/assets/images/home.png` added — hero section main image
+- `Index.js` added — page entry point rendering all main sections
+- `MainLayout.js` updated — `Index` integrated, `export const` replaced with `export function`
+- hero-specific animation styles added to `custom.css` — `animate-movingY`, `animate-rotating`, `animate-scalingUp`
+
+---
+
+### feature/services-section
+
+- `ServicesSection.js` added — services section with inline `ServiceCard` component
+- four service cards added — Fast Delivery, Customer Service, Original Plants, Affordable Price
+- `Index.js` updated — `ServicesSection` integrated into page entry point
+
+---
+
+### feature/about-section
+
+- `AboutSection.js` added — about section with inline `AboutItem` component
+- two about items added with alternating layout (normal and reversed)
+- `plant-1.png`, `plant-2.png`, `leaf-3.png` added — about section image assets
+- `.title` base style added to `custom.css` — shared title style for section headings
+- `Index.js` updated — `AboutSection` integrated into page entry point
+
+---
+
+### feature/popular-section
+
+- `PopularSection.js` added — popular plants section with inline `PopularCard` component
+- four plant cards added — Boston Fern, Rubber Plant, Peace Lily, Desert Rose
+- `cart-1.png`, `cart-2.png`, `cart-3.png`, `cart-4.png` added — popular plant image assets
+- `.popular__card:hover img` style added to `custom.css` — card image lift effect on hover
+- `Index.js` updated — `PopularSection` integrated into page entry point
+
+---
+
+### feature/review-section
+
+- `ReviewSection.js` added — customer review section with inline `ReviewCard` component
+- four review cards added with reviewer avatar images
+- `review-1.jpg`, `review-2.jpg`, `review-3.jpg`, `review-4.jpg` added — reviewer avatar assets
+- `leaf-4.png` added — leaf decoration asset for review section
+- swiper pagination styles added to `custom.css` — custom bullet size and color
+- `Index.js` updated — `ReviewSection` integrated into page entry point
+- swiper library integration deferred to UX phase
+
+---
+
+### feature/footer-section
+
+- `src/components/footer/` directory created
+- `FooterLogo.js` added — footer logo component
+- `FooterLinks.js` added — quick links and popular services columns
+- `ContactInfo.js` added — contact details component
+- `Copyright.js` added — copyright notice component
+- `FloralDecoration.js` added — floral decoration image component
+- `SocialIcons.js` added — social icons with divider component
+- `NewsletterForm.js` added — newsletter subscription form component
+- `floral-1.png` added — floral decoration image asset
+- `Footer.js` updated — all footer components integrated
+
+---
+
+### docs/ui-phase
+
+- `ARCHITECTURE.md` updated — current v0.3.0 project structure documented
+- folder structure updated with all new directories and files
+- page structure section added — sections, page entry point, page-specific components
+- component strategy updated — footer sub-components layer added
+- styling strategy updated — custom.css section markers documented
+- export conventions table added
+- phase boundaries updated — UI phase scope documented
+- architecture history updated — v0.2.0 summary added
+- next phase updated — v0.4.0 UX phase scope listed
+
+---
+
 ## v0.2.0 — Architecture Phase
 
 ### feature/main-layout
@@ -170,3 +256,4 @@
 | Release v0.1.0      | ✔      |
 | Architecture v0.2.0 | ✔      |
 | Release v0.2.0      | ✔      |
+| Hero section        | ✔      |

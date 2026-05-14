@@ -1,10 +1,11 @@
 import { Header } from './Header'
 import { Footer } from './Footer'
+import { Index } from '../pages/main/Index'
 
-export const MainLayout = () => {
+export function MainLayout() {
   return `
   ${Header()}
-  <main id="main">Main Content Here</main>
+  ${Index()}
   ${Footer()}
   `
 }
