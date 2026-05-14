@@ -4,7 +4,7 @@ All notable changes in this project are documented in this file.
 
 ---
 
-## Unreleased — v0.3.0 (UI Phase)
+## v0.3.0 - 2026-05-14
 
 ### Added in v0.3.0
 
