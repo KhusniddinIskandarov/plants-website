@@ -127,6 +127,15 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ---
 
+### hotfix/navbar-pointer-events
+
+- `#nav-menu` on desktop was taking full width and height of the page — blocking hover and click interactions on sections below
+- root cause: missing `lg:h-auto`, `lg:w-auto`, `lg:py-0`, `lg:overflow-visible` — menu was not collapsing to content size on desktop
+- fix: added explicit reset classes for lg breakpoint — menu now collapses to its content dimensions
+- `LeafDecoration.js` had absolute import paths (`/src/assets/`) — replaced with relative paths (`../../assets/`) for consistency
+
+---
+
 ### hero-section
 
 - Introduced `src/pages/` directory to separate page-level concerns from layout and reusable components
