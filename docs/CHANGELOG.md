@@ -4,6 +4,42 @@ All notable changes in this project are documented in this file.
 
 ---
 
+## Unreleased — v0.3.0 (UI Phase)
+
+### Added in v0.3.0
+
+- added `src/pages/main/sections/` directory for page-level sections
+- added `src/pages/main/components/` directory for page-specific components
+- added `src/components/footer/` directory for footer sub-components
+- added `HeroSection.js` — hero section with decorative icons and social links
+- added `DecorativeIcons.js` — animated leaf, flower and plant decorative icons
+- added `ServicesSection.js` — services section with inline ServiceCard component
+- added `AboutSection.js` — about section with inline AboutItem component
+- added `PopularSection.js` — popular plants section with inline PopularCard component
+- added `ReviewSection.js` — customer review section with swiper structure
+- added `FooterLogo.js`, `FooterLinks.js`, `ContactInfo.js`, `Copyright.js`
+- added `FloralDecoration.js`, `SocialIcons.js` footer sub-components
+- added `NewsletterForm.js` — newsletter subscription form
+- added `Index.js` — page entry point rendering all main sections
+- added hero animation styles to `custom.css` — movingY, rotating, scalingUp
+- added `.title` shared style to `custom.css`
+- added popular card hover style to `custom.css`
+- added swiper pagination styles to `custom.css`
+- added image assets — home.png, plant-1.png, plant-2.png, leaf-3.png, leaf-4.png
+- added image assets — cart-1.png, cart-2.png, cart-3.png, cart-4.png
+- added image assets — review-1.png, review-2.png, review-3.png, review-4.png, floral-1.png
+
+### Changed in v0.3.0
+
+- updated `MainLayout.js` — integrated `Index` page entry point
+- updated `MainLayout.js` — replaced `export const` with `export function`
+- updated `Footer.js` — integrated all footer sub-components
+- updated `ARCHITECTURE.md` with current v0.3.0 project structure
+- updated `DEVLOG.md` with UI phase progress
+- updated `DevNotes.md` with UI phase architectural decisions
+
+---
+
 ## v0.2.0 - 2026-05-08
 
 ### Added in v0.2.0
@@ -68,22 +104,11 @@ All notable changes in this project are documented in this file.
 
 ---
 
-## Next Cycle (v0.3.0 — UI Phase)
-
-- build hero section
-- build services section
-- build about section
-- build popular plants section
-- build review section
-- build footer section
-
----
-
 ## Notes
 
+- v0.3.0 = UI release (all page sections, footer sub-components, page entry point, section styles)
 - v0.2.0 = architecture release (layout, navigation, reusable UI components, style foundation, and app entry point)
 - v0.1.0 = foundation release (tooling + setup only)
-
-- UI sections and interactive behavior are not included yet
+- interactive behavior and animations are not included yet
 - deployment is intentionally deferred until the production phase
-- future releases will focus on UI sections, UX behavior, and production readiness
+- future releases will focus on UX behavior and production readiness

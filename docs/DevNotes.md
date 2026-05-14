@@ -196,6 +196,20 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ---
 
+### ui-phase
+
+- all UI sections follow `export default function` pattern — consistent page-level section convention
+- private helper functions (ServiceCard, AboutItem, PopularCard, ReviewCard) kept inside their parent section files — not exported, reduces module surface
+- `src/pages/` directory introduced to separate page-level concerns from shared layout and components
+- `src/pages/main/components/` used for page-specific components — DecorativeIcons and NewsletterForm not shared globally
+- `src/components/footer/` introduced for footer sub-components — footer complexity managed through decomposition
+- swiper HTML structure added in ReviewSection — library installation and initialization deferred to UX phase
+- ScrollUp button hidden via `-bottom-1/2` — visibility behavior deferred to UX phase
+- all images kept in `.png` format during UI phase — format optimization deferred to production phase
+- custom.css grows incrementally — each feature branch adds its styles under a named comment block
+
+---
+
 ## 📊 Architectural Insights
 
 - The setup phase is not about UI, but about building a reliable foundation.
