@@ -1,6 +1,6 @@
-# 🌱 Plant Website
+# 🌱 Plants Website
 
-[![v0.2.0](https://img.shields.io/badge/version-v0.2.0-green)](./docs/CHANGELOG.md)
+[![v0.3.0](https://img.shields.io/badge/version-v0.3.0-green)](./docs/CHANGELOG.md)
 
 A modern frontend project built with a structured Git workflow and incremental architecture-driven development.
 
@@ -40,7 +40,7 @@ This repository is designed to practice and demonstrate:
 
 ## 📊 Current Status
 
-**v0.2.0** — Architecture phase complete
+**v0.3.0** — UI phase complete
 
 - ✅ Vite + TailwindCSS setup
 - ✅ ESLint + Prettier configuration
@@ -52,6 +52,12 @@ This repository is designed to practice and demonstrate:
 - ✅ Reusable UI components
 - ✅ Style foundation
 - ✅ Application entry point
+- ✅ Hero section
+- ✅ Services section
+- ✅ About section
+- ✅ Popular plants section
+- ✅ Customer review section
+- ✅ Footer section
 
 ---
 
