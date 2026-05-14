@@ -74,6 +74,20 @@
 
 ---
 
+### docs/ui-phase
+
+- `ARCHITECTURE.md` updated — current v0.3.0 project structure documented
+- folder structure updated with all new directories and files
+- page structure section added — sections, page entry point, page-specific components
+- component strategy updated — footer sub-components layer added
+- styling strategy updated — custom.css section markers documented
+- export conventions table added
+- phase boundaries updated — UI phase scope documented
+- architecture history updated — v0.2.0 summary added
+- next phase updated — v0.4.0 UX phase scope listed
+
+---
+
 ## v0.2.0 — Architecture Phase
 
 ### feature/main-layout
