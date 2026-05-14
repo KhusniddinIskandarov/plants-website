@@ -172,6 +172,17 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ---
 
+### review-section
+
+- `ReviewSection.js` uses `export default` — consistent with page-level section pattern
+- `ReviewCard` kept as a private function inside `ReviewSection.js` — not exported, only used internally
+- swiper HTML structure added — `swiper`, `swiper-wrapper`, `swiper-slide`, `swiper-pagination` classes in place
+- swiper library installation and initialization deferred to UX phase — UI structure ready, behavior comes later
+- swiper pagination styles added to `custom.css` — custom green bullet colors matching project palette
+- images kept in `.jpg` format — format conversion deferred to production phase
+
+---
+
 ## 📊 Architectural Insights
 
 - The setup phase is not about UI, but about building a reliable foundation.
