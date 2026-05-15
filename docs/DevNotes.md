@@ -239,6 +239,14 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ---
 
+### scroll-up-button
+
+- `scrollUp.js` shows scroll-up button after 250px scroll — threshold chosen for comfortable UX
+- button hidden via `-bottom-1/2` by default — shown by swapping to `bottom-4` on scroll
+- null guard added — prevents errors if scroll-up element is not found in DOM
+
+---
+
 ## 📊 Architectural Insights
 
 - The setup phase is not about UI, but about building a reliable foundation.

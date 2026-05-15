@@ -20,6 +20,13 @@
 
 ---
 
+### feature/scroll-up-button
+
+- `scrollUp.js` added — scroll-up button visibility based on scroll position
+- `main.js` updated — `initScrollUp` integrated into app entry
+
+---
+
 ## v0.3.0 — UI Phase
 
 ### hotfix/navbar-pointer-events
