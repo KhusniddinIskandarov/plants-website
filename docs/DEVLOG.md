@@ -54,6 +54,13 @@
 
 ---
 
+### hotfix/navbar-styles
+
+- `custom.css` updated — added `.show-menu` class for mobile menu visibility
+- `custom.css` updated — added `#nav-menu` scrollbar hiding styles for Chrome, Firefox and IE
+
+---
+
 ### feature/hero-section
 
 - `src/pages/` directory created
