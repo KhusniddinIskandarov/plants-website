@@ -4,6 +4,7 @@ import { initNavbarController } from './modules/navbarController'
 import { initScrollHeader } from './modules/scrollHeader'
 import { initActiveLink } from './modules/scrollActiveLink'
 import { initScrollUp } from './modules/scrollUp.js'
+import { initScrollReveal } from './modules/scrollReveal'
 
 function initApp() {
   const app = document.querySelector('#app')
@@ -19,6 +20,7 @@ function initApp() {
   initScrollHeader()
   initActiveLink()
   initScrollUp()
+  initScrollReveal()
 }
 
 window.addEventListener('DOMContentLoaded', initApp)
