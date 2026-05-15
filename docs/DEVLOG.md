@@ -36,6 +36,14 @@
 
 ---
 
+### feature/swiper-integration
+
+- `swiper` package installed
+- `swiper.module.js` added — swiper initialization with pagination and autoplay
+- `main.js` updated — `initSwiperModule` integrated into app entry
+
+---
+
 ## v0.3.0 — UI Phase
 
 ### hotfix/navbar-pointer-events
