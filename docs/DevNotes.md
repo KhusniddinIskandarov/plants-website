@@ -136,6 +136,14 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ---
 
+### hotfix/navbar-styles
+
+- `.show-menu` class added to `custom.css` — controls mobile menu visibility by setting `left: 0`
+- `#nav-menu` scrollbar hidden via CSS — improves mobile menu appearance by hiding the scrollbar while keeping scroll functionality
+- scrollbar hiding applied for all browsers — `-webkit-scrollbar` for Chrome/Safari, `-ms-overflow-style` for IE, `scrollbar-width` for Firefox
+
+---
+
 ### hero-section
 
 - Introduced `src/pages/` directory to separate page-level concerns from layout and reusable components
