@@ -247,6 +247,20 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ---
 
+### scroll-reveal
+
+- `scrollreveal` library used for scroll-based reveal animations — lightweight and easy to configure
+- `reset: false` — elements animate once and stay visible, standard for professional sites
+- `viewFactor: 0.7` — element 70% visible before animation triggers — ensures element is well in view
+- `distance: 80px` — elements travel 80px to their final position — gives a noticeable but smooth effect
+- `duration: 2000ms` — smooth and deliberate animation speed
+- `delay: 300ms` — slight pause before animation starts
+- different reveal directions used per element type — top, left, right for visual variety
+- `interval: 100` used for cards — staggers card animations for a cascading effect
+- `newsletter__form` class added to NewsletterForm — enables scroll reveal targeting without modifying component logic
+
+---
+
 ## 📊 Architectural Insights
 
 - The setup phase is not about UI, but about building a reliable foundation.

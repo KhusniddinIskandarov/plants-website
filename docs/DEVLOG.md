@@ -27,6 +27,15 @@
 
 ---
 
+### feature/scroll-reveal
+
+- `scrollreveal` package installed
+- `scrollReveal.js` added — scroll reveal animations for all major sections and components
+- `NewsletterForm.js` updated — added `newsletter__form` class for scroll reveal targeting
+- `main.js` updated — `initScrollReveal` integrated into app entry
+
+---
+
 ## v0.3.0 — UI Phase
 
 ### hotfix/navbar-pointer-events
