@@ -261,6 +261,19 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ---
 
+### swiper-integration
+
+- `swiper` library installed for review section carousel functionality
+- `Pagination` and `Autoplay` modules imported from swiper — only needed modules loaded, not full bundle
+- `speed: 400` — smooth slide transition speed
+- `spaceBetween: 30` — consistent spacing between slides
+- `autoplay delay: 3000` — 3 second auto-advance, `disableOnInteraction: false` keeps autoplay after user interaction
+- `grabCursor: true` — improves desktop UX with grab cursor on hover
+- breakpoints configured — 1 slide on mobile, 2 on tablet, 3 on desktop
+- swiper CSS imported — `swiper/css` and `swiper/css/pagination` for pagination styles
+
+---
+
 ## 📊 Architectural Insights
 
 - The setup phase is not about UI, but about building a reliable foundation.
