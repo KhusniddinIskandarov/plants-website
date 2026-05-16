@@ -29,6 +29,12 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ## v0.4.0 — UX Phase
 
+### release/v0.4.0
+
+- version bump to 0.4.0 follows SemVer conventions
+- build, lint, format checks passed before release
+- README and CHANGELOG updated to reflect UX phase completion
+
 ### docs/ux-phase
 
 - `src/modules/` directory established as the dedicated layer for all interactive behavior
