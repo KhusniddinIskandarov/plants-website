@@ -10,122 +10,85 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 - keep commits and branches small and focused
 - build project in incremental, testable steps
 - prefer clarity over premature optimization
+- optimize images to webp format in production phase
+- finalize SEO and Open Graph tags before deployment
 
 ---
 
 ## ❓ Open Questions
 
-- how will scaling strategy evolve after v0.2.0?
-- how will UI sections be organized during the UI phase?
+- how will image optimization be handled in the production phase?
+- what deployment platform will be used — Vercel or Netlify?
+- how will Lighthouse 95+ score be achieved?
 
 ---
 
 ## ⚙️ Decision Notes
 
-### setup-vite-tailwind
-
-- Chose Vite for fast development and modern tooling
-- Integrated TailwindCSS for utility-first styling approach
-- Removed default scaffold to keep project clean and controlled
-- Introduced minimal folder structure to avoid early over-engineering
-
 ---
 
-### gitignore-setup
+## v0.4.0 — UX Phase
 
-- Introduced comprehensive `.gitignore` rules to prevent unnecessary files from being tracked
-- Ensured sensitive environment files are excluded from version control
-- Standardized ignore patterns for consistency across environments
+### docs/ux-phase
 
----
+- `src/modules/` directory established as the dedicated layer for all interactive behavior
+- each module follows a consistent `init*` function pattern — predictable and easy to extend
+- all modules initialized in `main.js` after `app.innerHTML = MainLayout()` — guarantees DOM is ready
+- null guards added to all modules — prevents runtime errors if elements are missing
+- `scrollreveal` and `swiper` added as runtime dependencies — both are lightweight and well-maintained
+- interactive behavior intentionally deferred from UI phase — keeps phase boundaries clean
+- `hotfix/navbar-pointer-events` and `hotfix/navbar-styles` addressed missing navbar behavior from earlier phases
 
-### code-quality-setup
+### hotfix/navbar-styles
 
-- Introduced ESLint as the primary linting tool for code quality enforcement
-- Configured ESLint using modern flat config approach
-- Added Prettier to handle consistent code formatting
-- Integrated Prettier with ESLint to avoid rule conflicts
-- Ensured support for multiple file types (JS, JSON, CSS, Markdown)
-- Added `.editorconfig` to standardize editor settings across team
-- Added `.env.example` as a safe template for environment variables
+- `.show-menu` class added to `custom.css` — controls mobile menu visibility by setting `left: 0`
+- `#nav-menu` scrollbar hidden via CSS — improves mobile menu appearance by hiding the scrollbar while keeping scroll functionality
+- scrollbar hiding applied for all browsers — `-webkit-scrollbar` for Chrome/Safari, `-ms-overflow-style` for IE, `scrollbar-width` for Firefox
 
----
+### swiper-integration
 
-### git-hooks-setup
+- `swiper` library installed for review section carousel functionality
+- `Pagination` and `Autoplay` modules imported from swiper — only needed modules loaded, not full bundle
+- `speed: 400` — smooth slide transition speed
+- `spaceBetween: 30` — consistent spacing between slides
+- `autoplay delay: 3000` — 3 second auto-advance, `disableOnInteraction: false` keeps autoplay after user interaction
+- `grabCursor: true` — improves desktop UX with grab cursor on hover
+- breakpoints configured — 1 slide on mobile, 2 on tablet, 3 on desktop
+- swiper CSS imported — `swiper/css` and `swiper/css/pagination` for pagination styles
 
-- Introduced Husky to manage Git hooks in the project
-- Used lint-staged to run checks only on staged files for better performance
-- Configured pre-commit hook to automatically run ESLint and Prettier
-- Enforced code quality rules at commit stage
-- Reduced risk of inconsistent or broken code entering repository
+### scroll-reveal
 
----
+- `scrollreveal` library used for scroll-based reveal animations — lightweight and easy to configure
+- `reset: false` — elements animate once and stay visible, standard for professional sites
+- `viewFactor: 0.7` — element 70% visible before animation triggers — ensures element is well in view
+- `distance: 80px` — elements travel 80px to their final position — gives a noticeable but smooth effect
+- `duration: 2000ms` — smooth and deliberate animation speed
+- `delay: 300ms` — slight pause before animation starts
+- different reveal directions used per element type — top, left, right for visual variety
+- `interval: 100` used for cards — staggers card animations for a cascading effect
+- `newsletter__form` class added to NewsletterForm — enables scroll reveal targeting without modifying component logic
 
-### html-head-setup
+### scroll-up-button
 
-- Established a complete HTML `<head>` structure for SEO and performance
-- Added metadata for search engines and social media platforms
-- Configured Open Graph and Twitter cards for link previews
-- Implemented resource optimization using preconnect
-- Integrated fonts and icon libraries for UI consistency
-- Standardized head structure for scalability and maintainability
+- `scrollUp.js` shows scroll-up button after 250px scroll — threshold chosen for comfortable UX
+- button hidden via `-bottom-1/2` by default — shown by swapping to `bottom-4` on scroll
+- null guard added — prevents errors if scroll-up element is not found in DOM
 
----
+### active-nav-links
 
-### main-layout
+- `scrollActiveLink.js` tracks scroll position against section offsets — updates active class on nav links dynamically
+- `current` defaults to `hero` — ensures first nav link is active on page load before any scrolling
+- offset of `60px` used in section detection — accounts for fixed header height
+- null guard added — prevents errors if sections or nav links are not found in DOM
 
-- separated layout from components — `layouts/` handles structure, `components/` handles UI
-- `MainLayout.js` acts as a pure wrapper — renders Header, main content area, and Footer
-- `Header.js` and `Footer.js` kept as simple functions returning HTML strings
-- used named exports for Header and Footer, consistent with component pattern
-- `main` content area given `id="main"` for scroll and accessibility targeting later
+### scroll-header
 
----
-
-### ui-components
-
-- Introduced reusable UI components for shared interface elements
-- Separated common buttons, social links, and scroll control into dedicated components
-- Kept components simple and markup-focused during the architecture phase
-- Deferred advanced styling and behavior refinements to later feature cycles
-
----
-
-### style-foundation
-
-- Moved global styling from a single root stylesheet into a dedicated `src/styles/` folder
-- Established `main.css` as the stylesheet entry point
-- Used `custom.css` for project-specific base styles and shared component classes
-- Kept this phase limited to foundation styles to avoid mixing UI section or UX animation work into the architecture phase
-
----
-
-### entry-point
-
-- Established `main.js` as the application entry point
-- Used `#app` in `index.html` as the single DOM mount target
-- Rendered `MainLayout` through the application entry point instead of static HTML
-- Kept runtime initialization limited to layout rendering during the architecture phase
-- Deferred interactive modules to the UX phase to keep branch scope focused
-
----
-
-### architecture-phase
-
-- Consolidated the architecture phase documentation after completing all v0.2.0 feature branches
-- Documented the current project structure in `ARCHITECTURE.md`
-- Preserved v0.1.0 foundation decisions as architecture history instead of mixing them with the current state
-- Clarified that UI sections, animations, scroll behavior, swiper integration, and deployment are outside the v0.2.0 scope
-
----
-
-### release/v0.2.0
-
-- confirmed version bump to `0.2.0` follows SemVer conventions
-- verified build, lint, and format checks before release
-- README and CHANGELOG updated to reflect architecture phase completion
-
----
+- `src/modules/` directory introduced — separates interactive behavior from layout and components
+- `navbarController.js` handles hamburger toggle and nav link click — closes menu on link click for better UX
+- `scrollHeader.js` adds border effect on scroll — visual feedback for sticky header position
+- null guards added to both modules — prevents errors if elements are not found in DOM
+- modules initialized inside `initApp` after `app.innerHTML = MainLayout()` — ensures DOM is ready before querying elements
+- interactive modules intentionally deferred from architecture phase — added now as UX phase begins
 
 ### hotfix/navbar-pointer-events
 
@@ -136,13 +99,70 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ---
 
-### hotfix/navbar-styles
+## v0.3.0 — UI Phase
 
-- `.show-menu` class added to `custom.css` — controls mobile menu visibility by setting `left: 0`
-- `#nav-menu` scrollbar hidden via CSS — improves mobile menu appearance by hiding the scrollbar while keeping scroll functionality
-- scrollbar hiding applied for all browsers — `-webkit-scrollbar` for Chrome/Safari, `-ms-overflow-style` for IE, `scrollbar-width` for Firefox
+### release/v0.3.0
 
----
+- version bump to 0.3.0 follows SemVer conventions
+- build, lint, format checks passed before release
+- README and CHANGELOG updated to reflect UI phase completion
+
+### ui-phase
+
+- all UI sections follow `export default function` pattern — consistent page-level section convention
+- private helper functions (ServiceCard, AboutItem, PopularCard, ReviewCard) kept inside their parent section files — not exported, reduces module surface
+- `src/pages/` directory introduced to separate page-level concerns from shared layout and components
+- `src/pages/main/components/` used for page-specific components — DecorativeIcons and NewsletterForm not shared globally
+- `src/components/footer/` introduced for footer sub-components — footer complexity managed through decomposition
+- swiper HTML structure added in ReviewSection — library installation and initialization deferred to UX phase
+- ScrollUp button hidden via `-bottom-1/2` — visibility behavior deferred to UX phase
+- all images kept in `.png` format during UI phase — format optimization deferred to production phase
+- custom.css grows incrementally — each feature branch adds its styles under a named comment block
+
+### footer-section
+
+- `src/components/footer/` directory created — footer-specific components separated from shared UI components
+- footer sub-components kept small and focused — each component handles one responsibility
+- `NewsletterForm.js` placed in `src/pages/main/components/` — page-specific component, not shared
+- `SocialIcons.js` reuses `SocialNetworks` component from shared UI layer — avoids duplication
+- `FloralDecoration.js` uses `pointer-events-none` — prevents decoration from blocking interactions
+- `ScrollUp` button kept hidden via `-bottom-1/2` — show/hide behavior deferred to UX phase
+- `Footer.js` updated to integrate all sub-components — layout wrapper pattern consistent with architecture phase
+- images kept in `.png` format — format conversion deferred to production phase
+
+### review-section
+
+- `ReviewSection.js` uses `export default` — consistent with page-level section pattern
+- `ReviewCard` kept as a private function inside `ReviewSection.js` — not exported, only used internally
+- swiper HTML structure added — `swiper`, `swiper-wrapper`, `swiper-slide`, `swiper-pagination` classes in place
+- swiper library installation and initialization deferred to UX phase — UI structure ready, behavior comes later
+- swiper pagination styles added to `custom.css` — custom green bullet colors matching project palette
+- images kept in `.jpg` format — format conversion deferred to production phase
+
+### popular-section
+
+- `PopularSection.js` uses `export default` — consistent with page-level section pattern
+- `PopularCard` kept as a private function inside `PopularSection.js` — not exported, only used internally
+- card image hover effect added via CSS — image lifts on card hover using `popular__card:hover img`
+- `mb-40` used in section header to create space for overlapping card images
+- `gap-y-36` used in grid to maintain vertical spacing between cards with overflowing images
+- images kept in `.png` format — format conversion deferred to production phase
+
+### about-section
+
+- `AboutSection.js` uses `export default` — consistent with page-level section pattern
+- `AboutItem` kept as a private function inside `AboutSection.js` — not exported, only used internally
+- `reverse` parameter used to alternate layout direction — avoids code duplication
+- `index` parameter used for unique BEM class names per item — allows section-specific styling later
+- `.title` style added to `custom.css` — shared across multiple sections, not about-specific
+- images kept in `.png` format — format conversion deferred to production phase
+
+### services-section
+
+- `ServicesSection.js` uses `export default` — consistent with page-level section pattern
+- `ServiceCard` kept as a private function inside `ServicesSection.js` — not exported, only used internally
+- no separate assets needed for this section — icon-based design using Remix Icon library
+- section background set to white (`bg-white`) with dark green text — intentional contrast against dark hero section
 
 ### hero-section
 
@@ -158,127 +178,129 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ---
 
-### services-section
+## v0.2.0 — Architecture Phase
 
-- `ServicesSection.js` uses `export default` — consistent with page-level section pattern
-- `ServiceCard` kept as a private function inside `ServicesSection.js` — not exported, only used internally
-- no separate assets needed for this section — icon-based design using Remix Icon library
-- section background set to white (`bg-white`) with dark green text — intentional contrast against dark hero section
+### release/v0.2.0
 
----
+- confirmed version bump to `0.2.0` follows SemVer conventions
+- verified build, lint, and format checks before release
+- README and CHANGELOG updated to reflect architecture phase completion
 
-### about-section
+### architecture-phase
 
-- `AboutSection.js` uses `export default` — consistent with page-level section pattern
-- `AboutItem` kept as a private function inside `AboutSection.js` — not exported, only used internally
-- `reverse` parameter used to alternate layout direction — avoids code duplication
-- `index` parameter used for unique BEM class names per item — allows section-specific styling later
-- `.title` style added to `custom.css` — shared across multiple sections, not about-specific
-- images kept in `.png` format — format conversion deferred to production phase
+- Consolidated the architecture phase documentation after completing all v0.2.0 feature branches
+- Documented the current project structure in `ARCHITECTURE.md`
+- Preserved v0.1.0 foundation decisions as architecture history instead of mixing them with the current state
+- Clarified that UI sections, animations, scroll behavior, swiper integration, and deployment are outside the v0.2.0 scope
 
----
+### entry-point
 
-### popular-section
+- Established `main.js` as the application entry point
+- Used `#app` in `index.html` as the single DOM mount target
+- Rendered `MainLayout` through the application entry point instead of static HTML
+- Kept runtime initialization limited to layout rendering during the architecture phase
+- Deferred interactive modules to the UX phase to keep branch scope focused
 
-- `PopularSection.js` uses `export default` — consistent with page-level section pattern
-- `PopularCard` kept as a private function inside `PopularSection.js` — not exported, only used internally
-- card image hover effect added via CSS — image lifts on card hover using `popular__card:hover img`
-- `mb-40` used in section header to create space for overlapping card images
-- `gap-y-36` used in grid to maintain vertical spacing between cards with overflowing images
-- images kept in `.png` format — format conversion deferred to production phase
+### style-foundation
 
----
+- Moved global styling from a single root stylesheet into a dedicated `src/styles/` folder
+- Established `main.css` as the stylesheet entry point
+- Used `custom.css` for project-specific base styles and shared component classes
+- Kept this phase limited to foundation styles to avoid mixing UI section or UX animation work into the architecture phase
 
-### review-section
+### ui-components
 
-- `ReviewSection.js` uses `export default` — consistent with page-level section pattern
-- `ReviewCard` kept as a private function inside `ReviewSection.js` — not exported, only used internally
-- swiper HTML structure added — `swiper`, `swiper-wrapper`, `swiper-slide`, `swiper-pagination` classes in place
-- swiper library installation and initialization deferred to UX phase — UI structure ready, behavior comes later
-- swiper pagination styles added to `custom.css` — custom green bullet colors matching project palette
-- images kept in `.jpg` format — format conversion deferred to production phase
+- Introduced reusable UI components for shared interface elements
+- Separated common buttons, social links, and scroll control into dedicated components
+- Kept components simple and markup-focused during the architecture phase
+- Deferred advanced styling and behavior refinements to later feature cycles
 
----
+### feature/navbar
 
-### footer-section
+- `Navbar.js` kept as a separate navigation component — isolated from Header layout wrapper
+- `LeafDecoration.js` extracted as its own component — decorative markup separated from navigation logic
+- leaf assets added to `src/assets/images/` — kept alongside other project images
+- `Header.js` updated to integrate Navbar — layout wrapper delegates navigation rendering to component
 
-- `src/components/footer/` directory created — footer-specific components separated from shared UI components
-- footer sub-components kept small and focused — each component handles one responsibility
-- `NewsletterForm.js` placed in `src/pages/main/components/` — page-specific component, not shared
-- `SocialIcons.js` reuses `SocialNetworks` component from shared UI layer — avoids duplication
-- `FloralDecoration.js` uses `pointer-events-none` — prevents decoration from blocking interactions
-- `ScrollUp` button kept hidden via `-bottom-1/2` — show/hide behavior deferred to UX phase
-- `Footer.js` updated to integrate all sub-components — layout wrapper pattern consistent with architecture phase
-- images kept in `.png` format — format conversion deferred to production phase
+### main-layout
 
----
-
-### ui-phase
-
-- all UI sections follow `export default function` pattern — consistent page-level section convention
-- private helper functions (ServiceCard, AboutItem, PopularCard, ReviewCard) kept inside their parent section files — not exported, reduces module surface
-- `src/pages/` directory introduced to separate page-level concerns from shared layout and components
-- `src/pages/main/components/` used for page-specific components — DecorativeIcons and NewsletterForm not shared globally
-- `src/components/footer/` introduced for footer sub-components — footer complexity managed through decomposition
-- swiper HTML structure added in ReviewSection — library installation and initialization deferred to UX phase
-- ScrollUp button hidden via `-bottom-1/2` — visibility behavior deferred to UX phase
-- all images kept in `.png` format during UI phase — format optimization deferred to production phase
-- custom.css grows incrementally — each feature branch adds its styles under a named comment block
+- separated layout from components — `layouts/` handles structure, `components/` handles UI
+- `MainLayout.js` acts as a pure wrapper — renders Header, main content area, and Footer
+- `Header.js` and `Footer.js` kept as simple functions returning HTML strings
+- used named exports for Header and Footer, consistent with component pattern
+- `main` content area given `id="main"` for scroll and accessibility targeting later
 
 ---
 
-### scroll-header
+## v0.1.0 — Foundation Phase
 
-- `src/modules/` directory introduced — separates interactive behavior from layout and components
-- `navbarController.js` handles hamburger toggle and nav link click — closes menu on link click for better UX
-- `scrollHeader.js` adds border effect on scroll — visual feedback for sticky header position
-- null guards added to both modules — prevents errors if elements are not found in DOM
-- modules initialized inside `initApp` after `app.innerHTML = MainLayout()` — ensures DOM is ready before querying elements
-- interactive modules intentionally deferred from architecture phase — added now as UX phase begins
+### release/v0.1.0
+
+- version bump to 0.1.0 follows SemVer conventions
+- build, lint, format checks passed before release
+- README and CHANGELOG updated to reflect foundation phase completion
+
+### docs/setup-phase
+
+- consolidated all setup phase documentation after completing v0.1.0 feature branches
+- SETUP.md, ARCHITECTURE.md, DEVLOG.md, DevNotes.md finalized
+- all decisions and reasoning recorded before release
+- release structure prepared for v0.1.0
+
+### html-head-setup
+
+- Established a complete HTML `<head>` structure for SEO and performance
+- Added metadata for search engines and social media platforms
+- Configured Open Graph and Twitter cards for link previews
+- Implemented resource optimization using preconnect
+- Integrated fonts and icon libraries for UI consistency
+- Standardized head structure for scalability and maintainability
+
+### git-hooks-setup
+
+- Introduced Husky to manage Git hooks in the project
+- Used lint-staged to run checks only on staged files for better performance
+- Configured pre-commit hook to automatically run ESLint and Prettier
+- Enforced code quality rules at commit stage
+- Reduced risk of inconsistent or broken code entering repository
+
+### code-quality-setup
+
+- Introduced ESLint as the primary linting tool for code quality enforcement
+- Configured ESLint using modern flat config approach
+- Added Prettier to handle consistent code formatting
+- Integrated Prettier with ESLint to avoid rule conflicts
+- Ensured support for multiple file types (JS, JSON, CSS, Markdown)
+- Added `.editorconfig` to standardize editor settings across team
+- Added `.env.example` as a safe template for environment variables
+
+### gitignore-setup
+
+- Introduced comprehensive `.gitignore` rules to prevent unnecessary files from being tracked
+- Ensured sensitive environment files are excluded from version control
+- Standardized ignore patterns for consistency across environments
+
+### setup-vite-tailwind
+
+- Chose Vite for fast development and modern tooling
+- Integrated TailwindCSS for utility-first styling approach
+- Removed default scaffold to keep project clean and controlled
+- Introduced minimal folder structure to avoid early over-engineering
 
 ---
 
-### active-nav-links
+## v0.0.0 — Initial Setup
 
-- `scrollActiveLink.js` tracks scroll position against section offsets — updates active class on nav links dynamically
-- `current` defaults to `hero` — ensures first nav link is active on page load before any scrolling
-- offset of `60px` used in section detection — accounts for fixed header height
-- null guard added — prevents errors if sections or nav links are not found in DOM
+### develop
 
----
+- `develop` branch opened from main
+- 7 docs skeleton files created — SETUP.md, ARCHITECTURE.md, DEVLOG.md, DevNotes.md, CHANGELOG.md, README-short.md, DEPLOYMENT.md
 
-### scroll-up-button
+### main
 
-- `scrollUp.js` shows scroll-up button after 250px scroll — threshold chosen for comfortable UX
-- button hidden via `-bottom-1/2` by default — shown by swapping to `bottom-4` on scroll
-- null guard added — prevents errors if scroll-up element is not found in DOM
-
----
-
-### scroll-reveal
-
-- `scrollreveal` library used for scroll-based reveal animations — lightweight and easy to configure
-- `reset: false` — elements animate once and stay visible, standard for professional sites
-- `viewFactor: 0.7` — element 70% visible before animation triggers — ensures element is well in view
-- `distance: 80px` — elements travel 80px to their final position — gives a noticeable but smooth effect
-- `duration: 2000ms` — smooth and deliberate animation speed
-- `delay: 300ms` — slight pause before animation starts
-- different reveal directions used per element type — top, left, right for visual variety
-- `interval: 100` used for cards — staggers card animations for a cascading effect
-- `newsletter__form` class added to NewsletterForm — enables scroll reveal targeting without modifying component logic
-
----
-
-### swiper-integration
-
-- `swiper` library installed for review section carousel functionality
-- `Pagination` and `Autoplay` modules imported from swiper — only needed modules loaded, not full bundle
-- `speed: 400` — smooth slide transition speed
-- `spaceBetween: 30` — consistent spacing between slides
-- `autoplay delay: 3000` — 3 second auto-advance, `disableOnInteraction: false` keeps autoplay after user interaction
-- `grabCursor: true` — improves desktop UX with grab cursor on hover
-- breakpoints configured — 1 slide on mobile, 2 on tablet, 3 on desktop
-- swiper CSS imported — `swiper/css` and `swiper/css/pagination` for pagination styles
+- repository initialized
+- `README.md` skeleton added
+- `LICENSE.md` added
 
 ---
 
