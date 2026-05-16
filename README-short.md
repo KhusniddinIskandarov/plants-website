@@ -1,6 +1,6 @@
 # 🌱 Plants Website
 
-[![v0.3.0](https://img.shields.io/badge/version-v0.3.0-green)](./docs/CHANGELOG.md)
+[![v0.4.0](https://img.shields.io/badge/version-v0.4.0-green)](./docs/CHANGELOG.md)
 
 Modern frontend project with structured Git workflow and incremental architecture.
 
@@ -15,7 +15,7 @@ Modern frontend project with structured Git workflow and incremental architectur
 
 ## Current Status
 
-**v0.3.0** — UI phase complete.
+**v0.4.0** — UX phase complete.
 
 ---
 
