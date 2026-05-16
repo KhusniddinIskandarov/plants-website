@@ -4,11 +4,11 @@ Project architecture reference for Plants Website.
 
 ---
 
-## Current State — v0.3.0
+## Current State — v0.4.0
 
-UI phase complete.
+UX phase complete.
 
-The project now has a fully rendered single-page layout with all visual sections, footer sub-components, a page entry point, and section-specific styles. All sections are rendered through the main layout into the HTML mount point.
+The project now has a fully interactive single-page layout with scroll-based behavior, active navigation tracking, scroll reveal animations, swiper carousel, and scroll-up button visibility. All interactive modules are initialized through the application entry point after layout rendering.
 
 Architecture baseline includes:
 
@@ -22,6 +22,7 @@ Architecture baseline includes:
 - Footer sub-component layer
 - Section-specific styles and animations
 - Dedicated styles directory
+- Interactive behavior modules
 
 ---
 
@@ -68,6 +69,13 @@ Current structure:
     Footer.js
     Header.js
     MainLayout.js
+  /modules
+    navbarController.js
+    scrollActiveLink.js
+    scrollHeader.js
+    scrollReveal.js
+    scrollUp.js
+    swiper.module.js
   /pages
     /main
       /components
@@ -102,8 +110,16 @@ Current structure:
 - waiting for `DOMContentLoaded`
 - selecting the `#app` mount point
 - rendering `MainLayout` into the page
+- initializing all interactive modules after layout render
 
-Interactive modules are intentionally deferred to the UX phase.
+Current modules initialized in `main.js`:
+
+- `initNavbarController` — hamburger menu and nav link behavior
+- `initScrollHeader` — scroll-based header border effect
+- `initActiveLink` — scroll-based active navigation link tracking
+- `initScrollUp` — scroll-up button visibility
+- `initScrollReveal` — scroll reveal animations
+- `initSwiperModule` — review section swiper carousel
 
 ---
 
@@ -141,6 +157,27 @@ Page-specific components:
 
 - `DecorativeIcons.js` — animated decorative icons for hero section
 - `NewsletterForm.js` — newsletter subscription form for footer
+
+---
+
+## Module Strategy
+
+Interactive behavior modules are stored in `src/modules/`.
+
+Each module is responsible for one behavior:
+
+- `navbarController.js` — hamburger toggle and nav link click handlers
+- `scrollHeader.js` — scroll-based header border effect
+- `scrollActiveLink.js` — scroll-based active navigation link tracking
+- `scrollUp.js` — scroll-up button show/hide based on scroll position
+- `scrollReveal.js` — scroll reveal animations using ScrollReveal library
+- `swiper.module.js` — review section swiper carousel using Swiper library
+
+All modules follow the same pattern:
+
+- exported as named `init*` functions
+- initialized in `main.js` after `app.innerHTML = MainLayout()`
+- include null guards to prevent DOM errors
 
 ---
 
@@ -189,6 +226,7 @@ Current style sections in `custom.css`:
 - `feature/about-section` — shared title style
 - `feature/popular-section` — popular card hover style
 - `feature/review-section` — swiper pagination styles
+- `hotfix/navbar-styles` — show-menu class and nav-menu scrollbar hiding
 
 ---
 
@@ -215,6 +253,25 @@ Current style sections in `custom.css`:
 ---
 
 ## Phase Boundaries
+
+### UX Phase — v0.4.0
+
+Responsible for:
+
+- interactive behavior modules
+- scroll-based header effect
+- active navigation link tracking
+- scroll-up button visibility
+- scroll reveal animations
+- swiper carousel integration
+- navbar mobile menu behavior
+
+Not responsible for:
+
+- production deployment
+- SEO optimization
+- performance audit
+- image format optimization
 
 ### UI Phase — v0.3.0
 
@@ -245,9 +302,54 @@ Responsible for:
 - stylesheet structure
 - application entry point
 
+### Foundation Phase — v0.1.0
+
+Responsible for:
+
+- Vite build tool setup
+- TailwindCSS integration
+- ESLint + Prettier configuration
+- Husky + lint-staged automation
+- HTML head SEO setup
+- Documentation foundation
+
+### Initial Setup — v0.0.0
+
+Responsible for:
+
+- repository initialization
+- README and LICENSE setup
+- documentation skeleton
+
 ---
 
 ## Architecture History
+
+### v0.4.0 — UX Phase
+
+UX phase established interactive behavior before production work started.
+
+UX baseline included:
+
+- Interactive behavior modules — navbarController, scrollHeader, scrollActiveLink, scrollUp, scrollReveal, swiper
+- Navbar mobile menu behavior
+- Scroll-based header border effect
+- Active navigation link tracking
+- Scroll-up button visibility
+- Scroll reveal animations
+- Swiper carousel integration
+
+### v0.3.0 — UI Phase
+
+UI phase established all visual sections before interactive behavior work started.
+
+UI baseline included:
+
+- All page sections — hero, services, about, popular, review
+- Footer sub-components
+- Page entry point with Index.js
+- Section-specific styles and animations
+- All section image assets
 
 ### v0.2.0 — Architecture Phase
 
@@ -289,12 +391,13 @@ Setup baseline included:
 
 ## Next Phase
 
-`v0.4.0 — UX Phase`
+`v1.0.0 — Production Phase`
 
 Next focus:
 
-- scroll-based header behavior
-- active navigation link tracking
-- scroll-up button visibility
-- scroll reveal animations
-- swiper library integration
+- Vercel/Netlify deploy configuration
+- SEO meta tags finalization
+- Open Graph tags completion
+- Lighthouse 95+ performance target
+- Image format optimization
+- README final update
