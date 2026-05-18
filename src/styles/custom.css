@@ -37,6 +37,20 @@ h3 {
   @apply text-yellow-500;
 }
 
+/* hotfix/navbar-styles */
+.show-menu {
+  left: 0;
+}
+
+#nav-menu::-webkit-scrollbar {
+  display: none;
+}
+
+#nav-menu {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* button */
 .btn {
   @apply border border-yellow-500 bg-yellow-500 px-5 py-2 rounded-md duration-300;

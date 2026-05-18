@@ -1,6 +1,6 @@
 {
   "name": "plants-website",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -28,6 +28,8 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.4",
+    "scrollreveal": "^4.0.9",
+    "swiper": "^12.1.4",
     "tailwindcss": "^4.2.4"
   },
   "lint-staged": {

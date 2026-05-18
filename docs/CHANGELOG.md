@@ -4,6 +4,39 @@ All notable changes in this project are documented in this file.
 
 ---
 
+## v0.4.0 - 2026-05-16
+
+### Added in v0.4.0
+
+- added `src/modules/` directory for interactive behavior modules
+- added `navbarController.js` — hamburger menu toggle and nav link click handlers
+- added `scrollHeader.js` — scroll-based header border effect
+- added `scrollActiveLink.js` — scroll-based active navigation link tracking
+- added `scrollUp.js` — scroll-up button visibility based on scroll position
+- added `scrollReveal.js` — scroll reveal animations using ScrollReveal library
+- added `swiper.module.js` — review section swiper carousel using Swiper library
+- added `scrollreveal` as runtime dependency
+- added `swiper` as runtime dependency
+- added `.show-menu` class to `custom.css` — mobile menu visibility
+- added `#nav-menu` scrollbar hiding styles to `custom.css`
+- added `newsletter__form` class to `NewsletterForm.js` for scroll reveal targeting
+
+### Changed in v0.4.0
+
+- updated `main.js` — integrated all interactive modules into app entry
+- updated `Navbar.js` — fixed nav-menu overflow on desktop
+- updated `LeafDecoration.js` — fixed import paths to relative
+- updated `ARCHITECTURE.md` with current v0.4.0 project structure
+- updated `DEVLOG.md` with UX phase progress
+- updated `DevNotes.md` with UX phase architectural decisions
+
+### Fixed in v0.4.0
+
+- fixed `#nav-menu` overflow blocking page interactions on desktop
+- fixed `LeafDecoration.js` absolute import paths
+
+---
+
 ## v0.3.0 - 2026-05-14
 
 ### Added in v0.3.0
@@ -106,9 +139,9 @@ All notable changes in this project are documented in this file.
 
 ## Notes
 
+- v0.4.0 = UX release (interactive modules, scroll behavior, swiper, scroll reveal)
 - v0.3.0 = UI release (all page sections, footer sub-components, page entry point, section styles)
 - v0.2.0 = architecture release (layout, navigation, reusable UI components, style foundation, and app entry point)
 - v0.1.0 = foundation release (tooling + setup only)
-- interactive behavior and animations are not included yet
 - deployment is intentionally deferred until the production phase
-- future releases will focus on UX behavior and production readiness
+- future releases will focus on production readiness

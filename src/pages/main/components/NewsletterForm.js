@@ -1,7 +1,7 @@
 export function NewsletterForm() {
   return `
     <div
-        class="container mx-auto text-white p-8 absolute top-0 right-0 left-0 -translate-y-1/2"
+        class="newsletter__form container mx-auto text-white p-8 absolute top-0 right-0 left-0 -translate-y-1/2"
       >
         <div class="bg-green-900 px-10 pt-5 pb-10 space-y-5 rounded-md">
           <h3>
