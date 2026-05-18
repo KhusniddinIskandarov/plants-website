@@ -29,6 +29,12 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ## v0.4.0 — UX Phase
 
+### release/v0.4.0
+
+- version bump to 0.4.0 follows SemVer conventions
+- build, lint, format checks passed before release
+- README and CHANGELOG updated to reflect UX phase completion
+
 ### docs/ux-phase
 
 - `src/modules/` directory established as the dedicated layer for all interactive behavior
@@ -301,6 +307,89 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 - repository initialized
 - `README.md` skeleton added
 - `LICENSE.md` added
+
+---
+
+### hero-section
+
+- Introduced `src/pages/` directory to separate page-level concerns from layout and reusable components
+- Used `src/pages/main/sections/` for page sections and `src/pages/main/components/` for section-specific components
+- `HeroSection.js` uses `export default` — consistent with page-level section pattern
+- `DecorativeIcons.js` kept as a separate component to isolate decorative markup from section logic
+- `Index.js` acts as the page entry point — renders all main sections in order
+- `MainLayout.js` updated to use `export function` for consistency with all other layout and component files
+- images kept in `.png` format during development — format conversion deferred to production phase
+- animation styles added to `custom.css` under `feature/hero-section` comment marker for traceability
+- relative import paths used throughout — no path alias configured in `vite.config.js`
+
+---
+
+### services-section
+
+- `ServicesSection.js` uses `export default` — consistent with page-level section pattern
+- `ServiceCard` kept as a private function inside `ServicesSection.js` — not exported, only used internally
+- no separate assets needed for this section — icon-based design using Remix Icon library
+- section background set to white (`bg-white`) with dark green text — intentional contrast against dark hero section
+
+---
+
+### about-section
+
+- `AboutSection.js` uses `export default` — consistent with page-level section pattern
+- `AboutItem` kept as a private function inside `AboutSection.js` — not exported, only used internally
+- `reverse` parameter used to alternate layout direction — avoids code duplication
+- `index` parameter used for unique BEM class names per item — allows section-specific styling later
+- `.title` style added to `custom.css` — shared across multiple sections, not about-specific
+- images kept in `.png` format — format conversion deferred to production phase
+
+---
+
+### popular-section
+
+- `PopularSection.js` uses `export default` — consistent with page-level section pattern
+- `PopularCard` kept as a private function inside `PopularSection.js` — not exported, only used internally
+- card image hover effect added via CSS — image lifts on card hover using `popular__card:hover img`
+- `mb-40` used in section header to create space for overlapping card images
+- `gap-y-36` used in grid to maintain vertical spacing between cards with overflowing images
+- images kept in `.png` format — format conversion deferred to production phase
+
+---
+
+### review-section
+
+- `ReviewSection.js` uses `export default` — consistent with page-level section pattern
+- `ReviewCard` kept as a private function inside `ReviewSection.js` — not exported, only used internally
+- swiper HTML structure added — `swiper`, `swiper-wrapper`, `swiper-slide`, `swiper-pagination` classes in place
+- swiper library installation and initialization deferred to UX phase — UI structure ready, behavior comes later
+- swiper pagination styles added to `custom.css` — custom green bullet colors matching project palette
+- images kept in `.jpg` format — format conversion deferred to production phase
+
+---
+
+### footer-section
+
+- `src/components/footer/` directory created — footer-specific components separated from shared UI components
+- footer sub-components kept small and focused — each component handles one responsibility
+- `NewsletterForm.js` placed in `src/pages/main/components/` — page-specific component, not shared
+- `SocialIcons.js` reuses `SocialNetworks` component from shared UI layer — avoids duplication
+- `FloralDecoration.js` uses `pointer-events-none` — prevents decoration from blocking interactions
+- `ScrollUp` button kept hidden via `-bottom-1/2` — show/hide behavior deferred to UX phase
+- `Footer.js` updated to integrate all sub-components — layout wrapper pattern consistent with architecture phase
+- images kept in `.png` format — format conversion deferred to production phase
+
+---
+
+### ui-phase
+
+- all UI sections follow `export default function` pattern — consistent page-level section convention
+- private helper functions (ServiceCard, AboutItem, PopularCard, ReviewCard) kept inside their parent section files — not exported, reduces module surface
+- `src/pages/` directory introduced to separate page-level concerns from shared layout and components
+- `src/pages/main/components/` used for page-specific components — DecorativeIcons and NewsletterForm not shared globally
+- `src/components/footer/` introduced for footer sub-components — footer complexity managed through decomposition
+- swiper HTML structure added in ReviewSection — library installation and initialization deferred to UX phase
+- ScrollUp button hidden via `-bottom-1/2` — visibility behavior deferred to UX phase
+- all images kept in `.png` format during UI phase — format optimization deferred to production phase
+- custom.css grows incrementally — each feature branch adds its styles under a named comment block
 
 ---
 

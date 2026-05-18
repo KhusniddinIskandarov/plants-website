@@ -4,6 +4,15 @@
 
 ## v0.4.0 — UX Phase
 
+### release/v0.4.0
+
+- version bumped to `0.4.0` in `package.json`
+- CHANGELOG finalized for v0.4.0
+- version badge updated in README and README-short
+- build verified successfully
+- lint and format checks passed
+- Prettier formatting applied across all files
+
 ### docs/ux-phase
 
 - `ARCHITECTURE.md` updated — current v0.4.0 project structure documented
