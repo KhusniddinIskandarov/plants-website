@@ -1,7 +1,7 @@
-import cart1 from '../../../assets/images/cart-1.png'
-import cart2 from '../../../assets/images/cart-2.png'
-import cart3 from '../../../assets/images/cart-3.png'
-import cart4 from '../../../assets/images/cart-4.png'
+import cart1 from '../../../assets/images/cart-1.webp'
+import cart2 from '../../../assets/images/cart-2.webp'
+import cart3 from '../../../assets/images/cart-3.webp'
+import cart4 from '../../../assets/images/cart-4.webp'
 
 export default function PopularSection() {
   return `
@@ -35,7 +35,7 @@ function PopularCard(image, text, title) {
       </div>
       <div class="flex items-center justify-between">
         <p class="text-2xl">$5</p>
-        <button class="bg-yellow-500 px-2 py-1 rounded-sm text-2xl">
+        <button class="bg-yellow-500 px-2 py-1 rounded-sm text-2xl" aria-label="Add to cart">
           <i class="ri-shopping-cart-fill"></i>
         </button>
       </div>

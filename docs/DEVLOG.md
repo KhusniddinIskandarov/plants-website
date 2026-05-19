@@ -4,6 +4,19 @@
 
 ## v1.0.0 — Production Phase
 
+### chore/performance-audit
+
+- `sharp` package installed — image optimization tool
+- `scripts/optimize-images.js` added — converts PNG/JPG images to WebP format
+- all PNG and JPG image assets converted to WebP format
+- original PNG and JPG assets removed
+- `cart-1.webp` resized from 4000px to 600px width and re-optimized
+- JS import paths updated to WebP format across all section components
+- `aria-label` added to social network links — accessibility improvement
+- `aria-label` added to popular section cart button — accessibility improvement
+- `preview.png` optimized — reduced from 1.5MB to 137KB
+- Lighthouse scores: Performance 97, Accessibility 90, Best Practices 100, SEO 92
+
 ### chore/seo-optimization
 
 - `preview.png` updated — new screenshot replacing placeholder image
