@@ -1,6 +1,6 @@
-import plant1 from '../../../assets/images/plant-1.png'
-import plant2 from '../../../assets/images/plant-2.png'
-import leaf3 from '../../../assets/images/leaf-3.png'
+import plant1 from '../../../assets/images/plant-1.webp'
+import plant2 from '../../../assets/images/plant-2.webp'
+import leaf3 from '../../../assets/images/leaf-3.webp'
 
 export default function AboutSection() {
   return `

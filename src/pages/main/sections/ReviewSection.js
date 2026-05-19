@@ -1,11 +1,11 @@
 // ReviewSection.js (Optimized)
 
-import review1 from '/src/assets/images/review-1.jpg'
-import review2 from '/src/assets/images/review-2.jpg'
-import review3 from '/src/assets/images/review-3.jpg'
-import review4 from '/src/assets/images/review-4.jpg'
-import review5 from '/src/assets/images/review-1.jpg'
-import leaf4 from '/src/assets/images/leaf-4.png'
+import review1 from '../../../assets/images/review-1.webp'
+
+import review2 from '../../../assets/images/review-2.webp'
+import review3 from '../../../assets/images/review-3.webp'
+import review4 from '../../../assets/images/review-4.webp'
+import leaf4 from '../../../assets/images/leaf-4.webp'
 
 export default function ReviewSection() {
   return `
@@ -35,7 +35,6 @@ export default function ReviewSection() {
             ${ReviewCard(review2)}
             ${ReviewCard(review3)}
             ${ReviewCard(review4)}
-            ${ReviewCard(review5)}
           </ul>
           <div class="swiper-pagination"></div>
         </div>

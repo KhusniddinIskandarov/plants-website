@@ -1,5 +1,5 @@
-import leaf1 from '../../assets/images/leaf-1.png'
-import leaf2 from '../../assets/images/leaf-2.png'
+import leaf1 from '../../assets/images/leaf-1.webp'
+import leaf2 from '../../assets/images/leaf-2.webp'
 
 export function LeafDecoration() {
   return `
