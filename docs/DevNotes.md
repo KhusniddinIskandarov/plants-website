@@ -27,6 +27,15 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ## v1.0.0 — Production Phase
 
+### seo-optimization
+
+- `preview.png` replaced with actual project screenshot — 1200x630px for OG image standard
+- `og:locale` added — specifies language and region for search engines and social platforms
+- `og:site_name` added — improves link preview appearance on social platforms
+- `apple-touch-icon` added — enables proper icon when added to iOS home screen
+- canonical URL and OG URLs kept as placeholder — will be updated after deployment in release/v1.0.0
+- Twitter card tags kept — future-proof even without active Twitter account
+
 ### deploy-config
 
 - `vercel.json` added — explicit config preferred over Vercel auto-detection for clarity

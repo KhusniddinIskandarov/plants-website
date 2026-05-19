@@ -4,6 +4,13 @@
 
 ## v1.0.0 — Production Phase
 
+### chore/seo-optimization
+
+- `preview.png` updated — new screenshot replacing placeholder image
+- `og:locale` added to `index.html` — language and region metadata
+- `og:site_name` added to `index.html` — site name for Open Graph
+- `apple-touch-icon` added to `index.html` — iOS home screen icon support
+
 ### feature/deploy-config
 
 - `vercel.json` added — Vercel deploy configuration with build command and SPA rewrites
