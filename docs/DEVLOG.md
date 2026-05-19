@@ -2,6 +2,17 @@
 
 ---
 
+## v1.0.0 — Production Phase
+
+### feature/deploy-config
+
+- `vercel.json` added — Vercel deploy configuration with build command and SPA rewrites
+- `netlify.toml` added — Netlify deploy configuration with build command and SPA redirects
+- `.github/workflows/deploy.yml` added — GitHub Pages CI/CD workflow
+- `vite.config.js` updated — added base path for GitHub Pages deployment
+
+---
+
 ## v0.4.0 — UX Phase
 
 ### release/v0.4.0

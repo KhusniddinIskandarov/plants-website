@@ -25,6 +25,18 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ## ⚙️ Decision Notes
 
+## v1.0.0 — Production Phase
+
+### deploy-config
+
+- `vercel.json` added — explicit config preferred over Vercel auto-detection for clarity
+- `netlify.toml` added — TOML format used for Netlify — standard and readable
+- SPA redirects added to both Vercel and Netlify configs — prevents 404 on page refresh
+- GitHub Pages workflow added — CI/CD pipeline triggers on main branch push
+- `base: '/plants-website/'` added to vite.config.js — required for GitHub Pages subdirectory deployment
+- Vercel and Netlify work without base path — they serve from root domain
+- GitHub Pages requires base path — served from username.github.io/plants-website/
+
 ---
 
 ## v0.4.0 — UX Phase
