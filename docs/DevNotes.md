@@ -27,6 +27,19 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ## v1.0.0 — Production Phase
 
+### performance-audit
+
+- `sharp` used for automated WebP conversion — consistent quality across all images
+- WebP format chosen over PNG/JPG — significantly smaller file sizes with comparable quality
+- `floral-1.png` kept in PNG — WebP version was larger than original PNG
+- `cart-1` resized from 4000x4000px to 600px width — original resolution was unnecessarily large
+- all image imports updated to `.webp` extension — consistent with new asset format
+- `aria-label` added to icon-only links and buttons — required for screen reader accessibility
+- Lighthouse Performance target 95+ achieved — final score 97
+- Lighthouse Accessibility improved from 81 to 90 — aria-label fixes applied
+- `preview.png` kept in PNG format — better OG image compatibility across platforms
+- image optimization deferred from UI/UX phases — production phase is the right time for this
+
 ### seo-optimization
 
 - `preview.png` replaced with actual project screenshot — 1200x630px for OG image standard
