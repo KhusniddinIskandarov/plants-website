@@ -53,7 +53,7 @@
 - `.github/workflows/deploy.yml` added — GitHub Pages CI/CD workflow
 - `vite.config.js` updated — added base path for GitHub Pages deployment
 
----
+### feature/scroll-reveal
 
 ## v0.4.0 — UX Phase
 
