@@ -4,11 +4,11 @@ Project architecture reference for Plants Website.
 
 ---
 
-## Current State — v0.4.0
+## Current State — v1.0.0
 
-UX phase complete.
+Production phase complete.
 
-The project now has a fully interactive single-page layout with scroll-based behavior, active navigation tracking, scroll reveal animations, swiper carousel, and scroll-up button visibility. All interactive modules are initialized through the application entry point after layout rendering.
+The project is fully built and optimized. Deployment configurations are in place for Vercel, Netlify, and GitHub Pages. Live deployment pending release/v1.0.0.
 
 Architecture baseline includes:
 
@@ -23,6 +23,8 @@ Architecture baseline includes:
 - Section-specific styles and animations
 - Dedicated styles directory
 - Interactive behavior modules
+- Image optimization pipeline
+- Multi-platform deployment configuration
 
 ---
 
@@ -31,25 +33,32 @@ Architecture baseline includes:
 Current structure:
 
 ```text
+/scripts
+  optimize-images.js
+.github/
+  /workflows
+    deploy.yml
+vercel.json
+netlify.toml
 /src
   /assets
     /images
-      cart-1.png
-      cart-2.png
-      cart-3.png
-      cart-4.png
+      cart-1.webp
+      cart-2.webp
+      cart-3.webp
+      cart-4.webp
       floral-1.png
-      home.png
-      leaf-1.png
-      leaf-2.png
-      leaf-3.png
-      leaf-4.png
-      plant-1.png
-      plant-2.png
-      review-1.png
-      review-2.png
-      review-3.png
-      review-4.png
+      home.webp
+      leaf-1.webp
+      leaf-2.webp
+      leaf-3.webp
+      leaf-4.webp
+      plant-1.webp
+      plant-2.webp
+      review-1.webp
+      review-2.webp
+      review-3.webp
+      review-4.webp
   /components
     /footer
       ContactInfo.js
@@ -254,6 +263,18 @@ Current style sections in `custom.css`:
 
 ## Phase Boundaries
 
+### Production Phase — v1.0.0
+
+Responsible for:
+
+- Vercel, Netlify, GitHub Pages deployment configuration
+- SEO meta tags finalization
+- OG tags and preview image optimization
+- Lighthouse 95+ performance achievement
+- WebP image format conversion
+- Accessibility improvements
+- README and documentation finalization
+
 ### UX Phase — v0.4.0
 
 Responsible for:
@@ -325,6 +346,19 @@ Responsible for:
 
 ## Architecture History
 
+### v1.0.0 — Production Phase
+
+Production phase finalized deployment, optimization, and documentation.
+
+Production baseline included:
+
+- Vercel, Netlify and GitHub Pages deployment configuration
+- WebP image optimization — all PNG/JPG assets converted
+- Lighthouse Performance 97, Accessibility 90, Best Practices 100, SEO 92
+- SEO meta tags finalized — og:locale, og:site_name, apple-touch-icon added
+- Accessibility improvements — aria-label added to icon-only links and buttons
+- README and documentation finalization in progress
+
 ### v0.4.0 — UX Phase
 
 UX phase established interactive behavior before production work started.
@@ -389,15 +423,8 @@ Setup baseline included:
 
 ---
 
-## Next Phase
+## Project Status
 
-`v1.0.0 — Production Phase`
+`v1.0.0` — Production ready.
 
-Next focus:
-
-- Vercel/Netlify deploy configuration
-- SEO meta tags finalization
-- Open Graph tags completion
-- Lighthouse 95+ performance target
-- Image format optimization
-- README final update
+The project is fully built and optimized. Deployment configurations are in place for Vercel, Netlify, and GitHub Pages.
