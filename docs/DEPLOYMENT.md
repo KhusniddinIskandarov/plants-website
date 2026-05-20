@@ -4,7 +4,7 @@
 
 ## Current Status
 
-Deployment configuration complete. Live deployment pending release/v1.0.0.
+Deployment configuration complete. Live deployment pending production release.
 
 The project is configured for deployment across three platforms — Vercel (primary), Netlify (backup), and GitHub Pages (CI/CD). Live URLs will be updated after deployment.
 
@@ -67,4 +67,4 @@ The project is configured for deployment across three platforms — Vercel (prim
 - GitHub Pages uses CI/CD workflow via GitHub Actions
 - SPA redirects configured on both Vercel and Netlify — prevents 404 on page refresh
 - Base path `/plants-website/` required for GitHub Pages — not needed for Vercel and Netlify
-- Live URLs will be updated after deployment in `release/v1.0.0`
+- Live URLs will be updated after production deployment
