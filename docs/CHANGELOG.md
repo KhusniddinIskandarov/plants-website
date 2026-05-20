@@ -4,7 +4,7 @@ All notable changes in this project are documented in this file.
 
 ---
 
-## Unreleased
+## v1.0.0 - 2026-05-20
 
 ### Added
 
@@ -184,5 +184,3 @@ All notable changes in this project are documented in this file.
 - v0.3.0 = UI release (all page sections, footer sub-components, page entry point, section styles)
 - v0.2.0 = architecture release (layout, navigation, reusable UI components, style foundation, and app entry point)
 - v0.1.0 = foundation release (tooling + setup only)
-- deployment is intentionally deferred until the production phase
-- future releases will focus on production readiness
