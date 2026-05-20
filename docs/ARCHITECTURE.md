@@ -8,7 +8,7 @@ Project architecture reference for Plants Website.
 
 Production phase complete.
 
-The project is fully built and optimized. Deployment configurations are in place for Vercel, Netlify, and GitHub Pages. Live deployment pending release/v1.0.0.
+The project is fully built and optimized. Deployment configurations are in place for Vercel, Netlify, and GitHub Pages. Live deployment pending production release.
 
 Architecture baseline includes:
 
@@ -357,7 +357,7 @@ Production baseline included:
 - Lighthouse Performance 97, Accessibility 90, Best Practices 100, SEO 92
 - SEO meta tags finalized — og:locale, og:site_name, apple-touch-icon added
 - Accessibility improvements — aria-label added to icon-only links and buttons
-- README and documentation finalization in progress
+- README and documentation finalized
 
 ### v0.4.0 — UX Phase
 
