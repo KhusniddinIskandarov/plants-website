@@ -15,8 +15,6 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ## ❓ Open Questions
 
-## ❓ Open Questions
-
 No open questions — all production phase decisions resolved.
 
 ---
@@ -25,6 +23,15 @@ No open questions — all production phase decisions resolved.
 
 ## v1.0.0 — Production Phase
 
+### release/v1.0.0
+
+- version bump to 1.0.0 follows SemVer conventions
+- build, lint, format checks passed before release
+- README.md expanded with portfolio-focused sections — improves project discoverability for recruiters
+- README-short.md expanded with key highlights and project goals — provides quick overview for recruiters
+- all documentation reviewed and finalized for v1.0.0 release
+- CHANGELOG Unreleased heading replaced with v1.0.0 and release date
+
 ### docs/production-phase
 
 - `README.md` updated with preview image and live demo section — improves project discoverability
@@ -32,7 +39,7 @@ No open questions — all production phase decisions resolved.
 - `CHANGELOG.md` updated with Unreleased v1.0.0 changes — tracks all production phase work
 - `ARCHITECTURE.md` updated with v1.0.0 production phase structure — folder structure, phase boundaries and history updated
 - `DEPLOYMENT.md` finalized — deployment platforms, build config and pre-deployment checklist documented
-- live URLs kept as placeholder — will be updated after deployment in release/v1.0.0
+- live URLs kept as placeholder — will be updated after production deployment
 
 ### performance-audit
 
@@ -53,7 +60,7 @@ No open questions — all production phase decisions resolved.
 - `og:locale` added — specifies language and region for search engines and social platforms
 - `og:site_name` added — improves link preview appearance on social platforms
 - `apple-touch-icon` added — enables proper icon when added to iOS home screen
-- canonical URL and OG URLs kept as placeholder — will be updated after deployment in release/v1.0.0
+- canonical URL and OG URLs kept as placeholder — will be updated after production deployment
 - Twitter card tags kept — future-proof even without active Twitter account
 
 ### deploy-config
