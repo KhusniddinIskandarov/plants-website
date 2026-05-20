@@ -17,15 +17,65 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 
 ## ❓ Open Questions
 
-- how will image optimization be handled in the production phase?
-- what deployment platform will be used — Vercel or Netlify?
-- how will Lighthouse 95+ score be achieved?
+No open questions — all production phase decisions resolved.
 
 ---
 
 ## ⚙️ Decision Notes
 
----
+## v1.0.0 — Production Phase
+
+### release/v1.0.0
+
+- version bump to 1.0.0 follows SemVer conventions
+- build, lint, format checks passed before release
+- README.md expanded with portfolio-focused sections — improves project discoverability for recruiters
+- README-short.md expanded with key highlights and project goals — provides quick overview for recruiters
+- all documentation reviewed and finalized for v1.0.0 release
+- CHANGELOG Unreleased heading replaced with v1.0.0 and release date
+
+### docs/production-phase
+
+- `README.md` updated with preview image and live demo section — improves project discoverability
+- `README-short.md` updated to match README structure — keeps both files consistent
+- `CHANGELOG.md` updated with Unreleased v1.0.0 changes — tracks all production phase work
+- `ARCHITECTURE.md` updated with v1.0.0 production phase structure — folder structure, phase boundaries and history updated
+- `DEPLOYMENT.md` finalized — deployment platforms, build config and pre-deployment checklist documented
+- live URLs kept as placeholder — will be updated after production deployment
+
+### performance-audit
+
+- `sharp` used for automated WebP conversion — consistent quality across all images
+- WebP format chosen over PNG/JPG — significantly smaller file sizes with comparable quality
+- `floral-1.png` kept in PNG — WebP version was larger than original PNG
+- `cart-1` resized from 4000x4000px to 600px width — original resolution was unnecessarily large
+- all image imports updated to `.webp` extension — consistent with new asset format
+- `aria-label` added to icon-only links and buttons — required for screen reader accessibility
+- Lighthouse Performance target 95+ achieved — final score 97
+- Lighthouse Accessibility improved from 81 to 90 — aria-label fixes applied
+- `preview.png` kept in PNG format — better OG image compatibility across platforms
+- image optimization deferred from UI/UX phases — production phase is the right time for this
+
+### seo-optimization
+
+- `preview.png` replaced with actual project screenshot — 1200x630px for OG image standard
+- `og:locale` added — specifies language and region for search engines and social platforms
+- `og:site_name` added — improves link preview appearance on social platforms
+- `apple-touch-icon` added — enables proper icon when added to iOS home screen
+- canonical URL and OG URLs kept as placeholder — will be updated after production deployment
+- Twitter card tags kept — future-proof even without active Twitter account
+
+### deploy-config
+
+- `vercel.json` added — explicit config preferred over Vercel auto-detection for clarity
+- `netlify.toml` added — TOML format used for Netlify — standard and readable
+- SPA redirects added to both Vercel and Netlify configs — prevents 404 on page refresh
+- GitHub Pages workflow added — CI/CD pipeline triggers on main branch push
+- `base: '/plants-website/'` added to vite.config.js — required for GitHub Pages subdirectory deployment
+- Vercel and Netlify work without base path — they serve from root domain
+- GitHub Pages requires base path — served from username.github.io/plants-website/
+
+### release/v0.4.0
 
 ## v0.4.0 — UX Phase
 
@@ -307,89 +357,6 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 - repository initialized
 - `README.md` skeleton added
 - `LICENSE.md` added
-
----
-
-### hero-section
-
-- Introduced `src/pages/` directory to separate page-level concerns from layout and reusable components
-- Used `src/pages/main/sections/` for page sections and `src/pages/main/components/` for section-specific components
-- `HeroSection.js` uses `export default` — consistent with page-level section pattern
-- `DecorativeIcons.js` kept as a separate component to isolate decorative markup from section logic
-- `Index.js` acts as the page entry point — renders all main sections in order
-- `MainLayout.js` updated to use `export function` for consistency with all other layout and component files
-- images kept in `.png` format during development — format conversion deferred to production phase
-- animation styles added to `custom.css` under `feature/hero-section` comment marker for traceability
-- relative import paths used throughout — no path alias configured in `vite.config.js`
-
----
-
-### services-section
-
-- `ServicesSection.js` uses `export default` — consistent with page-level section pattern
-- `ServiceCard` kept as a private function inside `ServicesSection.js` — not exported, only used internally
-- no separate assets needed for this section — icon-based design using Remix Icon library
-- section background set to white (`bg-white`) with dark green text — intentional contrast against dark hero section
-
----
-
-### about-section
-
-- `AboutSection.js` uses `export default` — consistent with page-level section pattern
-- `AboutItem` kept as a private function inside `AboutSection.js` — not exported, only used internally
-- `reverse` parameter used to alternate layout direction — avoids code duplication
-- `index` parameter used for unique BEM class names per item — allows section-specific styling later
-- `.title` style added to `custom.css` — shared across multiple sections, not about-specific
-- images kept in `.png` format — format conversion deferred to production phase
-
----
-
-### popular-section
-
-- `PopularSection.js` uses `export default` — consistent with page-level section pattern
-- `PopularCard` kept as a private function inside `PopularSection.js` — not exported, only used internally
-- card image hover effect added via CSS — image lifts on card hover using `popular__card:hover img`
-- `mb-40` used in section header to create space for overlapping card images
-- `gap-y-36` used in grid to maintain vertical spacing between cards with overflowing images
-- images kept in `.png` format — format conversion deferred to production phase
-
----
-
-### review-section
-
-- `ReviewSection.js` uses `export default` — consistent with page-level section pattern
-- `ReviewCard` kept as a private function inside `ReviewSection.js` — not exported, only used internally
-- swiper HTML structure added — `swiper`, `swiper-wrapper`, `swiper-slide`, `swiper-pagination` classes in place
-- swiper library installation and initialization deferred to UX phase — UI structure ready, behavior comes later
-- swiper pagination styles added to `custom.css` — custom green bullet colors matching project palette
-- images kept in `.jpg` format — format conversion deferred to production phase
-
----
-
-### footer-section
-
-- `src/components/footer/` directory created — footer-specific components separated from shared UI components
-- footer sub-components kept small and focused — each component handles one responsibility
-- `NewsletterForm.js` placed in `src/pages/main/components/` — page-specific component, not shared
-- `SocialIcons.js` reuses `SocialNetworks` component from shared UI layer — avoids duplication
-- `FloralDecoration.js` uses `pointer-events-none` — prevents decoration from blocking interactions
-- `ScrollUp` button kept hidden via `-bottom-1/2` — show/hide behavior deferred to UX phase
-- `Footer.js` updated to integrate all sub-components — layout wrapper pattern consistent with architecture phase
-- images kept in `.png` format — format conversion deferred to production phase
-
----
-
-### ui-phase
-
-- all UI sections follow `export default function` pattern — consistent page-level section convention
-- private helper functions (ServiceCard, AboutItem, PopularCard, ReviewCard) kept inside their parent section files — not exported, reduces module surface
-- `src/pages/` directory introduced to separate page-level concerns from shared layout and components
-- `src/pages/main/components/` used for page-specific components — DecorativeIcons and NewsletterForm not shared globally
-- `src/components/footer/` introduced for footer sub-components — footer complexity managed through decomposition
-- swiper HTML structure added in ReviewSection — library installation and initialization deferred to UX phase
-- ScrollUp button hidden via `-bottom-1/2` — visibility behavior deferred to UX phase
-- all images kept in `.png` format during UI phase — format optimization deferred to production phase
-- custom.css grows incrementally — each feature branch adds its styles under a named comment block
 
 ---
 

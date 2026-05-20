@@ -1,4 +1,4 @@
-import homeImage from '../../../assets/images/home.png'
+import homeImage from '../../../assets/images/home.webp'
 
 import { Button } from '../../../components/ui/Button'
 import { SocialNetworks } from '../../../components/ui/SocialNetworks'

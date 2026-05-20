@@ -4,27 +4,67 @@
 
 ## Current Status
 
-Production deployment is not configured yet.
+Deployment configuration complete. Live deployment pending production release.
 
-The project is currently in the architecture phase (`v0.2.0`). Deployment is intentionally deferred to keep the current phase focused on project structure and architecture.
+The project is configured for deployment across three platforms — Vercel (primary), Netlify (backup), and GitHub Pages (CI/CD). Live URLs will be updated after deployment.
 
 ---
 
-## Planned
+## Platforms
 
-Deployment will be handled during the production phase (`v1.0.0`).
+### Vercel (Primary)
 
-Planned deployment scope:
+- Platform: [vercel.com](https://vercel.com)
+- Config: `vercel.json`
+- Deploy: automatic on push to `main`
+- URL: coming soon
 
-- choose deployment platform (Vercel / Netlify / GitHub Pages)
-- configure build and deployment pipeline
-- verify environment variable handling
-- run production build checks
-- perform performance and SEO validation
-- publish final production version
+### Netlify (Backup)
+
+- Platform: [netlify.com](https://netlify.com)
+- Config: `netlify.toml`
+- Deploy: automatic on push to `main`
+- URL: coming soon
+
+### GitHub Pages (CI/CD)
+
+- Platform: GitHub Actions
+- Config: `.github/workflows/deploy.yml`
+- Deploy: automatic on push to `main` via `peaceiris/actions-gh-pages`
+- URL: coming soon
+
+---
+
+## Build Configuration
+
+- Build command: `npm run build`
+- Output directory: `dist`
+- Framework: Vite
+- Base path: `/plants-website/` (GitHub Pages only)
+
+---
+
+## Pre-deployment Checklist
+
+- ✅ Build verified — `npm run build` passes
+- ✅ Lint verified — `npm run lint` passes
+- ✅ Format verified — `npm run format:check` passes
+- ✅ Lighthouse Performance — 97
+- ✅ Lighthouse Accessibility — 90
+- ✅ Lighthouse Best Practices — 100
+- ✅ Lighthouse SEO — 92
+- ✅ Images optimized — WebP format
+- ✅ SEO meta tags finalized
+- ✅ OG tags configured
+- ✅ Preview image optimized
 
 ---
 
 ## Notes
 
-Preview or production deployment is intentionally skipped during early phases to avoid expanding the scope before UI and UX work are complete.
+- Vercel is the primary deployment platform — fastest and most optimized for Vite
+- Netlify serves as backup deployment
+- GitHub Pages uses CI/CD workflow via GitHub Actions
+- SPA redirects configured on both Vercel and Netlify — prevents 404 on page refresh
+- Base path `/plants-website/` required for GitHub Pages — not needed for Vercel and Netlify
+- Live URLs will be updated after production deployment
