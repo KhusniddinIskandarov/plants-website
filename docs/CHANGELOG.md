@@ -4,6 +4,46 @@ All notable changes in this project are documented in this file.
 
 ---
 
+## Unreleased
+
+### Added
+
+- added `vercel.json` — Vercel deployment configuration with build command and SPA rewrites
+- added `netlify.toml` — Netlify deployment configuration with build command and SPA redirects
+- added `.github/workflows/deploy.yml` — GitHub Pages CI/CD workflow triggered on main push
+- added `scripts/optimize-images.js` — automated image optimization script using sharp
+- added `sharp` as dev dependency — image optimization tool for WebP conversion
+- added optimized WebP versions of all section images — cart, home, leaf, plant, review assets
+- added `og:locale` meta tag — language and region metadata for search engines
+- added `og:site_name` meta tag — site name for Open Graph link previews
+- added `apple-touch-icon` — iOS home screen icon support
+
+### Changed
+
+- updated `vite.config.js` — added base path for GitHub Pages deployment
+- updated `preview.png` — replaced placeholder with actual project screenshot, reduced from 1.5MB to 137KB
+- updated all image imports to `.webp` format across section and navigation components
+- updated `SocialNetworks.js` — added `aria-label` to social network links for accessibility
+- updated `ARCHITECTURE.md` with v1.0.0 production phase structure
+- updated `DEVLOG.md` with production phase progress
+- updated `DevNotes.md` with production phase decisions
+- updated `DEPLOYMENT.md` with finalized deployment strategy
+- updated `README.md` and `README-short.md` for v1.0.0
+
+### Removed
+
+- removed all original PNG image assets — cart-1 through cart-4, home, leaf-1 through leaf-4, plant-1, plant-2
+- removed all original JPG image assets — review-1 through review-4
+
+### Performance
+
+- Lighthouse Performance: 97
+- Lighthouse Accessibility: 90
+- Lighthouse Best Practices: 100
+- Lighthouse SEO: 92
+
+---
+
 ## v0.4.0 - 2026-05-16
 
 ### Added in v0.4.0
@@ -139,6 +179,7 @@ All notable changes in this project are documented in this file.
 
 ## Notes
 
+- v1.0.0 = production release (deployment config, SEO finalization, performance audit, image optimization, docs update)
 - v0.4.0 = UX release (interactive modules, scroll behavior, swiper, scroll reveal)
 - v0.3.0 = UI release (all page sections, footer sub-components, page entry point, section styles)
 - v0.2.0 = architecture release (layout, navigation, reusable UI components, style foundation, and app entry point)
