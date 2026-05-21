@@ -16,6 +16,10 @@ export default defineConfig([
     ]
   },
   {
+    files: ['vite.config.js'],
+    languageOptions: { globals: globals.node }
+  },
+  {
     files: ['**/*.{js,mjs,cjs}'],
     plugins: { js },
     extends: ['js/recommended', prettier],
