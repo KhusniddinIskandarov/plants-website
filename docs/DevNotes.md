@@ -10,6 +10,8 @@ This file tracks decisions, reasoning, and architectural thinking behind the pro
 - keep commits and branches small and focused
 - build project in incremental, testable steps
 - prefer clarity over premature optimization
+- optimize images to webp format in production phase
+- finalize SEO and Open Graph tags before deployment
 
 ---
 
@@ -72,8 +74,6 @@ No open questions — all production phase decisions resolved.
 - `base: '/plants-website/'` added to vite.config.js — required for GitHub Pages subdirectory deployment
 - Vercel and Netlify work without base path — they serve from root domain
 - GitHub Pages requires base path — served from username.github.io/plants-website/
-
----
 
 ## v0.4.0 — UX Phase
 
