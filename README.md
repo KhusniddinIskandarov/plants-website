@@ -3,7 +3,7 @@
 ![Last Commit](https://img.shields.io/github/last-commit/KhusniddinIskandarov/plants-website)
 ![Repo Size](https://img.shields.io/github/repo-size/KhusniddinIskandarov/plants-website)
 ![Top Language](https://img.shields.io/github/languages/top/KhusniddinIskandarov/plants-website)
-[![v0.4.0](https://img.shields.io/badge/version-v0.4.0-green)](./docs/CHANGELOG.md)
+[![v1.0.0](https://img.shields.io/badge/version-v1.0.0-green)](./docs/CHANGELOG.md)
 ![Vite](https://img.shields.io/badge/Vite-Frontend-blue)
 ![Status](https://img.shields.io/badge/status-active-success)
 ![ESLint](https://img.shields.io/badge/code%20style-eslint-blue?style=flat&logo=eslint)
@@ -53,12 +53,76 @@ It demonstrates:
 
 ## 🔥 Key Highlights
 
-- ⚡ 97 Lighthouse performance score
-- 🧩 Scalable modular architecture
-- 📱 Fully responsive (mobile-first)
-- 🎯 Production-ready (no frameworks)
-- 🧠 Feature-based Git workflow
-- 🧹 Clean code (ESLint, Prettier, Husky)
+- 🧩 scalable modular architecture
+- 🎯 production-ready (no frameworks)
+
+---
+
+## 🎯 Project Goals
+
+- build a fully responsive and interactive UI
+- apply modular and scalable architecture
+- create reusable UI components
+- follow a professional Git workflow (feature branches)
+- deliver a portfolio-ready production-level project
+
+---
+
+## ✨ Features & Highlights
+
+- 📱 fully responsive design (mobile-first)
+- 🧩 scalable modular architecture
+- 🎯 production-ready (no frameworks)
+- 🎨 reusable UI components
+- 🚀 high performance (Lighthouse 97)
+- ⚙️ clean code (ESLint, Prettier, Husky)
+- 🔄 feature-based Git workflow
+
+### 🌿 Sections
+
+- Hero
+- Services
+- About
+- Popular Plants
+- Customer Reviews
+- Footer
+
+### 🎬 UX Enhancements
+
+- scroll reveal animations
+- swiper carousel
+- scroll-up button
+- active navigation links
+- scroll-based header effect
+
+---
+
+## 📱 Responsive Design
+
+- ✅ Mobile
+- ✅ Tablet
+- ✅ Desktop
+
+---
+
+## 🌐 SEO & Performance
+
+- meta tags (SEO + Open Graph + Twitter cards)
+- WebP image optimization
+
+---
+
+## ♿ Accessibility
+
+- ✅ semantic HTML5 structure
+- ✅ aria-label on icon-only links and buttons
+- ✅ keyboard-friendly navigation structure
+
+---
+
+## 🌐 Status
+
+🚧 actively maintained
 
 ---
 
@@ -68,7 +132,8 @@ It demonstrates:
 - 🎨 TailwindCSS (utility-first styling)
 - 🟨 JavaScript (ESM, vanilla approach)
 - ESLint + Prettier (code quality)
-- Husky + lint-staged (git automation)
+- EditorConfig (cross-editor consistency)
+- Husky + lint-staged (pre-commit ESLint + Prettier automation)
 - 🎠 Swiper (carousel)
 - ✨ ScrollReveal (scroll animations)
 - 🖼️ Sharp (image optimization, dev only)
@@ -89,7 +154,7 @@ It demonstrates:
 
 ## 📊 Current Status
 
-**v0.4.0** — UX phase complete
+**v1.0.0** — Production release complete
 
 - ✅ Vite + TailwindCSS setup
 - ✅ ESLint + Prettier configuration
@@ -113,16 +178,17 @@ It demonstrates:
 - ✅ Scroll up button
 - ✅ Scroll reveal animations
 - ✅ Swiper carousel
-- ✅ Image optimization (WebP)
-- ✅ Lighthouse 97 Performance
-- ✅ Deploy configuration (Vercel, Netlify, GitHub Pages)
+- ✅ Vercel + Netlify + GitHub Pages deployment config
+- ✅ SEO meta tags and Open Graph finalization
+- ✅ Image optimization (WebP, Lighthouse 97)
+- ✅ Accessibility improvements (aria-labels)
 - 🔄 Production deployment — coming soon
 
 ---
 
 ## 🏗️ Project Structure
 
-```
+```text
 src/
   assets/images/    — optimized WebP image assets
   components/       — reusable UI, navigation and footer components
@@ -176,6 +242,15 @@ npm run preview
 ---
 
 ## 📚 Documentation
+
+[![README-short](https://img.shields.io/badge/📘-README--SHORT-blue)](./README-short.md)
+[![Setup](https://img.shields.io/badge/⚙️-SETUP-green)](./docs/SETUP.md)
+[![Architecture](https://img.shields.io/badge/📐-ARCHITECTURE-purple)](./docs/ARCHITECTURE.md)
+[![DevNotes](https://img.shields.io/badge/📝-DEVNOTES-orange)](./docs/DevNotes.md)
+[![DevLog](https://img.shields.io/badge/📓-DEVLOG-brown)](./docs/DEVLOG.md)
+[![Changelog](https://img.shields.io/badge/📖-CHANGELOG-lightgrey)](./docs/CHANGELOG.md)
+[![Deployment](https://img.shields.io/badge/🚀-DEPLOYMENT-red)](./docs/DEPLOYMENT.md)
+[![License](https://img.shields.io/badge/⚖️-LICENSE-darkblue)](./LICENSE.md)
 
 | Document                                  | Description                                       |
 | ----------------------------------------- | ------------------------------------------------- |
