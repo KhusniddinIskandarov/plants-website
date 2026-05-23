@@ -2,6 +2,16 @@
 
 ---
 
+## v1.0.1 — Hotfix Release
+
+### hotfix/vercel-deploy-fix
+
+- `vercel.json` removed — Vercel auto-detects Vite projects, manual config was causing conflicts
+- `vite.config.js` updated — base path made dynamic using `GITHUB_ACTIONS` environment variable
+- `eslint.config.js` updated — added Node.js globals for `vite.config.js` to fix ESLint warnings
+
+---
+
 ## v1.0.0 — Production Phase
 
 ### release/v1.0.0

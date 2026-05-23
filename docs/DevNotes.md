@@ -23,6 +23,16 @@ No open questions — all production phase decisions resolved.
 
 ## ⚙️ Decision Notes
 
+## v1.0.1 — Hotfix Release
+
+### hotfix/vercel-deploy-fix
+
+- `vercel.json` removed — Vercel auto-detects Vite projects, explicit config was overriding correct defaults
+- `vite.config.js` base path made dynamic — `GITHUB_ACTIONS` env variable used to conditionally apply `/plants-website/` base only on GitHub Pages
+- `eslint.config.js` updated — `vite.config.js` needs Node.js globals, browser globals caused false ESLint errors
+
+---
+
 ## v1.0.0 — Production Phase
 
 ### release/v1.0.0

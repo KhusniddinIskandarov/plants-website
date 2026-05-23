@@ -4,9 +4,19 @@ All notable changes in this project are documented in this file.
 
 ---
 
+## v1.0.1 — 2026-05-21
+
+### Fixed - v1.0.1
+
+- removed `vercel.json` — Vercel auto-detects Vite projects, manual config was causing conflicts
+- fixed `vite.config.js` — base path now dynamic via `GITHUB_ACTIONS` environment variable
+- fixed `eslint.config.js` — added Node.js globals for `vite.config.js`
+
+---
+
 ## v1.0.0 - 2026-05-20
 
-### Added
+### Added - v1.0.0
 
 - added `vercel.json` — Vercel deployment configuration with build command and SPA rewrites
 - added `netlify.toml` — Netlify deployment configuration with build command and SPA redirects
@@ -18,7 +28,7 @@ All notable changes in this project are documented in this file.
 - added `og:site_name` meta tag — site name for Open Graph link previews
 - added `apple-touch-icon` — iOS home screen icon support
 
-### Changed
+### Changed - v1.0.0
 
 - updated `vite.config.js` — added base path for GitHub Pages deployment
 - updated `preview.png` — replaced placeholder with actual project screenshot, reduced from 1.5MB to 137KB
@@ -30,7 +40,7 @@ All notable changes in this project are documented in this file.
 - updated `DEPLOYMENT.md` with finalized deployment strategy
 - updated `README.md` and `README-short.md` for v1.0.0
 
-### Removed
+### Removed - v1.0.0
 
 - removed all original PNG image assets — cart-1 through cart-4, home, leaf-1 through leaf-4, plant-1, plant-2
 - removed all original JPG image assets — review-1 through review-4
