@@ -4,9 +4,64 @@ All notable changes in this project are documented in this file.
 
 ---
 
-## v1.0.0 - 2026-05-20
+## Unreleased — v1.1.0
 
 ### Added
+
+- added `@fontsource/jost`, `@fontsource/lobster` — local font packages replacing Google Fonts CDN
+- added `@fortawesome/fontawesome-free`, `remixicon` — local icon packages replacing CDN links
+- added responsive hero image variants — `home-480.webp`, `home-720.webp`, `home-1080.webp`
+- added `srcset` and `sizes` attributes to hero image — responsive image loading
+- added `fetchpriority="high"` and `loading="eager"` to hero image — LCP optimization
+- added `width` and `height` attributes to all images — prevents layout shift (CLS)
+- added `alt` text to all images missing it — accessibility improvement
+- added `aria-label` to hamburger button and scroll-up link — screen reader support
+- added `public/robots.txt` — search engine crawl configuration
+
+### Changed
+
+- replaced hamburger `<div>` with `<button>` — semantic HTML for accessibility
+- replaced CDN font and icon links in `index.html` with local npm imports in `main.js`
+- refactored `scrollReveal.js` — lazy dynamic import, tuned animation parameters
+- refactored `swiper.module.js` — lazy dynamic import, adjusted speed and breakpoints
+- deferred `initScrollReveal` and `initSwiperModule` to `load` event — improves LCP
+
+### Removed
+
+- removed CDN preconnect and stylesheet links from `index.html`
+- removed `src/assets/icons/.gitkeep` — unused placeholder
+
+### Performance
+
+#### Desktop
+
+- Performance: 100
+- Accessibility: 96
+- Best Practices: 100
+- SEO: 100
+
+#### Mobile
+
+- Performance: 87
+- Accessibility: 100
+- Best Practices: 100
+- SEO: 100
+
+---
+
+## v1.0.1 — 2026-05-21
+
+### Fixed - v1.0.1
+
+- removed `vercel.json` — Vercel auto-detects Vite projects, manual config was causing conflicts
+- fixed `vite.config.js` — base path now dynamic via `GITHUB_ACTIONS` environment variable
+- fixed `eslint.config.js` — added Node.js globals for `vite.config.js`
+
+---
+
+## v1.0.0 - 2026-05-20
+
+### Added - v1.0.0
 
 - added `vercel.json` — Vercel deployment configuration with build command and SPA rewrites
 - added `netlify.toml` — Netlify deployment configuration with build command and SPA redirects
@@ -18,7 +73,7 @@ All notable changes in this project are documented in this file.
 - added `og:site_name` meta tag — site name for Open Graph link previews
 - added `apple-touch-icon` — iOS home screen icon support
 
-### Changed
+### Changed - v1.0.0
 
 - updated `vite.config.js` — added base path for GitHub Pages deployment
 - updated `preview.png` — replaced placeholder with actual project screenshot, reduced from 1.5MB to 137KB
@@ -30,12 +85,12 @@ All notable changes in this project are documented in this file.
 - updated `DEPLOYMENT.md` with finalized deployment strategy
 - updated `README.md` and `README-short.md` for v1.0.0
 
-### Removed
+### Removed - v1.0.0
 
 - removed all original PNG image assets — cart-1 through cart-4, home, leaf-1 through leaf-4, plant-1, plant-2
 - removed all original JPG image assets — review-1 through review-4
 
-### Performance
+### Performance - v1.0.0
 
 - Lighthouse Performance: 97
 - Lighthouse Accessibility: 90

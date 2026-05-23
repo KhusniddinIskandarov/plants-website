@@ -1,4 +1,12 @@
 import './styles/main.css'
+
+import '@fontsource/jost/400.css'
+import '@fontsource/jost/700.css'
+import '@fontsource/lobster/400.css'
+
+import '@fortawesome/fontawesome-free/css/all.min.css'
+import 'remixicon/fonts/remixicon.css'
+
 import { MainLayout } from './layouts/MainLayout'
 import { initNavbarController } from './modules/navbarController'
 import { initScrollHeader } from './modules/scrollHeader'
@@ -21,8 +29,11 @@ function initApp() {
   initScrollHeader()
   initActiveLink()
   initScrollUp()
+}
+
+window.addEventListener('load', () => {
   initScrollReveal()
   initSwiperModule()
-}
+})
 
 window.addEventListener('DOMContentLoaded', initApp)

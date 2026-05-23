@@ -16,9 +16,9 @@ export function Navbar() {
         </ul>
         ${LeafDecoration()}
       </div>
-      <div class="text-4xl sm:text-3xl cursor-pointer z-50 lg:hidden">
+      <button class="text-4xl sm:text-3xl cursor-pointer z-50 lg:hidden" aria-label="Open menu" id="hamburger-btn">
         <i class="ri-menu-4-line" id="hamburger"></i>
-      </div>
+      </button>
     </nav>
   `
 }

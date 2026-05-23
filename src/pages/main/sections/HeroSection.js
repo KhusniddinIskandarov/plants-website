@@ -1,4 +1,6 @@
-import homeImage from '../../../assets/images/home.webp'
+import homeImage480 from '../../../assets/images/home-480.webp'
+import homeImage720 from '../../../assets/images/home-720.webp'
+import homeImage1080 from '../../../assets/images/home-1080.webp'
 
 import { Button } from '../../../components/ui/Button'
 import { SocialNetworks } from '../../../components/ui/SocialNetworks'
@@ -36,7 +38,22 @@ export default function HeroSection() {
             </div>
           </div>
           <div class="w-full relative lg:w-1/2">
-            <img src="${homeImage}" alt="home_image" class="home__image" loading="lazy"/>
+            <img
+              src="${homeImage720}"
+              srcset="
+                ${homeImage480} 480w,
+                ${homeImage720} 720w,
+                ${homeImage1080} 1080w
+              "
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+              alt="home_image"
+              class="home__image"
+              width="720"
+              height="720"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
             ${DecorativeIcons()}
           </div>
         </div>
