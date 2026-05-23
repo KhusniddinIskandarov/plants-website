@@ -26,14 +26,14 @@
 
 #### Desktop
 
-- Performance: 99
+- Performance: 100
 - Accessibility: 96
 - Best Practices: 100
 - SEO: 100
 
 #### Mobile
 
-- Performance: 83
+- Performance: 87
 - Accessibility: 100
 - Best Practices: 100
 - SEO: 100

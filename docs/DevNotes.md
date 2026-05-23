@@ -42,10 +42,10 @@ No open questions — all production phase decisions resolved.
 - `aria-label` added to hamburger and scroll-up — icon-only controls require accessible labels
 - `robots.txt` added to public — controls search engine crawl behavior
 
-- Desktop Lighthouse: Performance 99, Accessibility 96, Best Practices 100, SEO 100
-- Mobile Lighthouse: Performance 83, Accessibility 100, Best Practices 100, SEO 100
-- mobile Performance 83 — hero image sizes attribute not working correctly on mobile, home-1080.webp loads instead of home-480.webp
-- mobile Performance improvement deferred to next fix branch
+- Desktop Lighthouse: Performance 100, Accessibility 96, Best Practices 100, SEO 100
+- Mobile Lighthouse: Performance 87, Accessibility 100, Best Practices 100, SEO 100
+- mobile Performance 87 — LCP discovery issue: hero image rendered via JS innerHTML, not discoverable in initial HTML document
+- mobile Performance improvement deferred to fix/mobile-performance branch
 
 ---
 
