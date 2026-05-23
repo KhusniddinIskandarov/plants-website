@@ -45,7 +45,7 @@ export default function HeroSection() {
                 ${homeImage720} 720w,
                 ${homeImage1080} 1080w
               "
-              sizes="(max-width: 480px) 100vw, (max-width: 768px) 480px, (max-width: 1024px) 720px, 1080px"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
               alt="home_image"
               class="home__image"
               width="720"
