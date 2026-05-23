@@ -1,7 +1,4 @@
-// ReviewSection.js (Optimized)
-
 import review1 from '../../../assets/images/review-1.webp'
-
 import review2 from '../../../assets/images/review-2.webp'
 import review3 from '../../../assets/images/review-3.webp'
 import review4 from '../../../assets/images/review-4.webp'
@@ -17,6 +14,8 @@ export default function ReviewSection() {
           src="${leaf4}"
           alt="leaf_image"
           class="w-40 md:w-56 xl:w-64"
+          width="256"
+          height="256"
           loading="lazy"
         />
       </div>
@@ -43,7 +42,6 @@ export default function ReviewSection() {
   `
 }
 
-// ReviewCard function with lazy load
 function ReviewCard(image) {
   return `
     <li class="swiper-slide">
@@ -58,6 +56,8 @@ function ReviewCard(image) {
             src="${image}"
             alt="review_image"
             class="w-14 h-14 rounded-full"
+            width="56"
+            height="56"
             loading="lazy"
           />
           <div class="ml-2.5">

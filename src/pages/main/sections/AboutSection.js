@@ -10,29 +10,35 @@ export default function AboutSection() {
           src="${leaf3}"
           alt="leaf_image"
           class="w-40 md:w-52 xl:w-64"
+          width="256"
+          height="256"
+          loading="lazy"
         />
       </div>
-      <div
-        class="about__top flex flex-col items-center gap-3 text-center mb-10 md:mb-15"
-        >
+      <div class="about__top flex flex-col items-center gap-3 text-center mb-10 md:mb-15">
         <h2 class="title">About Us</h2>
         <p class="text-max-w-2xl">Follow instruction for more</p>
       </div>
       <div class="container mx-auto space-y-10 xl:space-y-0 p-8">
-
-        ${AboutItem(plant1, "Make your <span class='text-yellow-500'> organic </span> <br /> garden", false, 1)}
-        ${AboutItem(plant2, "Come with us <br /> <span class='text-yellow-500'> grow up </span> your plant", true, 2)}
-
+        ${AboutItem(plant1, 'Organic garden plant', "Make your <span class='text-yellow-500'> organic </span> <br /> garden", false, 1)}
+        ${AboutItem(plant2, 'Growing plant', "Come with us <br /> <span class='text-yellow-500'> grow up </span> your plant", true, 2)}
       </div>
     </section>
   `
 }
 
-function AboutItem(image, title, reverse, index) {
+function AboutItem(image, alt, title, reverse, index) {
   return `
     <div class="flex flex-col items-center gap-5 ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'}">
       <div class="about__item__${index}-img about__item-img w-full lg:w-1/2">
-        <img src="${image}" class="w-full sm:2/3 lg:w-full xl:w-2/3 mx-auto" loading="lazy"/>
+        <img
+          src="${image}"
+          alt="${alt}"
+          class="w-full sm:2/3 lg:w-full xl:w-2/3 mx-auto"
+          width="600"
+          height="600"
+          loading="lazy"
+        />
       </div>
       <div class="about__item__${index}-content about__item-content w-full lg:w-1/2">
         <div class="space-y-5">
