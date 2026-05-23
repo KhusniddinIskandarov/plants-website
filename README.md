@@ -3,12 +3,15 @@
 ![Last Commit](https://img.shields.io/github/last-commit/KhusniddinIskandarov/plants-website)
 ![Repo Size](https://img.shields.io/github/repo-size/KhusniddinIskandarov/plants-website)
 ![Top Language](https://img.shields.io/github/languages/top/KhusniddinIskandarov/plants-website)
-[![v1.0.0](https://img.shields.io/badge/version-v1.0.0-green)](./docs/CHANGELOG.md)
+[![v1.1.0](https://img.shields.io/badge/version-v1.1.0-green)](./docs/CHANGELOG.md)
+[![GitHub release](https://img.shields.io/github/v/release/KhusniddinIskandarov/plants-website?color=brightgreen&label=latest%20release)](https://github.com/KhusniddinIskandarov/plants-website/releases)
 ![Vite](https://img.shields.io/badge/Vite-Frontend-blue)
 ![Status](https://img.shields.io/badge/status-active-success)
 ![ESLint](https://img.shields.io/badge/code%20style-eslint-blue?style=flat&logo=eslint)
 ![Prettier](https://img.shields.io/badge/format-prettier-ff69b4?style=flat&logo=prettier)
-![Lighthouse](https://img.shields.io/badge/performance-97-brightgreen?style=flat&logo=lighthouse)
+![Lighthouse](https://img.shields.io/badge/performance-100-brightgreen?style=flat&logo=lighthouse)
+![Vercel Deploy](https://img.shields.io/badge/deploy-vercel-success?style=flat&logo=vercel)
+![Netlify Deploy](https://img.shields.io/badge/deploy-netlify-success?style=flat&logo=netlify)
 ![CI/CD](https://img.shields.io/badge/ci%2Fcd-githubactions-2088FF?style=flat&logo=githubactions)
 ![License](https://img.shields.io/badge/license-MIT-yellow.svg)
 
@@ -22,17 +25,35 @@
 
 ---
 
+## 📄 Recruiter-Friendly Version
+
+Quick overview: [📝 Short README](./README-short.md)
+
+---
+
+## 📸 Previews
+
 ![Preview](./public/preview.png)
 
 A modern frontend project built with a structured Git workflow and incremental architecture-driven development.
 
+### 📺 Responsive Full pages Screenshots
+
+Quick previews of the project: 👇
+
+🔗 [🖥️ Desktop](https://github.com/KhusniddinIskandarov/plants-website-showcase/blob/main/screenshots/desktop.webp)
+🔗 [📲 Tablet](https://github.com/KhusniddinIskandarov/plants-website-showcase/blob/main/screenshots/tablet.webp)
+🔗 [📱 Mobile](https://github.com/KhusniddinIskandarov/plants-website-showcase/blob/main/screenshots/mobile.webp)
+
+👉 More previews: [Showcase Repository (GIFs & Videos)](https://github.com/KhusniddinIskandarov/plants-website-showcase)
+
 ---
 
-## 🚀 Live Demo
+## 🚀 Live Demos
 
-- Vercel: coming soon
-- Netlify: coming soon
-- GitHub Pages: coming soon
+- Vercel: [plants-website](https://khusniddn-plants-website.vercel.app)
+- Netlify: [plants-website](https://khusniddin-plants-website.netlify.app)
+- GitHub Pages: [plants-website](https://khusniddiniskandarov.github.io/plants-website)
 
 ---
 
@@ -74,7 +95,7 @@ It demonstrates:
 - 🧩 scalable modular architecture
 - 🎯 production-ready (no frameworks)
 - 🎨 reusable UI components
-- 🚀 high performance (Lighthouse 97)
+- 🚀 high performance (Lighthouse 100)
 - ⚙️ clean code (ESLint, Prettier, Husky)
 - 🔄 feature-based Git workflow
 
@@ -109,6 +130,9 @@ It demonstrates:
 
 - meta tags (SEO + Open Graph + Twitter cards)
 - WebP image optimization
+- responsive hero image (srcset, 480w/720w/1080w)
+- local fonts and icons (no CDN dependency)
+- LCP and CLS optimized
 
 ---
 
@@ -117,6 +141,7 @@ It demonstrates:
 - ✅ semantic HTML5 structure
 - ✅ aria-label on icon-only links and buttons
 - ✅ keyboard-friendly navigation structure
+- ✅ responsive images with width/height attributes
 
 ---
 
@@ -154,7 +179,7 @@ It demonstrates:
 
 ## 📊 Current Status
 
-**v1.0.0** — Production release complete
+**v1.1.0** — Performance & Accessibility release complete
 
 - ✅ Vite + TailwindCSS setup
 - ✅ ESLint + Prettier configuration
@@ -180,9 +205,12 @@ It demonstrates:
 - ✅ Swiper carousel
 - ✅ Vercel + Netlify + GitHub Pages deployment config
 - ✅ SEO meta tags and Open Graph finalization
-- ✅ Image optimization (WebP, Lighthouse 97)
-- ✅ Accessibility improvements (aria-labels)
-- 🔄 Production deployment — coming soon
+- ✅ Image optimization (WebP, responsive srcset)
+- ✅ Accessibility improvements (aria-labels, semantic HTML)
+- ✅ Local fonts and icons (no CDN dependency)
+- ✅ Lazy imports for ScrollReveal and Swiper
+- ✅ LCP and CLS optimizations
+- ✅ Production deployment — live
 
 ---
 
@@ -203,12 +231,23 @@ src/
 
 ## 📈 Lighthouse Scores
 
+### 🖥️ Desktop
+
 | Category       | Score  |
 | -------------- | ------ |
-| Performance    | 97 ✅  |
-| Accessibility  | 90 ✅  |
+| Performance    | 100 ✅ |
+| Accessibility  | 96 ✅  |
 | Best Practices | 100 ✅ |
-| SEO            | 92 ✅  |
+| SEO            | 100 ✅ |
+
+### 📱 Mobile
+
+| Category       | Score  |
+| -------------- | ------ |
+| Performance    | 87 ✅  |
+| Accessibility  | 100 ✅ |
+| Best Practices | 100 ✅ |
+| SEO            | 100 ✅ |
 
 ---
 

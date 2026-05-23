@@ -23,6 +23,50 @@ No open questions — all production phase decisions resolved.
 
 ## ⚙️ Decision Notes
 
+## v1.1.0 — Performance & Accessibility Phase
+
+### release/v1.1.0
+
+- version bump to 1.1.0 follows SemVer conventions
+- build, lint, format checks passed before release
+- README and CHANGELOG updated to reflect v1.1.0 completion
+
+### fix/post-release
+
+- `Thumbs.db` added to `.gitignore` — Windows thumbnail cache file, should not be tracked
+- Vite temp and cache entries added to `.gitignore` — `.vite/` and `*.local` files excluded from version control
+- `FloralDecoration.js` `loading` changed from `lazy` to `eager` — footer image was not rendering in incognito and some browsers because lazy loading treats footer elements as outside the viewport and skips them
+
+### fix/accessibility-and-performance
+
+- CDN fonts and icons replaced with local npm packages — eliminates external network dependency and improves load reliability
+- `@fontsource/jost` and `@fontsource/lobster` chosen — self-hosted font packages, no Google Fonts tracking
+- `@fortawesome/fontawesome-free` and `remixicon` installed locally — consistent with font strategy
+- `scrollReveal.js` converted to async dynamic import — library loads only when needed, reduces initial bundle
+- `swiper.module.js` converted to async dynamic import — same reasoning as scrollReveal
+- `requestIdleCallback` used in scrollReveal scheduler — defers animation setup to browser idle time
+- `initScrollReveal` and `initSwiperModule` moved to `load` event — prevents blocking LCP
+- ScrollReveal parameters tuned — `distance: 20px`, `duration: 550ms`, `viewFactor: 0.12` for smoother feel
+- hero image split into three sizes — 480w, 720w, 1080w for responsive loading via srcset
+- `fetchpriority="high"` and `loading="eager"` on hero image — LCP element should load immediately
+- `width` and `height` on all images — browser reserves space before image loads, prevents CLS
+- hamburger `<div>` replaced with `<button>` — interactive elements must be semantic for screen readers
+- `aria-label` added to hamburger and scroll-up — icon-only controls require accessible labels
+- `robots.txt` added to public — controls search engine crawl behavior
+
+- Desktop Lighthouse: Performance 100, Accessibility 96, Best Practices 100, SEO 100
+- Mobile Lighthouse: Performance 87, Accessibility 100, Best Practices 100, SEO 100
+- mobile Performance 87 — LCP discovery issue: hero image rendered via JS innerHTML, not discoverable in initial HTML document
+- mobile Performance improvement deferred to fix/mobile-performance branch
+
+### hotfix/vercel-deploy-fix
+
+- `vercel.json` removed — Vercel auto-detects Vite projects, explicit config was overriding correct defaults
+- `vite.config.js` base path made dynamic — `GITHUB_ACTIONS` env variable used to conditionally apply `/plants-website/` base only on GitHub Pages
+- `eslint.config.js` updated — `vite.config.js` needs Node.js globals, browser globals caused false ESLint errors
+
+---
+
 ## v1.0.0 — Production Phase
 
 ### release/v1.0.0
@@ -41,7 +85,6 @@ No open questions — all production phase decisions resolved.
 - `CHANGELOG.md` updated with Unreleased v1.0.0 changes — tracks all production phase work
 - `ARCHITECTURE.md` updated with v1.0.0 production phase structure — folder structure, phase boundaries and history updated
 - `DEPLOYMENT.md` finalized — deployment platforms, build config and pre-deployment checklist documented
-- live URLs kept as placeholder — will be updated after production deployment
 
 ### performance-audit
 
@@ -62,20 +105,16 @@ No open questions — all production phase decisions resolved.
 - `og:locale` added — specifies language and region for search engines and social platforms
 - `og:site_name` added — improves link preview appearance on social platforms
 - `apple-touch-icon` added — enables proper icon when added to iOS home screen
-- canonical URL and OG URLs kept as placeholder — will be updated after production deployment
 - Twitter card tags kept — future-proof even without active Twitter account
 
 ### deploy-config
 
-- `vercel.json` added — explicit config preferred over Vercel auto-detection for clarity
 - `netlify.toml` added — TOML format used for Netlify — standard and readable
 - SPA redirects added to both Vercel and Netlify configs — prevents 404 on page refresh
 - GitHub Pages workflow added — CI/CD pipeline triggers on main branch push
 - `base: '/plants-website/'` added to vite.config.js — required for GitHub Pages subdirectory deployment
 - Vercel and Netlify work without base path — they serve from root domain
 - GitHub Pages requires base path — served from username.github.io/plants-website/
-
-### release/v0.4.0
 
 ## v0.4.0 — UX Phase
 

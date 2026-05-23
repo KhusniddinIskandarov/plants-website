@@ -2,6 +2,68 @@
 
 ---
 
+## v1.1.0 — Performance & Accessibility Phase
+
+### release/v1.1.0
+
+- version bumped to `1.1.0` in `package.json`
+- CHANGELOG finalized for v1.1.0
+- ARCHITECTURE.md updated — current v1.1.0 project structure documented
+- DEPLOYMENT.md updated — deployment status, live URLs and checklist finalized
+- README.md updated — v1.1.0 status, live deployment and showcase links added
+- README-short.md updated — v1.1.0 status and showcase links added
+- version badge updated in README and README-short
+- build verified successfully
+- lint and format checks passed
+- Prettier formatting applied across all files
+
+### fix/post-release
+
+- `Thumbs.db`, Vite temp and cache entries added to `.gitignore`
+- `FloralDecoration.js` updated — floral image `loading` changed from `lazy` to `eager`, image was not rendering in some browsers
+
+### fix/accessibility-and-performance
+
+- local npm packages added — `@fontsource/jost`, `@fontsource/lobster`, `@fortawesome/fontawesome-free`, `remixicon`
+- CDN links removed from `index.html` — fonts and icons now loaded locally
+- `main.js` updated — local font and icon imports added
+- `scrollReveal.js` refactored — converted to lazy dynamic import, animation parameters tuned for performance
+- `swiper.module.js` refactored — converted to lazy dynamic import, speed and breakpoints adjusted
+- `initScrollReveal` and `initSwiperModule` deferred to `load` event — improves LCP
+- hero image replaced with responsive srcset — `home-480.webp`, `home-720.webp`, `home-1080.webp`
+- `loading="eager"` and `fetchpriority="high"` added to hero image — LCP optimization
+- all images compressed and optimized — file sizes reduced
+- `width` and `height` attributes added to all images — prevents CLS
+- `alt` text added to all images — accessibility improvement
+- `<div>` hamburger replaced with `<button>` — semantic HTML for accessibility
+- `aria-label` added to hamburger button and scroll-up link
+- `public/robots.txt` added — search engine crawl configuration
+- unused `src/assets/icons/.gitkeep` removed
+
+### Lighthouse Results
+
+#### Desktop
+
+- Performance: 100
+- Accessibility: 96
+- Best Practices: 100
+- SEO: 100
+
+#### Mobile
+
+- Performance: 87
+- Accessibility: 100
+- Best Practices: 100
+- SEO: 100
+
+### hotfix/vercel-deploy-fix
+
+- `vercel.json` removed — Vercel auto-detects Vite projects, manual config was causing conflicts
+- `vite.config.js` updated — base path made dynamic using `GITHUB_ACTIONS` environment variable
+- `eslint.config.js` updated — added Node.js globals for `vite.config.js` to fix ESLint warnings
+
+---
+
 ## v1.0.0 — Production Phase
 
 ### release/v1.0.0
@@ -53,7 +115,7 @@
 - `.github/workflows/deploy.yml` added — GitHub Pages CI/CD workflow
 - `vite.config.js` updated — added base path for GitHub Pages deployment
 
-### feature/scroll-reveal
+---
 
 ## v0.4.0 — UX Phase
 
@@ -337,6 +399,18 @@
 ---
 
 ## Summary
+
+### v1.1.0 — Performance & Accessibility Phase
+
+| Layer                      | Status |
+| -------------------------- | ------ |
+| Local fonts and icons      | ✔      |
+| Responsive hero image      | ✔      |
+| LCP optimization           | ✔      |
+| CLS prevention             | ✔      |
+| Accessibility improvements | ✔      |
+| Deployment fixes           | ✔      |
+| Post-release fixes         | ✔      |
 
 ### v1.0.0 — Production Phase
 

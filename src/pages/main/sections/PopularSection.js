@@ -23,7 +23,14 @@ export default function PopularSection() {
 function PopularCard(image, text, title) {
   return `
     <div class="popular__card bg-green-950 p-9 pt-28 rounded-md relative">
-      <img src="${image}" class="w-56 absolute -top-5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 duration-500" loading="lazy"/>
+      <img
+        src="${image}"
+        alt="${title}"
+        class="w-56 absolute -top-5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 duration-500"
+        width="224"
+        height="224"
+        loading="lazy"
+      />
       <p class="italic text-2xl mb-2">${text}</p>
       <h3>${title}</h3>
       <div class="text-yellow-500 py-3">
