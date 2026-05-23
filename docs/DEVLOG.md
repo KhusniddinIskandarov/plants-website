@@ -2,6 +2,44 @@
 
 ---
 
+## v1.1.0 — Performance & Accessibility Phase
+
+### fix/accessibility-and-performance
+
+- local npm packages added — `@fontsource/jost`, `@fontsource/lobster`, `@fortawesome/fontawesome-free`, `remixicon`
+- CDN links removed from `index.html` — fonts and icons now loaded locally
+- `main.js` updated — local font and icon imports added
+- `scrollReveal.js` refactored — converted to lazy dynamic import, animation parameters tuned for performance
+- `swiper.module.js` refactored — converted to lazy dynamic import, speed and breakpoints adjusted
+- `initScrollReveal` and `initSwiperModule` deferred to `load` event — improves LCP
+- hero image replaced with responsive srcset — `home-480.webp`, `home-720.webp`, `home-1080.webp`
+- `loading="eager"` and `fetchpriority="high"` added to hero image — LCP optimization
+- all images compressed and optimized — file sizes reduced
+- `width` and `height` attributes added to all images — prevents CLS
+- `alt` text added to all images — accessibility improvement
+- `<div>` hamburger replaced with `<button>` — semantic HTML for accessibility
+- `aria-label` added to hamburger button and scroll-up link
+- `public/robots.txt` added — search engine crawl configuration
+- unused `src/assets/icons/.gitkeep` removed
+
+### Lighthouse Results
+
+#### Desktop
+
+- Performance: 99
+- Accessibility: 96
+- Best Practices: 100
+- SEO: 100
+
+#### Mobile
+
+- Performance: 83
+- Accessibility: 100
+- Best Practices: 100
+- SEO: 100
+
+---
+
 ## v1.0.1 — Hotfix Release
 
 ### hotfix/vercel-deploy-fix

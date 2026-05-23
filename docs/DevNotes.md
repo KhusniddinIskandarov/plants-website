@@ -23,6 +23,32 @@ No open questions — all production phase decisions resolved.
 
 ## ⚙️ Decision Notes
 
+## v1.1.0 — Performance & Accessibility Phase
+
+### fix/accessibility-and-performance
+
+- CDN fonts and icons replaced with local npm packages — eliminates external network dependency and improves load reliability
+- `@fontsource/jost` and `@fontsource/lobster` chosen — self-hosted font packages, no Google Fonts tracking
+- `@fortawesome/fontawesome-free` and `remixicon` installed locally — consistent with font strategy
+- `scrollReveal.js` converted to async dynamic import — library loads only when needed, reduces initial bundle
+- `swiper.module.js` converted to async dynamic import — same reasoning as scrollReveal
+- `requestIdleCallback` used in scrollReveal scheduler — defers animation setup to browser idle time
+- `initScrollReveal` and `initSwiperModule` moved to `load` event — prevents blocking LCP
+- ScrollReveal parameters tuned — `distance: 20px`, `duration: 550ms`, `viewFactor: 0.12` for smoother feel
+- hero image split into three sizes — 480w, 720w, 1080w for responsive loading via srcset
+- `fetchpriority="high"` and `loading="eager"` on hero image — LCP element should load immediately
+- `width` and `height` on all images — browser reserves space before image loads, prevents CLS
+- hamburger `<div>` replaced with `<button>` — interactive elements must be semantic for screen readers
+- `aria-label` added to hamburger and scroll-up — icon-only controls require accessible labels
+- `robots.txt` added to public — controls search engine crawl behavior
+
+- Desktop Lighthouse: Performance 99, Accessibility 96, Best Practices 100, SEO 100
+- Mobile Lighthouse: Performance 83, Accessibility 100, Best Practices 100, SEO 100
+- mobile Performance 83 — hero image sizes attribute not working correctly on mobile, home-1080.webp loads instead of home-480.webp
+- mobile Performance improvement deferred to next fix branch
+
+---
+
 ## v1.0.1 — Hotfix Release
 
 ### hotfix/vercel-deploy-fix

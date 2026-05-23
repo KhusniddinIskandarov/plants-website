@@ -4,6 +4,51 @@ All notable changes in this project are documented in this file.
 
 ---
 
+## Unreleased — v1.1.0
+
+### Added
+
+- added `@fontsource/jost`, `@fontsource/lobster` — local font packages replacing Google Fonts CDN
+- added `@fortawesome/fontawesome-free`, `remixicon` — local icon packages replacing CDN links
+- added responsive hero image variants — `home-480.webp`, `home-720.webp`, `home-1080.webp`
+- added `srcset` and `sizes` attributes to hero image — responsive image loading
+- added `fetchpriority="high"` and `loading="eager"` to hero image — LCP optimization
+- added `width` and `height` attributes to all images — prevents layout shift (CLS)
+- added `alt` text to all images missing it — accessibility improvement
+- added `aria-label` to hamburger button and scroll-up link — screen reader support
+- added `public/robots.txt` — search engine crawl configuration
+
+### Changed
+
+- replaced hamburger `<div>` with `<button>` — semantic HTML for accessibility
+- replaced CDN font and icon links in `index.html` with local npm imports in `main.js`
+- refactored `scrollReveal.js` — lazy dynamic import, tuned animation parameters
+- refactored `swiper.module.js` — lazy dynamic import, adjusted speed and breakpoints
+- deferred `initScrollReveal` and `initSwiperModule` to `load` event — improves LCP
+
+### Removed
+
+- removed CDN preconnect and stylesheet links from `index.html`
+- removed `src/assets/icons/.gitkeep` — unused placeholder
+
+### Performance
+
+#### Desktop
+
+- Performance: 99
+- Accessibility: 96
+- Best Practices: 100
+- SEO: 100
+
+#### Mobile
+
+- Performance: 83
+- Accessibility: 100
+- Best Practices: 100
+- SEO: 100
+
+---
+
 ## v1.0.1 — 2026-05-21
 
 ### Fixed - v1.0.1
@@ -45,7 +90,7 @@ All notable changes in this project are documented in this file.
 - removed all original PNG image assets — cart-1 through cart-4, home, leaf-1 through leaf-4, plant-1, plant-2
 - removed all original JPG image assets — review-1 through review-4
 
-### Performance
+### Performance - v1.0.0
 
 - Lighthouse Performance: 97
 - Lighthouse Accessibility: 90
