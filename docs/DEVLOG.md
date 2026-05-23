@@ -4,6 +4,19 @@
 
 ## v1.1.0 — Performance & Accessibility Phase
 
+### release/v1.1.0
+
+- version bumped to `1.1.0` in `package.json`
+- CHANGELOG finalized for v1.1.0
+- ARCHITECTURE.md updated — current v1.1.0 project structure documented
+- DEPLOYMENT.md updated — deployment status, live URLs and checklist finalized
+- README.md updated — v1.1.0 status, live deployment and showcase links added
+- README-short.md updated — v1.1.0 status and showcase links added
+- version badge updated in README and README-short
+- build verified successfully
+- lint and format checks passed
+- Prettier formatting applied across all files
+
 ### fix/post-release
 
 - `Thumbs.db`, Vite temp and cache entries added to `.gitignore`
@@ -42,10 +55,6 @@
 - Accessibility: 100
 - Best Practices: 100
 - SEO: 100
-
----
-
-## v1.0.1 — Hotfix Release
 
 ### hotfix/vercel-deploy-fix
 
@@ -390,6 +399,18 @@
 ---
 
 ## Summary
+
+### v1.1.0 — Performance & Accessibility Phase
+
+| Layer                      | Status |
+| -------------------------- | ------ |
+| Local fonts and icons      | ✔      |
+| Responsive hero image      | ✔      |
+| LCP optimization           | ✔      |
+| CLS prevention             | ✔      |
+| Accessibility improvements | ✔      |
+| Deployment fixes           | ✔      |
+| Post-release fixes         | ✔      |
 
 ### v1.0.0 — Production Phase
 

@@ -4,7 +4,7 @@ All notable changes in this project are documented in this file.
 
 ---
 
-## Unreleased — v1.1.0
+## v1.1.0 - 2026-05-23
 
 ### Added - v1.1.0
 
@@ -29,10 +29,13 @@ All notable changes in this project are documented in this file.
 
 ### Fixed - v1.1.0
 
+- fixed `vite.config.js` — base path now dynamic via `GITHUB_ACTIONS` environment variable
+- fixed `eslint.config.js` — added Node.js globals for `vite.config.js`
 - fixed `FloralDecoration.js` — changed floral image `loading` from `lazy` to `eager`, image was not rendering in some browsers
 
 ### Removed - v1.1.0
 
+- removed `vercel.json` — Vercel auto-detects Vite projects, manual config was causing conflicts
 - removed CDN preconnect and stylesheet links from `index.html`
 - removed `src/assets/icons/.gitkeep` — unused placeholder
 
@@ -51,16 +54,6 @@ All notable changes in this project are documented in this file.
 - Accessibility: 100
 - Best Practices: 100
 - SEO: 100
-
----
-
-## v1.0.1 — 2026-05-21
-
-### Fixed - v1.0.1
-
-- removed `vercel.json` — Vercel auto-detects Vite projects, manual config was causing conflicts
-- fixed `vite.config.js` — base path now dynamic via `GITHUB_ACTIONS` environment variable
-- fixed `eslint.config.js` — added Node.js globals for `vite.config.js`
 
 ---
 
@@ -244,3 +237,4 @@ All notable changes in this project are documented in this file.
 - v0.3.0 = UI release (all page sections, footer sub-components, page entry point, section styles)
 - v0.2.0 = architecture release (layout, navigation, reusable UI components, style foundation, and app entry point)
 - v0.1.0 = foundation release (tooling + setup only)
+- v1.1.0 = performance & accessibility release (local fonts/icons, responsive images, LCP optimization, CLS fix, semantic HTML, deployment fixes)

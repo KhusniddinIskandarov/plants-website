@@ -4,11 +4,11 @@ Project architecture reference for Plants Website.
 
 ---
 
-## Current State — v1.0.0
+## Current State — v1.1.0
 
-Production phase complete.
+Performance and accessibility phase complete.
 
-The project is fully built and optimized. Deployment configurations are in place for Vercel, Netlify, and GitHub Pages. Live deployment pending production release.
+The project is fully built, optimized and deployed. Live on Vercel, Netlify and GitHub Pages.
 
 Architecture baseline includes:
 
@@ -24,6 +24,8 @@ Architecture baseline includes:
 - Dedicated styles directory
 - Interactive behavior modules
 - Image optimization pipeline
+- Responsive image loading (srcset)
+- Local fonts and icons (no CDN)
 - Multi-platform deployment configuration
 
 ---
@@ -48,7 +50,9 @@ netlify.toml
       cart-3.webp
       cart-4.webp
       floral-1.png
-      home.webp
+      home-480.webp
+      home-720.webp
+      home-1080.webp
       leaf-1.webp
       leaf-2.webp
       leaf-3.webp
@@ -263,6 +267,22 @@ Current style sections in `custom.css`:
 
 ## Phase Boundaries
 
+### Performance & Accessibility Phase — v1.1.0
+
+Responsible for:
+
+- local fonts and icons (no CDN dependency)
+- responsive hero image with srcset
+- LCP and CLS optimization
+- accessibility improvements (semantic HTML, aria-labels)
+- deployment fixes (Vercel, Vite base path)
+- post-release fixes (gitignore, footer image)
+
+Not responsible for:
+
+- new features or sections
+- layout or component changes
+
 ### Production Phase — v1.0.0
 
 Responsible for:
@@ -346,6 +366,21 @@ Responsible for:
 
 ## Architecture History
 
+### v1.1.0 — Performance & Accessibility Phase
+
+Performance and accessibility phase improved Lighthouse scores and removed CDN dependencies.
+
+v1.1.0 baseline included:
+
+- Local fonts and icons — @fontsource/jost, @fontsource/lobster, @fortawesome/fontawesome-free, remixicon
+- Responsive hero image — home-480.webp, home-720.webp, home-1080.webp with srcset
+- LCP optimization — fetchpriority, eager loading, deferred module imports
+- CLS prevention — width and height on all images
+- Accessibility improvements — semantic hamburger button, aria-labels
+- Deployment fixes — vercel.json removed, vite base path made dynamic
+- Lighthouse Desktop: Performance 100, Accessibility 96, Best Practices 100, SEO 100
+- Lighthouse Mobile: Performance 87, Accessibility 100, Best Practices 100, SEO 100
+
 ### v1.0.0 — Production Phase
 
 Production phase finalized deployment, optimization, and documentation.
@@ -425,6 +460,6 @@ Setup baseline included:
 
 ## Project Status
 
-`v1.0.0` — Production ready.
+`v1.1.0` — Production ready.
 
-The project is fully built and optimized. Deployment configurations are in place for Vercel, Netlify, and GitHub Pages.
+The project is fully built, optimized and deployed. Live on Vercel, Netlify and GitHub Pages.

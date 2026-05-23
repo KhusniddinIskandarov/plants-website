@@ -4,9 +4,9 @@
 
 ## Current Status
 
-Deployment configuration complete. Live deployment pending production release.
+Deployment complete. All platforms live.
 
-The project is configured for deployment across three platforms — Vercel (primary), Netlify (backup), and GitHub Pages (CI/CD). Live URLs will be updated after deployment.
+The project is deployed across three platforms — Vercel (primary), Netlify (backup), and GitHub Pages (CI/CD).
 
 ---
 
@@ -15,23 +15,23 @@ The project is configured for deployment across three platforms — Vercel (prim
 ### Vercel (Primary)
 
 - Platform: [vercel.com](https://vercel.com)
-- Config: `vercel.json`
+- Config: auto-detected (Vite)
 - Deploy: automatic on push to `main`
-- URL: coming soon
+- URL: https://khusniddn-plants-website.vercel.app
 
 ### Netlify (Backup)
 
 - Platform: [netlify.com](https://netlify.com)
 - Config: `netlify.toml`
 - Deploy: automatic on push to `main`
-- URL: coming soon
+- URL: https://khusniddin-plants-website.netlify.app
 
 ### GitHub Pages (CI/CD)
 
 - Platform: GitHub Actions
 - Config: `.github/workflows/deploy.yml`
 - Deploy: automatic on push to `main` via `peaceiris/actions-gh-pages`
-- URL: coming soon
+- URL: https://khusniddiniskandarov.github.io/plants-website
 
 ---
 
@@ -49,14 +49,27 @@ The project is configured for deployment across three platforms — Vercel (prim
 - ✅ Build verified — `npm run build` passes
 - ✅ Lint verified — `npm run lint` passes
 - ✅ Format verified — `npm run format:check` passes
-- ✅ Lighthouse Performance — 97
-- ✅ Lighthouse Accessibility — 90
-- ✅ Lighthouse Best Practices — 100
-- ✅ Lighthouse SEO — 92
-- ✅ Images optimized — WebP format
+- ✅ Images optimized — WebP format with responsive srcset
 - ✅ SEO meta tags finalized
 - ✅ OG tags configured
 - ✅ Preview image optimized
+- ✅ Local fonts and icons — no CDN dependency
+- ✅ Accessibility improvements — semantic HTML, aria-labels
+- ✅ LCP and CLS optimized
+
+### Lighthouse Desktop
+
+- ✅ Performance — 100
+- ✅ Accessibility — 96
+- ✅ Best Practices — 100
+- ✅ SEO — 100
+
+### Lighthouse Mobile
+
+- ✅ Performance — 87
+- ✅ Accessibility — 100
+- ✅ Best Practices — 100
+- ✅ SEO — 100
 
 ---
 
@@ -67,4 +80,3 @@ The project is configured for deployment across three platforms — Vercel (prim
 - GitHub Pages uses CI/CD workflow via GitHub Actions
 - SPA redirects configured on both Vercel and Netlify — prevents 404 on page refresh
 - Base path `/plants-website/` required for GitHub Pages — not needed for Vercel and Netlify
-- Live URLs will be updated after production deployment

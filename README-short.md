@@ -3,12 +3,15 @@
 ![Last Commit](https://img.shields.io/github/last-commit/KhusniddinIskandarov/plants-website)
 ![Repo Size](https://img.shields.io/github/repo-size/KhusniddinIskandarov/plants-website)
 ![Top Language](https://img.shields.io/github/languages/top/KhusniddinIskandarov/plants-website)
-[![v1.0.0](https://img.shields.io/badge/version-v1.0.0-green)](./docs/CHANGELOG.md)
+[![v1.1.0](https://img.shields.io/badge/version-v1.1.0-green)](./docs/CHANGELOG.md)
+[![GitHub release](https://img.shields.io/github/v/release/KhusniddinIskandarov/plants-website?color=brightgreen&label=latest%20release)](https://github.com/KhusniddinIskandarov/plants-website/releases)
 ![Vite](https://img.shields.io/badge/Vite-Frontend-blue)
 ![Status](https://img.shields.io/badge/status-active-success)
 ![ESLint](https://img.shields.io/badge/code%20style-eslint-blue?style=flat&logo=eslint)
 ![Prettier](https://img.shields.io/badge/format-prettier-ff69b4?style=flat&logo=prettier)
-![Lighthouse](https://img.shields.io/badge/performance-97-brightgreen?style=flat&logo=lighthouse)
+![Lighthouse](https://img.shields.io/badge/performance-100-brightgreen?style=flat&logo=lighthouse)
+![Vercel Deploy](https://img.shields.io/badge/deploy-vercel-success?style=flat&logo=vercel)
+![Netlify Deploy](https://img.shields.io/badge/deploy-netlify-success?style=flat&logo=netlify)
 ![CI/CD](https://img.shields.io/badge/ci%2Fcd-githubactions-2088FF?style=flat&logo=githubactions)
 ![License](https://img.shields.io/badge/license-MIT-yellow.svg)
 
@@ -22,17 +25,36 @@
 
 ---
 
+## 📸 Previews
+
 ![Preview](./public/preview.png)
 
-Modern frontend project with structured Git workflow and incremental architecture.
+A modern frontend project built with a structured Git workflow and incremental architecture-driven development.
+
+### 📺 Responsive Full pages Screenshots
+
+Quick previews of the project: 👇
+
+🔗 [🖥️ Desktop](https://github.com/KhusniddinIskandarov/plants-website-showcase/blob/main/screenshots/desktop.webp)
+🔗 [📲 Tablet](https://github.com/KhusniddinIskandarov/plants-website-showcase/blob/main/screenshots/tablet.webp)
+🔗 [📱 Mobile](https://github.com/KhusniddinIskandarov/plants-website-showcase/blob/main/screenshots/mobile.webp)
+
+👉 More previews: [Showcase Repository (GIFs & Videos)](https://github.com/KhusniddinIskandarov/plants-website-showcase)
 
 ---
 
-## 🚀 Live Demo
+## 🚀 Live Demos
 
-- Vercel: coming soon
-- Netlify: coming soon
-- GitHub Pages: coming soon
+- 👉 [Vercel](https://khusniddn-plants-website.vercel.app)
+- 👉 [Netlify](https://khusniddin-plants-website.netlify.app)
+- 👉 [GitHub Pages](https://khusniddiniskandarov.github.io/plants-website)
+
+---
+
+## 📄 Showcase Documents
+
+- 🔗 [Short Docs (README)](https://github.com/KhusniddinIskandarov/plants-website-showcase/blob/main/README.md)
+- 🔗 [Ultra‑Short Docs (README)](https://github.com/KhusniddinIskandarov/plants-website-showcase/blob/main/README-short.md)
 
 ---
 
@@ -92,24 +114,41 @@ It demonstrates:
 
 ## Current Status
 
-**v1.0.0** — Production release complete. Deployment coming soon.
+**v1.1.0** — Performance & Accessibility release complete.
 
 ---
 
 ## 📈 Lighthouse Scores
 
+### 🖥️ Desktop
+
 | Category       | Score  |
 | -------------- | ------ |
-| Performance    | 97 ✅  |
-| Accessibility  | 90 ✅  |
+| Performance    | 100 ✅ |
+| Accessibility  | 96 ✅  |
 | Best Practices | 100 ✅ |
-| SEO            | 92 ✅  |
+| SEO            | 100 ✅ |
+
+### 📱 Mobile
+
+| Category       | Score  |
+| -------------- | ------ |
+| Performance    | 87 ✅  |
+| Accessibility  | 100 ✅ |
+| Best Practices | 100 ✅ |
+| SEO            | 100 ✅ |
 
 ---
 
 ## 👨‍💻 Author
 
-**Khusniddin Iskandarov** · [GitHub](https://github.com/KhusniddinIskandarov)
+**Khusniddin Iskandarov**
+
+- 🐙 GitHub: [KhusniddinIskandarov](https://github.com/KhusniddinIskandarov)
+- 💼 LinkedIn: [khusniddiniskandarov](https://www.linkedin.com/in/khusniddiniskandarov)
+- 📸 Instagram: [@khusniddiniskandarov](https://www.instagram.com/khusniddiniskandarov)
+- 💬 Telegram: [@khusniddiniskandarov](https://t.me/KhusniddinIskandarov)
+- 📧 Email: [kh.sh.iskandarov@gmail.com](mailto:kh.sh.iskandarov@gmail.com)
 
 ---
 

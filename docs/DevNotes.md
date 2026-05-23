@@ -25,6 +25,12 @@ No open questions — all production phase decisions resolved.
 
 ## v1.1.0 — Performance & Accessibility Phase
 
+### release/v1.1.0
+
+- version bump to 1.1.0 follows SemVer conventions
+- build, lint, format checks passed before release
+- README and CHANGELOG updated to reflect v1.1.0 completion
+
 ### fix/post-release
 
 - `Thumbs.db` added to `.gitignore` — Windows thumbnail cache file, should not be tracked
@@ -53,10 +59,6 @@ No open questions — all production phase decisions resolved.
 - mobile Performance 87 — LCP discovery issue: hero image rendered via JS innerHTML, not discoverable in initial HTML document
 - mobile Performance improvement deferred to fix/mobile-performance branch
 
----
-
-## v1.0.1 — Hotfix Release
-
 ### hotfix/vercel-deploy-fix
 
 - `vercel.json` removed — Vercel auto-detects Vite projects, explicit config was overriding correct defaults
@@ -83,7 +85,6 @@ No open questions — all production phase decisions resolved.
 - `CHANGELOG.md` updated with Unreleased v1.0.0 changes — tracks all production phase work
 - `ARCHITECTURE.md` updated with v1.0.0 production phase structure — folder structure, phase boundaries and history updated
 - `DEPLOYMENT.md` finalized — deployment platforms, build config and pre-deployment checklist documented
-- live URLs kept as placeholder — will be updated after production deployment
 
 ### performance-audit
 
@@ -104,12 +105,10 @@ No open questions — all production phase decisions resolved.
 - `og:locale` added — specifies language and region for search engines and social platforms
 - `og:site_name` added — improves link preview appearance on social platforms
 - `apple-touch-icon` added — enables proper icon when added to iOS home screen
-- canonical URL and OG URLs kept as placeholder — will be updated after production deployment
 - Twitter card tags kept — future-proof even without active Twitter account
 
 ### deploy-config
 
-- `vercel.json` added — explicit config preferred over Vercel auto-detection for clarity
 - `netlify.toml` added — TOML format used for Netlify — standard and readable
 - SPA redirects added to both Vercel and Netlify configs — prevents 404 on page refresh
 - GitHub Pages workflow added — CI/CD pipeline triggers on main branch push
