@@ -25,6 +25,12 @@ No open questions — all production phase decisions resolved.
 
 ## v1.1.0 — Performance & Accessibility Phase
 
+### fix/post-release
+
+- `Thumbs.db` added to `.gitignore` — Windows thumbnail cache file, should not be tracked
+- Vite temp and cache entries added to `.gitignore` — `.vite/` and `*.local` files excluded from version control
+- `FloralDecoration.js` `loading` changed from `lazy` to `eager` — footer image was not rendering in incognito and some browsers because lazy loading treats footer elements as outside the viewport and skips them
+
 ### fix/accessibility-and-performance
 
 - CDN fonts and icons replaced with local npm packages — eliminates external network dependency and improves load reliability

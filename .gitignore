@@ -38,3 +38,12 @@ coverage/
 
 # Vim
 *.sw?
+
+# OS files
+Thumbs.db
+
+# Vite temp
+vite.config.js.timestamp-*
+
+# Cache
+.cache/

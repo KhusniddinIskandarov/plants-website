@@ -9,7 +9,7 @@ export function FloralDecoration() {
         class="w-full lg:w-1/2"
         width="1200"
         height="1200"
-        loading="lazy"
+        loading="eager"
       />
     </div>
   `

@@ -4,6 +4,11 @@
 
 ## v1.1.0 — Performance & Accessibility Phase
 
+### fix/post-release
+
+- `Thumbs.db`, Vite temp and cache entries added to `.gitignore`
+- `FloralDecoration.js` updated — floral image `loading` changed from `lazy` to `eager`, image was not rendering in some browsers
+
 ### fix/accessibility-and-performance
 
 - local npm packages added — `@fontsource/jost`, `@fontsource/lobster`, `@fortawesome/fontawesome-free`, `remixicon`
