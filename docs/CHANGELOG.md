@@ -6,8 +6,9 @@ All notable changes in this project are documented in this file.
 
 ## Unreleased — v1.1.0
 
-### Added
+### Added - v1.1.0
 
+- added `Thumbs.db`, Vite temp and cache entries to `.gitignore`
 - added `@fontsource/jost`, `@fontsource/lobster` — local font packages replacing Google Fonts CDN
 - added `@fortawesome/fontawesome-free`, `remixicon` — local icon packages replacing CDN links
 - added responsive hero image variants — `home-480.webp`, `home-720.webp`, `home-1080.webp`
@@ -18,7 +19,7 @@ All notable changes in this project are documented in this file.
 - added `aria-label` to hamburger button and scroll-up link — screen reader support
 - added `public/robots.txt` — search engine crawl configuration
 
-### Changed
+### Changed - v1.1.0
 
 - replaced hamburger `<div>` with `<button>` — semantic HTML for accessibility
 - replaced CDN font and icon links in `index.html` with local npm imports in `main.js`
@@ -26,12 +27,16 @@ All notable changes in this project are documented in this file.
 - refactored `swiper.module.js` — lazy dynamic import, adjusted speed and breakpoints
 - deferred `initScrollReveal` and `initSwiperModule` to `load` event — improves LCP
 
-### Removed
+### Fixed - v1.1.0
+
+- fixed `FloralDecoration.js` — changed floral image `loading` from `lazy` to `eager`, image was not rendering in some browsers
+
+### Removed - v1.1.0
 
 - removed CDN preconnect and stylesheet links from `index.html`
 - removed `src/assets/icons/.gitkeep` — unused placeholder
 
-### Performance
+### Performance - v1.1.0
 
 #### Desktop
 
