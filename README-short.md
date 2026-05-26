@@ -3,7 +3,7 @@
 ![Last Commit](https://img.shields.io/github/last-commit/KhusniddinIskandarov/plants-website)
 ![Repo Size](https://img.shields.io/github/repo-size/KhusniddinIskandarov/plants-website)
 ![Top Language](https://img.shields.io/github/languages/top/KhusniddinIskandarov/plants-website)
-[![v1.1.0](https://img.shields.io/badge/version-v1.1.0-green)](./docs/CHANGELOG.md)
+[![v1.1.1](https://img.shields.io/badge/version-v1.1.1-green)](./docs/CHANGELOG.md)
 [![GitHub release](https://img.shields.io/github/v/release/KhusniddinIskandarov/plants-website?color=brightgreen&label=latest%20release)](https://github.com/KhusniddinIskandarov/plants-website/releases)
 ![Vite](https://img.shields.io/badge/Vite-Frontend-blue)
 ![Status](https://img.shields.io/badge/status-active-success)
