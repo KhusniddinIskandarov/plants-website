@@ -23,6 +23,25 @@ No open questions — all production phase decisions resolved.
 
 ## ⚙️ Decision Notes
 
+## v1.1.1 — Post-Release Fix Phase
+
+### release/v1.1.1
+
+- version bump to 1.1.1 follows SemVer conventions — patch release for post-release fixes
+- build, lint, format checks passed before release
+- README and CHANGELOG updated to reflect v1.1.1 completion
+
+### fix/post-v1.1.1
+
+- README formatting improved — recruiter and showcase sections restructured for clarity
+- Lighthouse tables converted to HTML side-by-side format — GitHub markdown does not support multi-column tables natively
+- scrollReveal parameters retuned — `distance: 60px`, `duration: 1200ms` gives smoother and more noticeable animations than previous `20px/550ms`
+- footer `viewFactor: 0` — footer is below viewport, standard viewFactor would never trigger animations
+- `about__leaf` origin changed to `right` — visually consistent with leaf position in layout
+- `review__leaf` and `footer__floral` kept `origin: left` with `viewFactor: 0` — decorative elements now animate correctly regardless of scroll position
+
+---
+
 ## v1.1.0 — Performance & Accessibility Phase
 
 ### release/v1.1.0

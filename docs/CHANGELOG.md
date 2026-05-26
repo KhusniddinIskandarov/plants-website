@@ -4,6 +4,23 @@ All notable changes in this project are documented in this file.
 
 ---
 
+## v1.1.1 - 2026-05-26
+
+### Changed - v1.1.1
+
+- `README.md` — `Recruiter-Friendly Version` section expanded with docs and repo links
+- `README.md` — `Showcase Documents` section added with showcase repo links
+- `README.md` — Live Demos list updated with `👉` emoji
+- `README.md` — Lighthouse tables converted to side-by-side HTML table format
+- `README-short.md` — `Recruiter-Friendly Version` section added with full README and docs links
+- `README-short.md` — `Responsive Full pages Screenshots` renamed to `Responsive Views`
+- `README-short.md` — Lighthouse tables converted to side-by-side HTML table format
+- `scrollReveal.js` — animation parameters retuned: `distance: 60px`, `duration: 1200ms`, `delay: 300ms`, `viewFactor: 0.2`
+- `scrollReveal.js` — footer elements (`footer__icon`, `footer__content`, `copy__right`) separated with `viewFactor: 0`
+- `scrollReveal.js` — `about__leaf` origin set to `right`, `review__leaf` and `footer__floral` set to `left` with `viewFactor: 0`
+
+---
+
 ## v1.1.0 - 2026-05-23
 
 ### Added - v1.1.0

@@ -4,45 +4,43 @@ export async function initScrollReveal() {
 
     const sr = ScrollReveal({
       origin: 'top',
-      distance: '20px',
-      duration: 550,
-      delay: 0,
+      distance: '60px',
+      duration: 1200,
+      delay: 300,
       reset: false,
-      viewFactor: 0.12,
+      viewFactor: 0.2,
       easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
     })
 
-    // batch reveal (less DOM calls)
     sr.reveal(`
       .home__data,
       .about__top,
       .popular__top,
       .review__top,
       .review__swiper,
-      .footer__icon,
-      .footer__content,
-      .copy__right,
       .newsletter__form
     `)
 
-    // hero image (LCP friendly)
     sr.reveal('.home__image', {
       distance: '12px',
       duration: 500
     })
 
-    // cards
     sr.reveal('.service__card, .popular__card', {
       interval: 80
     })
 
-    // decorative elements (low priority)
-    sr.reveal('.about__leaf, .review__leaf, .footer__floral', {
-      origin: 'left',
+    sr.reveal('.about__leaf', {
+      origin: 'right',
       delay: 250
     })
 
-    // split directional animations
+    sr.reveal('.review__leaf, .footer__floral', {
+      origin: 'left',
+      delay: 250,
+      viewFactor: 0
+    })
+
     sr.reveal(
       `
       .about__item__1-content,
@@ -64,9 +62,17 @@ export async function initScrollReveal() {
         distance: '18px'
       }
     )
+
+    // Footer — viewFactor: 0 qilingan
+    sr.reveal('.footer__icon, .footer__content, .copy__right', {
+      origin: 'top',
+      distance: '60px',
+      duration: 1200,
+      delay: 300,
+      viewFactor: 0
+    })
   }
 
-  // better scheduler (idle first, fallback smoother)
   const schedule = (fn) => {
     if ('requestIdleCallback' in window) {
       requestIdleCallback(fn, { timeout: 1000 })

@@ -2,6 +2,27 @@
 
 ---
 
+## v1.1.1 — Post-Release Fix Phase
+
+### release/v1.1.1
+
+- version bumped to `1.1.1` in `package.json`
+- CHANGELOG finalized for v1.1.1
+- version badge updated in README and README-short
+- build verified successfully
+- lint and format checks passed
+- Prettier formatting applied across all files
+
+### fix/post-v1.1.1
+
+- `README.md` and `README-short.md` formatting improved — Recruiter-Friendly Version and Showcase Documents sections expanded
+- Lighthouse tables converted to side-by-side HTML table format in both README files
+- `scrollReveal.js` animation parameters retuned — distance, duration, delay and viewFactor adjusted
+- footer elements separated with `viewFactor: 0` — fixes off-screen trigger issue
+- `about__leaf` origin set to `right`, `review__leaf` and `footer__floral` set to `left` with `viewFactor: 0`
+
+---
+
 ## v1.1.0 — Performance & Accessibility Phase
 
 ### release/v1.1.0
