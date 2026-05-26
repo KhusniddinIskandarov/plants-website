@@ -1,17 +1,40 @@
 export async function initScrollReveal() {
-  const run = async () => {
-    const ScrollReveal = (await import('scrollreveal')).default
+  const ScrollReveal = (await import('scrollreveal')).default
 
-    const sr = ScrollReveal({
-      origin: 'top',
-      distance: '60px',
-      duration: 1200,
-      delay: 300,
-      reset: false,
-      viewFactor: 0.2,
-      easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
-    })
+  const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 1200,
+    delay: 300,
+    reset: false,
+    viewFactor: 0.2,
+    easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  })
 
+  // Footer — darhol, schedulesiz
+  sr.reveal('.footer__icon, .footer__content, .copy__right', {
+    origin: 'top',
+    distance: '60px',
+    duration: 1200,
+    delay: 300,
+    viewFactor: 0
+  })
+
+  sr.reveal('.review__leaf, .footer__floral', {
+    origin: 'left',
+    delay: 250,
+    viewFactor: 0
+  })
+
+  const schedule = (fn) => {
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(fn, { timeout: 1000 })
+    } else {
+      setTimeout(fn, 1)
+    }
+  }
+
+  schedule(async () => {
     sr.reveal(`
       .home__data,
       .about__top,
@@ -35,12 +58,6 @@ export async function initScrollReveal() {
       delay: 250
     })
 
-    sr.reveal('.review__leaf, .footer__floral', {
-      origin: 'left',
-      delay: 250,
-      viewFactor: 0
-    })
-
     sr.reveal(
       `
       .about__item__1-content,
@@ -62,24 +79,5 @@ export async function initScrollReveal() {
         distance: '18px'
       }
     )
-
-    // Footer — viewFactor: 0 qilingan
-    sr.reveal('.footer__icon, .footer__content, .copy__right', {
-      origin: 'top',
-      distance: '60px',
-      duration: 1200,
-      delay: 300,
-      viewFactor: 0
-    })
-  }
-
-  const schedule = (fn) => {
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(fn, { timeout: 1000 })
-    } else {
-      setTimeout(fn, 1)
-    }
-  }
-
-  schedule(run)
+  })
 }

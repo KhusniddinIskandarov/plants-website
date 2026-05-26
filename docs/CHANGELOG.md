@@ -4,6 +4,16 @@ All notable changes in this project are documented in this file.
 
 ---
 
+## v1.1.2 - 2026-05-26
+
+### Fixed - v1.1.2
+
+- `index.html` — replaced placeholder URLs with live Vercel deployment URL in canonical, og:url, og:image and twitter:image
+- `README.md`, `README-short.md` — corrected Vercel URL typo: `khusniddn` → `khusniddin`
+- `scrollReveal.js` — moved footer elements reveal outside `requestIdleCallback` schedule to fix invisible footer on first desktop load
+
+---
+
 ## v1.1.1 - 2026-05-26
 
 ### Changed - v1.1.1

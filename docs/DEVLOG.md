@@ -2,6 +2,17 @@
 
 ---
 
+## v1.1.2 — Hotfix Phase
+
+### hotfix/seo-urls
+
+- `index.html` — canonical, og:url, og:image and twitter:image updated with live Vercel URL
+- `README.md` and `README-short.md` — Vercel URL typo corrected
+- `scrollReveal.js` — footer reveal moved outside schedule, fixes desktop visibility on first load
+- `package.json` — version bumped to `1.1.2`
+
+---
+
 ## v1.1.1 — Post-Release Fix Phase
 
 ### release/v1.1.1
