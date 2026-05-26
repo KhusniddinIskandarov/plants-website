@@ -51,7 +51,7 @@ A modern frontend project built with a structured Git workflow and incremental a
 
 ## 🚀 Live Demos
 
-- [Vercel](https://khusniddn-plants-website.vercel.app)
+- [Vercel](https://khusniddin-plants-website.vercel.app)
 - [Netlify](https://khusniddin-plants-website.netlify.app)
 - [GitHub Pages](https://khusniddiniskandarov.github.io/plants-website)
 
