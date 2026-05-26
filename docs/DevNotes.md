@@ -31,6 +31,15 @@ No open questions — all production phase decisions resolved.
 - build, lint, format checks passed before release
 - README and CHANGELOG updated to reflect v1.1.0 completion
 
+### fix/post-v1.1.0
+
+- `README.md` va `README-short.md` formatting yaxshilandi — recruiter va showcase bo'limlari kengaytirildi
+- Lighthouse jadvallari HTML table formatiga o'tkazildi — desktop va mobile yonma-yon ko'rsatish uchun, GitHub markdown cheklangan, shuning uchun raw HTML ishlatildi
+- `scrollReveal.js` animatsiya parametrlari qayta sozlandi — `distance: 60px`, `duration: 1200ms`, `delay: 300ms` — v1.1.0 dagi `20px/550ms` juda tez va qisqa edi
+- footer elementlari `viewFactor: 0` bilan alohida ajratildi — footer viewport tashqarisida bo'lgani uchun standart `viewFactor: 0.2` bilan hech qachon trigger bo'lmaydi
+- `about__leaf` uchun `origin: right` — o'ng tomondan kelishi vizual jihatdan to'g'riroq
+- `review__leaf` va `footer__floral` uchun `origin: left, viewFactor: 0` — dekorativ elementlar ham animatsiyaga kirishishi uchun
+
 ### fix/post-release
 
 - `Thumbs.db` added to `.gitignore` — Windows thumbnail cache file, should not be tracked

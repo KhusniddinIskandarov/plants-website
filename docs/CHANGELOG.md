@@ -19,6 +19,19 @@ All notable changes in this project are documented in this file.
 - added `aria-label` to hamburger button and scroll-up link — screen reader support
 - added `public/robots.txt` — search engine crawl configuration
 
+### Changed - fix/post-v1.1.0
+
+- `README.md` — `Recruiter-Friendly Version` bo'limi kengaytirildi, docs va repo havolalari qo'shildi
+- `README.md` — `Showcase Documents` bo'limi qo'shildi, showcase repo havolalari bilan
+- `README.md` — Live Demos ro'yxati `👉` emoji bilan yangilandi
+- `README-short.md` — `Recruiter-Friendly Version` bo'limi qo'shildi, full README va docs havolalari bilan
+- `README-short.md` — `Responsive Full pages Screenshots` sarlavhasi `Responsive Views` ga o'zgartirildi
+- `README-short.md` — Lighthouse jadvallari yonma-yon ko'rsatish uchun HTML table formatiga o'tkazildi
+- `README.md` — Lighthouse jadvallari yonma-yon HTML table formatiga o'tkazildi
+- `scrollReveal.js` — animatsiya parametrlari sozlandi: `distance: 60px`, `duration: 1200ms`, `delay: 300ms`, `viewFactor: 0.2`
+- `scrollReveal.js` — footer elementlari (`footer__icon`, `footer__content`, `copy__right`) alohida `viewFactor: 0` bilan ajratildi
+- `scrollReveal.js` — `about__leaf` uchun `origin: right`, `review__leaf` va `footer__floral` uchun `origin: left, viewFactor: 0` qilindi
+
 ### Changed - v1.1.0
 
 - replaced hamburger `<div>` with `<button>` — semantic HTML for accessibility
