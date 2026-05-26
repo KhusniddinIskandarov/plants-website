@@ -2,6 +2,18 @@
 
 ---
 
+## v1.1.3 — Hotfix Phase
+
+### hotfix/apple-icon-and-vercel-config
+
+- `index.html` — `apple-touch-icon` path corrected to `./public/favicon.ico`
+- `vercel.json` — `ignoreCommand` added to prevent Vercel from building `gh-pages` branch
+- `package.json` — version bumped to `1.1.3`
+
+---
+
+---
+
 ## v1.1.2 — Hotfix Phase
 
 ### hotfix/seo-urls
