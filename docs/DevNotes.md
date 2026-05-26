@@ -23,6 +23,16 @@ No open questions — all production phase decisions resolved.
 
 ## ⚙️ Decision Notes
 
+## v1.1.3 — Hotfix Phase
+
+### hotfix/apple-icon-and-vercel-config
+
+- `apple-touch-icon` path was `/favicon.ico` — incorrect for Vite projects, correct path is `./public/favicon.ico`
+- Vercel was deploying `gh-pages` branch — `gh-pages` is a build output branch, not a source branch, so deployment always failed with `vite: command not found`
+- `ignoreCommand` added to `vercel.json` — Vercel skips build when branch is `gh-pages`
+
+---
+
 ## v1.1.2 — Hotfix Phase
 
 ### hotfix/seo-urls

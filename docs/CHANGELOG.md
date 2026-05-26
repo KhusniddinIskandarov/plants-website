@@ -4,6 +4,17 @@ All notable changes in this project are documented in this file.
 
 ---
 
+## v1.1.3 - 2026-05-27
+
+### Fixed - v1.1.3
+
+- `index.html` — corrected `apple-touch-icon` path from `/favicon.ico` to `./public/favicon.ico`
+- `vercel.json` — added `ignoreCommand` to skip `gh-pages` branch deployment on Vercel
+
+---
+
+---
+
 ## v1.1.2 - 2026-05-26
 
 ### Fixed - v1.1.2
