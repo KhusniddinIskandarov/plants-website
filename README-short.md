@@ -25,29 +25,35 @@
 
 ---
 
+## 📄 Recruiter-Friendly Version
+
+- Detailed overview: [📖 Full README](./README.md)
+- Complete docs: [📚 /docs](./docs/)
+- 📂 [Repository](https://github.com/KhusniddinIskandarov/plants-website)
+
+---
+
 ## 📸 Previews
 
 ![Preview](./public/preview.png)
 
 A modern frontend project built with a structured Git workflow and incremental architecture-driven development.
 
-### 📺 Responsive Full pages Screenshots
-
-Quick previews of the project: 👇
+### Responsive Views 👇
 
 🔗 [🖥️ Desktop](https://github.com/KhusniddinIskandarov/plants-website-showcase/blob/main/screenshots/desktop.webp)
 🔗 [📲 Tablet](https://github.com/KhusniddinIskandarov/plants-website-showcase/blob/main/screenshots/tablet.webp)
 🔗 [📱 Mobile](https://github.com/KhusniddinIskandarov/plants-website-showcase/blob/main/screenshots/mobile.webp)
 
-👉 More previews: [Showcase Repository (GIFs & Videos)](https://github.com/KhusniddinIskandarov/plants-website-showcase)
+👉 More previews: 📂 [Showcase Repository - (GIFs & Videos)](https://github.com/KhusniddinIskandarov/plants-website-showcase)
 
 ---
 
 ## 🚀 Live Demos
 
-- 👉 [Vercel](https://khusniddn-plants-website.vercel.app)
-- 👉 [Netlify](https://khusniddin-plants-website.netlify.app)
-- 👉 [GitHub Pages](https://khusniddiniskandarov.github.io/plants-website)
+- [Vercel](https://khusniddn-plants-website.vercel.app)
+- [Netlify](https://khusniddin-plants-website.netlify.app)
+- [GitHub Pages](https://khusniddiniskandarov.github.io/plants-website)
 
 ---
 
@@ -120,6 +126,11 @@ It demonstrates:
 
 ## 📈 Lighthouse Scores
 
+<div align="center">
+<table>
+<tr>
+<td>
+
 ### 🖥️ Desktop
 
 | Category       | Score  |
@@ -129,6 +140,9 @@ It demonstrates:
 | Best Practices | 100 ✅ |
 | SEO            | 100 ✅ |
 
+</td>
+<td>
+
 ### 📱 Mobile
 
 | Category       | Score  |
@@ -137,6 +151,11 @@ It demonstrates:
 | Accessibility  | 100 ✅ |
 | Best Practices | 100 ✅ |
 | SEO            | 100 ✅ |
+
+</td>
+</tr>
+</table>
+</div>
 
 ---
 

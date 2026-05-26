@@ -27,7 +27,9 @@
 
 ## 📄 Recruiter-Friendly Version
 
-Quick overview: [📝 Short README](./README-short.md)
+- Quick overview: [📝 Short README](./README-short.md)
+- Complete docs: [📚 /docs](./docs/)
+- 📂 [Repository](https://github.com/KhusniddinIskandarov/plants-website)
 
 ---
 
@@ -37,23 +39,28 @@ Quick overview: [📝 Short README](./README-short.md)
 
 A modern frontend project built with a structured Git workflow and incremental architecture-driven development.
 
-### 📺 Responsive Full pages Screenshots
-
-Quick previews of the project: 👇
+### Responsive Views 👇
 
 🔗 [🖥️ Desktop](https://github.com/KhusniddinIskandarov/plants-website-showcase/blob/main/screenshots/desktop.webp)
 🔗 [📲 Tablet](https://github.com/KhusniddinIskandarov/plants-website-showcase/blob/main/screenshots/tablet.webp)
 🔗 [📱 Mobile](https://github.com/KhusniddinIskandarov/plants-website-showcase/blob/main/screenshots/mobile.webp)
 
-👉 More previews: [Showcase Repository (GIFs & Videos)](https://github.com/KhusniddinIskandarov/plants-website-showcase)
+👉 More previews: 📂 [Showcase Repository - (GIFs & Videos)](https://github.com/KhusniddinIskandarov/plants-website-showcase)
 
 ---
 
 ## 🚀 Live Demos
 
-- Vercel: [plants-website](https://khusniddn-plants-website.vercel.app)
-- Netlify: [plants-website](https://khusniddin-plants-website.netlify.app)
-- GitHub Pages: [plants-website](https://khusniddiniskandarov.github.io/plants-website)
+- 👉 [Vercel](https://khusniddn-plants-website.vercel.app)
+- 👉 [Netlify](https://khusniddin-plants-website.netlify.app)
+- 👉 [GitHub Pages](https://khusniddiniskandarov.github.io/plants-website)
+
+---
+
+## 📄 Showcase Documents
+
+- 🔗 [Short Docs (README)](https://github.com/KhusniddinIskandarov/plants-website-showcase/blob/main/README.md)
+- 🔗 [Ultra‑Short Docs (README)](https://github.com/KhusniddinIskandarov/plants-website-showcase/blob/main/README-short.md)
 
 ---
 
@@ -231,6 +238,11 @@ src/
 
 ## 📈 Lighthouse Scores
 
+<div align="center">
+<table>
+<tr>
+<td>
+
 ### 🖥️ Desktop
 
 | Category       | Score  |
@@ -240,6 +252,9 @@ src/
 | Best Practices | 100 ✅ |
 | SEO            | 100 ✅ |
 
+</td>
+<td>
+
 ### 📱 Mobile
 
 | Category       | Score  |
@@ -248,6 +263,11 @@ src/
 | Accessibility  | 100 ✅ |
 | Best Practices | 100 ✅ |
 | SEO            | 100 ✅ |
+
+</td>
+</tr>
+</table>
+</div>
 
 ---
 
