@@ -4,6 +4,18 @@
 
 ## v1.1.0 — Performance & Accessibility Phase
 
+### fix/post-v1.1.0
+
+- `README.md` — `Recruiter-Friendly Version` bo'limi kengaytirildi: docs va repo havolalari qo'shildi
+- `README.md` — `Showcase Documents` bo'limi qo'shildi
+- `README.md` — Lighthouse jadvallari yonma-yon HTML table formatiga o'tkazildi
+- `README-short.md` — `Recruiter-Friendly Version` bo'limi qo'shildi
+- `README-short.md` — `Responsive Full pages Screenshots` → `Responsive Views` nomini soddalashtirish
+- `README-short.md` — Lighthouse jadvallari HTML table formatiga o'tkazildi
+- `scrollReveal.js` — animatsiya parametrlari qayta sozlandi: sekinroq va chuqurroq efekt uchun
+- `scrollReveal.js` — footer elementlari `viewFactor: 0` bilan alohida ajratildi — viewport pastida qolib ketmasligi uchun
+- `scrollReveal.js` — `about__leaf` yo'nalishi `right` ga, `review__leaf` va `footer__floral` `left` ga, `viewFactor: 0` bilan
+
 ### release/v1.1.0
 
 - version bumped to `1.1.0` in `package.json`
