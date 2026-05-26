@@ -23,6 +23,17 @@ No open questions — all production phase decisions resolved.
 
 ## ⚙️ Decision Notes
 
+## v1.1.2 — Hotfix Phase
+
+### hotfix/seo-urls
+
+- OG image and canonical URL left as placeholder since v1.0.0 — only noticed when Telegram preview was not showing
+- `scrollReveal.js` footer reveal was inside `requestIdleCallback` — browser defers idle callbacks, footer was already in viewport before reveal registered, causing invisible elements on first desktop load
+- fix: footer reveal moved before `schedule` call — registers immediately after ScrollReveal init
+- `package.json` version bump to `1.1.2` — missed in previous hotfix flow
+
+---
+
 ## v1.1.1 — Post-Release Fix Phase
 
 ### release/v1.1.1
