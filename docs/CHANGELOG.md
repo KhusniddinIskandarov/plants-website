@@ -4,6 +4,23 @@ All notable changes in this project are documented in this file.
 
 ---
 
+## v1.1.1 - 2026-05-26
+
+### Changed - v1.1.1
+
+- `README.md` — `Recruiter-Friendly Version` section expanded with docs and repo links
+- `README.md` — `Showcase Documents` section added with showcase repo links
+- `README.md` — Live Demos list updated with `👉` emoji
+- `README.md` — Lighthouse tables converted to side-by-side HTML table format
+- `README-short.md` — `Recruiter-Friendly Version` section added with full README and docs links
+- `README-short.md` — `Responsive Full pages Screenshots` renamed to `Responsive Views`
+- `README-short.md` — Lighthouse tables converted to side-by-side HTML table format
+- `scrollReveal.js` — animation parameters retuned: `distance: 60px`, `duration: 1200ms`, `delay: 300ms`, `viewFactor: 0.2`
+- `scrollReveal.js` — footer elements (`footer__icon`, `footer__content`, `copy__right`) separated with `viewFactor: 0`
+- `scrollReveal.js` — `about__leaf` origin set to `right`, `review__leaf` and `footer__floral` set to `left` with `viewFactor: 0`
+
+---
+
 ## v1.1.0 - 2026-05-23
 
 ### Added - v1.1.0
@@ -18,19 +35,6 @@ All notable changes in this project are documented in this file.
 - added `alt` text to all images missing it — accessibility improvement
 - added `aria-label` to hamburger button and scroll-up link — screen reader support
 - added `public/robots.txt` — search engine crawl configuration
-
-### Changed - fix/post-v1.1.0
-
-- `README.md` — `Recruiter-Friendly Version` bo'limi kengaytirildi, docs va repo havolalari qo'shildi
-- `README.md` — `Showcase Documents` bo'limi qo'shildi, showcase repo havolalari bilan
-- `README.md` — Live Demos ro'yxati `👉` emoji bilan yangilandi
-- `README-short.md` — `Recruiter-Friendly Version` bo'limi qo'shildi, full README va docs havolalari bilan
-- `README-short.md` — `Responsive Full pages Screenshots` sarlavhasi `Responsive Views` ga o'zgartirildi
-- `README-short.md` — Lighthouse jadvallari yonma-yon ko'rsatish uchun HTML table formatiga o'tkazildi
-- `README.md` — Lighthouse jadvallari yonma-yon HTML table formatiga o'tkazildi
-- `scrollReveal.js` — animatsiya parametrlari sozlandi: `distance: 60px`, `duration: 1200ms`, `delay: 300ms`, `viewFactor: 0.2`
-- `scrollReveal.js` — footer elementlari (`footer__icon`, `footer__content`, `copy__right`) alohida `viewFactor: 0` bilan ajratildi
-- `scrollReveal.js` — `about__leaf` uchun `origin: right`, `review__leaf` va `footer__floral` uchun `origin: left, viewFactor: 0` qilindi
 
 ### Changed - v1.1.0
 

@@ -23,6 +23,25 @@ No open questions — all production phase decisions resolved.
 
 ## ⚙️ Decision Notes
 
+## v1.1.1 — Post-Release Fix Phase
+
+### release/v1.1.1
+
+- version bump to 1.1.1 follows SemVer conventions — patch release for post-release fixes
+- build, lint, format checks passed before release
+- README and CHANGELOG updated to reflect v1.1.1 completion
+
+### fix/post-v1.1.1
+
+- README formatting improved — recruiter and showcase sections restructured for clarity
+- Lighthouse tables converted to HTML side-by-side format — GitHub markdown does not support multi-column tables natively
+- scrollReveal parameters retuned — `distance: 60px`, `duration: 1200ms` gives smoother and more noticeable animations than previous `20px/550ms`
+- footer `viewFactor: 0` — footer is below viewport, standard viewFactor would never trigger animations
+- `about__leaf` origin changed to `right` — visually consistent with leaf position in layout
+- `review__leaf` and `footer__floral` kept `origin: left` with `viewFactor: 0` — decorative elements now animate correctly regardless of scroll position
+
+---
+
 ## v1.1.0 — Performance & Accessibility Phase
 
 ### release/v1.1.0
@@ -30,15 +49,6 @@ No open questions — all production phase decisions resolved.
 - version bump to 1.1.0 follows SemVer conventions
 - build, lint, format checks passed before release
 - README and CHANGELOG updated to reflect v1.1.0 completion
-
-### fix/post-v1.1.0
-
-- `README.md` va `README-short.md` formatting yaxshilandi — recruiter va showcase bo'limlari kengaytirildi
-- Lighthouse jadvallari HTML table formatiga o'tkazildi — desktop va mobile yonma-yon ko'rsatish uchun, GitHub markdown cheklangan, shuning uchun raw HTML ishlatildi
-- `scrollReveal.js` animatsiya parametrlari qayta sozlandi — `distance: 60px`, `duration: 1200ms`, `delay: 300ms` — v1.1.0 dagi `20px/550ms` juda tez va qisqa edi
-- footer elementlari `viewFactor: 0` bilan alohida ajratildi — footer viewport tashqarisida bo'lgani uchun standart `viewFactor: 0.2` bilan hech qachon trigger bo'lmaydi
-- `about__leaf` uchun `origin: right` — o'ng tomondan kelishi vizual jihatdan to'g'riroq
-- `review__leaf` va `footer__floral` uchun `origin: left, viewFactor: 0` — dekorativ elementlar ham animatsiyaga kirishishi uchun
 
 ### fix/post-release
 
